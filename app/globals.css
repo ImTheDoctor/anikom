@@ -1,0 +1,339 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* Reference loaded families by name so Armenian glyphs reach the Noto faces
+     before next/font's generated metric fallback families. */
+  --font-sans: "Geist", "Noto Sans Armenian", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", "Noto Serif Armenian", Georgia, "Times New Roman", serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Shadow scale — the shadcn preset ships no shadow tokens and Tailwind v4.3
+     emits no shadow utilities without definitions (standard values). */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-accent: var(--hero-accent);
+  --color-hero-border: var(--hero-border);
+  --color-brand-deep: var(--brand-deep);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.5396 0.1463 342.03);
+  --primary-foreground: oklch(0.985 0 0);
+  --primary-hover: oklch(0.47 0.135 342);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.962 0.012 342);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.5396 0.1463 342.03);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Inverse surface used by the hero and company bands. */
+  --hero: oklch(0.164 0.014 342);
+  --hero-foreground: oklch(0.968 0.006 342);
+  --hero-muted: oklch(0.78 0.015 342);
+  --hero-accent: oklch(0.78 0.09 342);
+  --hero-border: oklch(1 0 0 / 12%);
+
+  /* Deep burgundy surface for the footer, featured and contact bands. Reuses
+     the theme-independent hero text tokens above. Owner-set exact value:
+     #501C3F (Oct 2026). */
+  --brand-deep: oklch(0.3189 0.0906 342.34);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.8 0.1 342);
+  --primary-foreground: oklch(0.17 0.02 342);
+  --primary-hover: oklch(0.86 0.08 342);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.26 0.02 342);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.8 0.1 342);
+
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Light theme is the only enabled theme until a theme provider ships. The
+   `.dark` token set above is ready for that change. */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-wrap: break-word;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Purposeful motion (docs/design-system.md §7 "Motion"). One-time entry
+   reveals only, ≤450ms, ease-out; the utility is inert under
+   prefers-reduced-motion. Stagger with [--motion-delay:<ms>]. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-rise {
+    animation: rise-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--motion-delay, 0ms);
+  }
+}
+
+/* Scroll-reveal for the approved homepage sections (§7 "Motion"). The hidden
+   state is applied client-side by components/reveal.tsx after hydration, so
+   SSR markup, crawlers, and reduced-motion users always see the content. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition:
+      opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-reveal="shown"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Stagger variant: the children (not the container) rise in, 60ms apart. */
+  [data-reveal].reveal-stagger {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition:
+      opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-reveal="shown"].reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal="shown"].reveal-stagger > :nth-child(2) {
+    transition-delay: 60ms;
+  }
+  [data-reveal="shown"].reveal-stagger > :nth-child(3) {
+    transition-delay: 120ms;
+  }
+  [data-reveal="shown"].reveal-stagger > :nth-child(4) {
+    transition-delay: 180ms;
+  }
+  [data-reveal="shown"].reveal-stagger > :nth-child(5) {
+    transition-delay: 240ms;
+  }
+  [data-reveal="shown"].reveal-stagger > :nth-child(n + 6) {
+    transition-delay: 300ms;
+  }
+}
+
+/* Route transitions (docs/design-system.md §7 "Motion") — the "dossier stack":
+   forward navigation raises the incoming page over the outgoing one (old page
+   settles down and fades, new page rises from below), back navigation lifts
+   the top page away and reveals the page beneath. Vertical direction encodes
+   hierarchy — up is arrival, down is departure. Asymmetric timing: the old
+   page leaves fast so it does not compete with the entrance. Purely
+   progressive enhancement: browsers without the View Transitions API swap
+   instantly. No color or shadow values — motion only. */
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(.page-forward) {
+  animation: page-forward-exit 160ms cubic-bezier(0.55, 0, 1, 0.45) both;
+}
+::view-transition-new(.page-forward) {
+  animation:
+    page-enter-fade 180ms cubic-bezier(0.22, 1, 0.36, 1) 90ms both,
+    page-forward-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::view-transition-old(.page-back) {
+  animation: page-back-exit 200ms cubic-bezier(0.55, 0, 1, 0.45) both;
+}
+::view-transition-new(.page-back) {
+  animation: page-back-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) 60ms both;
+}
+
+/* Untyped navigations (hash jumps, browser buttons) get this class from the
+   ViewTransition wrapper's `default` — suppressing the UA crossfade keeps
+   same-page anchor jumps a native scroll instead of a position crossfade. */
+::view-transition-group(.page-none),
+::view-transition-old(.page-none),
+::view-transition-new(.page-none) {
+  animation: none;
+}
+
+@keyframes page-forward-exit {
+  to {
+    opacity: 0;
+    translate: 0 0.75rem;
+  }
+}
+@keyframes page-enter-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes page-forward-enter {
+  from {
+    translate: 0 2.5rem;
+  }
+}
+@keyframes page-back-exit {
+  to {
+    opacity: 0;
+    translate: 0 -2.5rem;
+  }
+}
+@keyframes page-back-enter {
+  from {
+    opacity: 0;
+    translate: 0 0.5rem;
+  }
+}
+
+/* The sticky header is a named group with its animation suppressed, so it
+   holds still — one fixed reference while the content moves beneath it. */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

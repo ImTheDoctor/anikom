@@ -1,0 +1,1078 @@
+{
+  "meta": {
+    "title": "Anicom — Judicial Examinations, Valuation & Research",
+    "description": "ANIKOM LLC — Center for Research and Judicial Examinations in Armenia. Judicial and extrajudicial examinations, property valuation, and measurement works. 25+ years of experience."
+  },
+  "common": {
+    "brandName": "ANICOM",
+    "skipToContent": "Skip to content",
+    "pageInProgress": "This page is being prepared — full content is coming soon."
+  },
+  "navigation": {
+    "primaryLabel": "Primary",
+    "mobileLabel": "Mobile primary",
+    "primary": [
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "Clients",
+        "href": "#clients"
+      },
+      {
+        "label": "Experts",
+        "href": "/team"
+      },
+      {
+        "label": "News",
+        "href": "#news"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "sections": [
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "Clients",
+        "href": "#clients"
+      },
+      {
+        "label": "Experts",
+        "href": "/team"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#testimonials"
+      },
+      {
+        "label": "News",
+        "href": "#news"
+      },
+      {
+        "label": "Partners",
+        "href": "#partners"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "header": {
+    "homeLabel": "Anicom — home",
+    "language": {
+      "label": "Language",
+      "triggerLabel": "Change language",
+      "names": {
+        "hy": "Հայերեն",
+        "en": "English",
+        "ru": "Русский"
+      }
+    },
+    "contactCta": {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  },
+  "mobileNav": {
+    "openLabel": "Open menu",
+    "closeLabel": "Close menu"
+  },
+  "hero": {
+    "title": "Objective expertise for complex situations.",
+    "description": "The ANIKOM center carries out judicial and extrajudicial examinations, property valuation, and measurement works. We help clients clarify complex situations with professional and well-substantiated conclusions.",
+    "primaryCta": {
+      "label": "Explore services",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "See our process",
+      "href": "#process"
+    },
+    "stats": [
+      {
+        "value": "25+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "10000+",
+        "label": "Completed examinations"
+      },
+      {
+        "value": "98%",
+        "label": "Client satisfaction"
+      },
+      {
+        "value": "30+",
+        "label": "Directions"
+      },
+      {
+        "value": "40+",
+        "label": "Partners"
+      }
+    ]
+  },
+  "services": {
+    "heading": "Service areas",
+    "action": "View all services",
+    "items": [
+      {
+        "slug": "judicial-examinations",
+        "title": "Judicial examinations",
+        "description": "Research and expert conclusions within court proceedings and legal processes."
+      },
+      {
+        "slug": "construction-technical-examinations",
+        "title": "Construction & technical examinations",
+        "description": "Studies of building condition, workmanship quality, damage, and defects."
+      },
+      {
+        "slug": "property-valuation",
+        "title": "Property valuation",
+        "description": "Determining the value of real and movable property: apartments, land plots, vehicles, and other assets."
+      },
+      {
+        "slug": "auto-technical-examinations",
+        "title": "Auto-technical examinations",
+        "description": "Studies of vehicle condition, damage, and related circumstances."
+      },
+      {
+        "slug": "economic-accounting-examinations",
+        "title": "Economic & accounting examinations",
+        "description": "Analysis of financial documents, calculations, and economic data."
+      },
+      {
+        "slug": "document-research",
+        "title": "Document research",
+        "description": "Professional examination of documents, their features, and other materials under study."
+      },
+      {
+        "slug": "geodetic-cadastral-works",
+        "title": "Geodetic & cadastral works",
+        "description": "Surveying and research related to land plots and real estate."
+      },
+      {
+        "slug": "damage-assessment",
+        "title": "Damage assessment",
+        "description": "Determining the extent of caused damage and other case-specific research."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "How we work",
+    "description": "The usual course of our work — from your first request to the finished conclusion.",
+    "action": {
+      "label": "Contact us",
+      "href": "#contact"
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Request",
+        "description": "Describe your situation in plain language; we determine the type of examination or valuation you need."
+      },
+      {
+        "number": "02",
+        "title": "Agreement",
+        "description": "We discuss the scope, timeline, and terms of the research, then sign a contract."
+      },
+      {
+        "number": "03",
+        "title": "Research",
+        "description": "The specialist carries out the study: inspection, measurements, and analysis of documents and data."
+      },
+      {
+        "number": "04",
+        "title": "Conclusion",
+        "description": "We prepare a substantiated expert conclusion with findings and their justification."
+      },
+      {
+        "number": "05",
+        "title": "Delivery",
+        "description": "We hand over the conclusion and stay in touch for any clarifications you need."
+      }
+    ]
+  },
+  "featured": {
+    "sectionLabel": "Guidance and mission",
+    "primary": {
+      "eyebrow": "Guidance",
+      "title": "Not sure which examination you need?",
+      "description": "Describe your situation in plain language. We will help you understand what kind of research or valuation you need and provide initial guidance.",
+      "imageLabel": "Consultation with a specialist",
+      "cta": {
+        "label": "Contact us",
+        "href": "#contact"
+      }
+    },
+    "secondary": {
+      "eyebrow": "Our mission",
+      "title": "Professional, objective, substantiated",
+      "description": "Our goal is to help clients clarify complex situations, value property, determine the extent of damage, and obtain the professional conclusions they need. Our work rests on research, factual analysis, and an expert approach.",
+      "cta": {
+        "label": "Explore services",
+        "href": "#services"
+      }
+    }
+  },
+  "cases": {
+    "eyebrow": "Practice",
+    "title": "Selected cases",
+    "description": "Examples of expert work across our main directions.",
+    "action": "View all cases",
+    "cardAction": "Case details",
+    "items": [
+      {
+        "slug": "residential-building",
+        "category": "Construction-technical",
+        "title": "Technical condition examination of a residential building",
+        "date": "Yerevan · 2026",
+        "imageLabel": "Residential apartment building"
+      },
+      {
+        "slug": "car-accident",
+        "category": "Auto-technical",
+        "title": "Circumstances and damage study after a road accident",
+        "date": "Yerevan · 2025",
+        "imageLabel": "Car"
+      },
+      {
+        "slug": "shopping-center",
+        "category": "Valuation",
+        "title": "Real estate valuation of a shopping center",
+        "date": "Yerevan · 2025",
+        "imageLabel": "Modern commercial building"
+      },
+      {
+        "slug": "land-surveying",
+        "category": "Geodesy & cadastre",
+        "title": "Land plot boundary surveying and cadastral works",
+        "date": "Kotayk · 2025",
+        "imageLabel": "Surveying works at a construction site"
+      }
+    ]
+  },
+  "clients": {
+    "eyebrow": "Clients",
+    "title": "Who we work with",
+    "description": "Our services are used by individuals, companies, lawyers, courts, property owners, and sector professionals.",
+    "items": [
+      {
+        "title": "Individuals",
+        "description": "Property valuation, damage determination, and arranging the examinations you need."
+      },
+      {
+        "title": "Companies and organizations",
+        "description": "Economic, construction-technical, and other examinations for business matters."
+      },
+      {
+        "title": "Lawyers and advocates",
+        "description": "Expert conclusions and guidance for case work."
+      },
+      {
+        "title": "Courts and law enforcement",
+        "description": "Judicial examinations under the procedures established by law."
+      },
+      {
+        "title": "Property owners and investors",
+        "description": "Property valuation and studies of the technical condition of buildings."
+      },
+      {
+        "title": "Sector professionals",
+        "description": "Surveying, cadastral, and other specialized research."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "People / Experts",
+    "title": "Our experts",
+    "action": "View all profiles",
+    "cardAction": "Profile",
+    "items": [
+      {
+        "slug": "araik-stepanyan",
+        "name": "Araik Stepanyan",
+        "role": "Director",
+        "imageLabel": "Portrait of Araik Stepanyan",
+        "directions": [
+          "judicial-examinations"
+        ],
+        "experienceYears": 25,
+        "experience": "25+ years",
+        "profile": {
+          "bio": [
+            "Founder and director of the ANIKOM center for research and judicial examinations since 2000. He leads the center's work and personally takes part in the judicial examination and valuation directions.",
+            "He received the right to practice as a judicial expert in 2005 (Ministry of Justice of RA, No. 0265) and the right to work in the field of valuation in 2011 (No. 0416). In 2007 he was granted the special civil service rank of Justice Advisor, First Class, and in 2012 he completed a law retraining program at Yerevan State University."
+          ],
+          "education": [
+            {
+              "period": "2012",
+              "title": "Retraining program — Law",
+              "place": "Yerevan State University"
+            }
+          ],
+          "career": [
+            {
+              "period": "2000 — present",
+              "title": "Director",
+              "place": "ANIKOM LLC"
+            },
+            {
+              "period": "2005 — present",
+              "title": "Judicial expert",
+              "place": "Judicial examinations and valuation"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Right to practice as a judicial expert",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2005",
+              "number": "No. 0265",
+              "image": "/images/certificates/araik-stepanyan/03-judicial-expert-license-2005.png",
+              "imageLabel": "Judicial expert practice certificate (2005)"
+            },
+            {
+              "title": "Special rank: Justice Advisor, First Class",
+              "issuer": "Judicial Department of RA",
+              "year": "2007",
+              "image": "/images/certificates/araik-stepanyan/02-civil-service-rank-2007.jpg",
+              "imageLabel": "Special civil service rank certificate (2007)"
+            },
+            {
+              "title": "Right to practice in the field of valuation",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2011",
+              "number": "No. 0416",
+              "image": "/images/certificates/araik-stepanyan/04-valuation-license-2011.jpg",
+              "imageLabel": "Valuation practice certificate (2011)"
+            },
+            {
+              "title": "Retraining certificate — Law",
+              "issuer": "Yerevan State University",
+              "year": "2012",
+              "image": "/images/certificates/araik-stepanyan/01-retraining-ysu-law-2012.jpg",
+              "imageLabel": "Retraining certificate, YSU (2012)"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "armen-galstyan",
+        "name": "Armen Galstyan",
+        "role": "Judicial expert",
+        "imageLabel": "Portrait of Armen Galstyan",
+        "directions": [
+          "judicial-examinations"
+        ],
+        "experienceYears": 18,
+        "experience": "18+ years",
+        "profile": {
+          "bio": [
+            "Judicial expert with more than 18 years of practice, specializing in organizing and conducting judicial and extrajudicial examinations. He has taken part in examinations in numerous criminal and civil cases. With ANIKOM since 2008."
+          ],
+          "education": [
+            {
+              "period": "2006",
+              "title": "Law",
+              "place": "Yerevan State University"
+            }
+          ],
+          "career": [
+            {
+              "period": "2008 — present",
+              "title": "Judicial expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Right to practice as a judicial expert",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2008"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "ani-petrosyan",
+        "name": "Ani Petrosyan",
+        "role": "Independent appraiser",
+        "imageLabel": "Portrait of Ani Petrosyan",
+        "directions": [
+          "property-valuation",
+          "damage-assessment"
+        ],
+        "experienceYears": 12,
+        "experience": "12+ years",
+        "profile": {
+          "bio": [
+            "Independent appraiser with more than 12 years of experience, specializing in real and movable property valuation and damage determination. She has prepared valuation reports for individuals, companies, and banks. With ANIKOM since 2014."
+          ],
+          "education": [
+            {
+              "period": "2012",
+              "title": "Finance",
+              "place": "Armenian State University of Economics"
+            }
+          ],
+          "career": [
+            {
+              "period": "2014 — present",
+              "title": "Independent appraiser",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian",
+            "English"
+          ],
+          "certificates": [
+            {
+              "title": "Right to practice in the field of valuation",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2014"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "vahagn-martirosyan",
+        "name": "Vahagn Martirosyan",
+        "role": "Surveyor",
+        "imageLabel": "Portrait of Vahagn Martirosyan",
+        "directions": [
+          "geodetic-cadastral-works"
+        ],
+        "experienceYears": 15,
+        "experience": "15+ years",
+        "profile": {
+          "bio": [
+            "Surveyor engineer with more than 15 years of experience: land plot boundary demarcation, surveying, and cadastral works. He has taken part in measurements for construction and infrastructure projects. With ANIKOM since 2011."
+          ],
+          "education": [
+            {
+              "period": "2009",
+              "title": "Engineering geodesy",
+              "place": "National Polytechnic University of Armenia"
+            }
+          ],
+          "career": [
+            {
+              "period": "2011 — present",
+              "title": "Surveyor",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Engineer surveyor qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2011"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "tigran-ohanyan",
+        "name": "Tigran Ohanyan",
+        "role": "Senior judicial expert",
+        "imageLabel": "Portrait of Tigran Ohanyan",
+        "directions": [
+          "judicial-examinations",
+          "document-research"
+        ],
+        "experienceYears": 20,
+        "experience": "20+ years",
+        "profile": {
+          "bio": [
+            "Senior judicial expert with more than 20 years of experience, specializing in judicial examinations and document research. He has led examinations and authored conclusions in numerous cases. With ANIKOM since 2006."
+          ],
+          "education": [
+            {
+              "period": "2004",
+              "title": "Law",
+              "place": "Yerevan State University"
+            }
+          ],
+          "career": [
+            {
+              "period": "2006 — present",
+              "title": "Senior judicial expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Right to practice as a judicial expert",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2006"
+            },
+            {
+              "title": "Document research qualification",
+              "issuer": "Professional training program",
+              "year": "2015"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "hayk-hovakimyan",
+        "name": "Hayk Hovakimyan",
+        "role": "Construction-technical expert",
+        "imageLabel": "Portrait of Hayk Hovakimyan",
+        "directions": [
+          "construction-technical-examinations"
+        ],
+        "experienceYears": 16,
+        "experience": "16+ years",
+        "profile": {
+          "bio": [
+            "Construction-technical expert for more than 16 years: building condition, workmanship quality, damage, and defects. He has taken part in examinations of residential and industrial buildings. With ANIKOM since 2010."
+          ],
+          "education": [
+            {
+              "period": "2008",
+              "title": "Civil engineering",
+              "place": "Yerevan State University of Architecture and Construction"
+            }
+          ],
+          "career": [
+            {
+              "period": "2010 — present",
+              "title": "Construction-technical expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Construction examination qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2010"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "lusine-hakobyan",
+        "name": "Lusine Hakobyan",
+        "role": "Economic expert",
+        "imageLabel": "Portrait of Lusine Hakobyan",
+        "directions": [
+          "economic-accounting-examinations"
+        ],
+        "experienceYears": 14,
+        "experience": "14+ years",
+        "profile": {
+          "bio": [
+            "Economic expert with more than 14 years of experience: analysis of financial documents, calculations, and economic data. She has taken part in examinations for business disputes and audit cases. With ANIKOM since 2012."
+          ],
+          "education": [
+            {
+              "period": "2010",
+              "title": "Accounting and audit",
+              "place": "Armenian State University of Economics"
+            }
+          ],
+          "career": [
+            {
+              "period": "2012 — present",
+              "title": "Economic expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian",
+            "English"
+          ],
+          "certificates": [
+            {
+              "title": "Economic examination qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2012"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "sargis-baghdasaryan",
+        "name": "Sargis Baghdasaryan",
+        "role": "Auto-technical expert",
+        "imageLabel": "Portrait of Sargis Baghdasaryan",
+        "directions": [
+          "auto-technical-examinations",
+          "damage-assessment"
+        ],
+        "experienceYears": 13,
+        "experience": "13+ years",
+        "profile": {
+          "bio": [
+            "Auto-technical expert for more than 13 years: vehicle condition, accident circumstances, and damage extent. He has taken part in examinations for road traffic accident cases. With ANIKOM since 2013."
+          ],
+          "education": [
+            {
+              "period": "2011",
+              "title": "Vehicle engineering and maintenance",
+              "place": "National Polytechnic University of Armenia"
+            }
+          ],
+          "career": [
+            {
+              "period": "2013 — present",
+              "title": "Auto-technical expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Auto-technical examination qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2013"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "mariam-gevorgyan",
+        "name": "Mariam Gevorgyan",
+        "role": "Document examiner",
+        "imageLabel": "Portrait of Mariam Gevorgyan",
+        "directions": [
+          "document-research"
+        ],
+        "experienceYears": 11,
+        "experience": "11+ years",
+        "profile": {
+          "bio": [
+            "Document research expert with more than 11 years of experience: document authenticity, signatures, and their features. She has taken part in examinations for document-related disputes. With ANIKOM since 2015."
+          ],
+          "education": [
+            {
+              "period": "2013",
+              "title": "Law",
+              "place": "Yerevan State University"
+            }
+          ],
+          "career": [
+            {
+              "period": "2015 — present",
+              "title": "Document examiner",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian",
+            "English"
+          ],
+          "certificates": [
+            {
+              "title": "Document research qualification",
+              "issuer": "Professional training program",
+              "year": "2015"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "gor-vardanyan",
+        "name": "Gor Vardanyan",
+        "role": "Damage assessment expert",
+        "imageLabel": "Portrait of Gor Vardanyan",
+        "directions": [
+          "damage-assessment",
+          "construction-technical-examinations"
+        ],
+        "experienceYears": 10,
+        "experience": "10+ years",
+        "profile": {
+          "bio": [
+            "Damage assessment expert with more than 10 years of experience: determining the extent of damage to property and construction-technical research. He has worked on insurance and construction dispute cases. With ANIKOM since 2016."
+          ],
+          "education": [
+            {
+              "period": "2014",
+              "title": "Civil engineering",
+              "place": "Yerevan State University of Architecture and Construction"
+            }
+          ],
+          "career": [
+            {
+              "period": "2016 — present",
+              "title": "Damage assessment expert",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian"
+          ],
+          "certificates": [
+            {
+              "title": "Damage assessment qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2016"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "nane-kirakosyan",
+        "name": "Nane Kirakosyan",
+        "role": "Appraiser",
+        "imageLabel": "Portrait of Nane Kirakosyan",
+        "directions": [
+          "property-valuation"
+        ],
+        "experienceYears": 9,
+        "experience": "9+ years",
+        "profile": {
+          "bio": [
+            "Appraiser with more than 9 years of experience, specializing in real estate and vehicle valuation. She prepares reports for collateral, sale, and court cases. With ANIKOM since 2017."
+          ],
+          "education": [
+            {
+              "period": "2015",
+              "title": "Finance",
+              "place": "Armenian State University of Economics"
+            }
+          ],
+          "career": [
+            {
+              "period": "2017 — present",
+              "title": "Appraiser",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian",
+            "English"
+          ],
+          "certificates": [
+            {
+              "title": "Right to practice in the field of valuation",
+              "issuer": "Ministry of Justice of RA",
+              "year": "2017"
+            }
+          ]
+        }
+      },
+      {
+        "slug": "areg-nersisyan",
+        "name": "Areg Nersisyan",
+        "role": "Engineer surveyor",
+        "imageLabel": "Portrait of Areg Nersisyan",
+        "directions": [
+          "geodetic-cadastral-works",
+          "construction-technical-examinations"
+        ],
+        "experienceYears": 8,
+        "experience": "8+ years",
+        "profile": {
+          "bio": [
+            "Engineer surveyor with more than 8 years of experience: surveying on construction sites, cadastral matters, and measurements for construction-technical research. With ANIKOM since 2018."
+          ],
+          "education": [
+            {
+              "period": "2016",
+              "title": "Engineering geodesy",
+              "place": "National Polytechnic University of Armenia"
+            }
+          ],
+          "career": [
+            {
+              "period": "2018 — present",
+              "title": "Engineer surveyor",
+              "place": "ANIKOM LLC"
+            }
+          ],
+          "languages": [
+            "Armenian",
+            "Russian",
+            "English"
+          ],
+          "certificates": [
+            {
+              "title": "Engineer surveyor qualification",
+              "issuer": "Professional qualification committee",
+              "year": "2018"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "experts": {
+    "metaTitle": "Experts",
+    "breadcrumbLabel": "Breadcrumb",
+    "breadcrumbHome": "Home",
+    "title": "Experts",
+    "description": "The specialists of the center — judicial experts, appraisers, engineers, and surveyors with years of practical experience across eight expertise directions.",
+    "stats": [
+      {
+        "value": "25+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "8",
+        "label": "Expertise directions"
+      }
+    ],
+    "rosterStatLabel": "Experts on the roster",
+    "listHeading": "Expert directory",
+    "directionsLabel": "Directions",
+    "filtersLabel": "Filters",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Search by name or role…",
+    "experienceLabel": "Experience",
+    "experienceOptions": [
+      {
+        "value": "any",
+        "label": "Any"
+      },
+      {
+        "value": "5",
+        "label": "5+ years"
+      },
+      {
+        "value": "10",
+        "label": "10+ years"
+      },
+      {
+        "value": "15",
+        "label": "15+ years"
+      }
+    ],
+    "resetLabel": "Reset filters",
+    "resultsLabel": "Found: {count}",
+    "sortLabel": "Sort by",
+    "sortOptions": [
+      {
+        "value": "default",
+        "label": "Default order"
+      },
+      {
+        "value": "experience",
+        "label": "Experience: high to low"
+      },
+      {
+        "value": "name",
+        "label": "Name: A to Z"
+      }
+    ],
+    "gridViewLabel": "Grid view",
+    "listViewLabel": "List view",
+    "cardAction": "Profile",
+    "paginationLabel": "Pagination",
+    "previousPageLabel": "Previous page",
+    "nextPageLabel": "Next page",
+    "goToPageLabel": "Go to page {page}",
+    "emptyTitle": "No experts match your filters",
+    "emptyDescription": "Try changing or clearing the filters to see the full roster.",
+    "profileUi": {
+      "aboutTitle": "About",
+      "educationTitle": "Education",
+      "careerTitle": "Career path",
+      "certificatesTitle": "Certificates & qualifications",
+      "similarTitle": "Related experts",
+      "experienceLabel": "Experience",
+      "languagesLabel": "Languages",
+      "certificatesLabel": "Certificates"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Client feedback",
+    "description": "What our clients say about working with us.",
+    "ratingLabel": "5/5",
+    "items": [
+      {
+        "quote": "The construction-technical examination conclusion became the decisive evidence in the case. The work was delivered on time, with detailed justification.",
+        "author": "Grigor Mkrtchyan",
+        "organization": "Advocate, Yerevan",
+        "imageLabel": "Profile photo of Grigor Mkrtchyan"
+      },
+      {
+        "quote": "The property valuation was fast and professional. The report met every requirement and was accepted without further questions.",
+        "author": "Anna Hovhannisyan",
+        "organization": "Finance director, Yerevan",
+        "imageLabel": "Profile photo of Anna Hovhannisyan"
+      },
+      {
+        "quote": "After the accident, the auto-technical examination helped determine the exact extent of the damage. Grateful for the team's precise work.",
+        "author": "Tigran Sargsyan",
+        "organization": "Individual client",
+        "imageLabel": "Profile photo of Tigran Sargsyan"
+      }
+    ]
+  },
+  "news": {
+    "eyebrow": "Blog",
+    "title": "News & articles",
+    "description": "Useful materials about examinations, valuation, and your rights.",
+    "action": "View all news",
+    "cardAction": "Read more",
+    "items": [
+      {
+        "slug": "judicial-examination",
+        "category": "Knowledge base",
+        "date": "October 2, 2026",
+        "title": "What is a judicial examination and when do you need one",
+        "imageLabel": "Gavel"
+      },
+      {
+        "slug": "property-valuation",
+        "category": "Guide",
+        "date": "September 18, 2026",
+        "title": "Property valuation: what documents you need",
+        "imageLabel": "Signing documents"
+      },
+      {
+        "slug": "auto-examination",
+        "category": "Knowledge base",
+        "date": "August 25, 2026",
+        "title": "Auto-technical examination after an accident: step by step",
+        "imageLabel": "Car engine"
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "title": "Working alongside",
+    "description": "We cooperate with organizations in legal, construction, insurance, and other sectors.",
+    "items": [
+      {
+        "name": "Law firms"
+      },
+      {
+        "name": "Construction companies"
+      },
+      {
+        "name": "Insurance companies"
+      },
+      {
+        "name": "Banks and financial institutions"
+      },
+      {
+        "name": "Real estate agencies"
+      },
+      {
+        "name": "Public institutions"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Have a question?",
+    "description": "Reach us by phone or email.",
+    "primaryCta": {
+      "label": "Call us",
+      "href": "tel:+37410577541"
+    },
+    "secondaryCta": {
+      "label": "Email us",
+      "href": "mailto:anikom-sa@mail.ru"
+    },
+    "note": "20/12 Abovyan St., Yerevan, Armenia (office 4) · Mon–Fri: 09:00–18:00, Sat: 10:00–14:00"
+  },
+  "contactPage": {
+    "metaTitle": "Contact us",
+    "metaDescription": "Contact details of the ANIKOM center — phone, email, office address and working hours, plus an inquiry form.",
+    "title": "Contact us",
+    "description": "Call, write or visit our office on judicial examination and independent valuation matters.",
+    "infoTitle": "Contact details",
+    "formTitle": "Write to us",
+    "formNote": "The form opens your email application with the inquiry pre-filled; you can edit it before sending.",
+    "form": {
+      "nameLabel": "Full name",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email (optional)",
+      "serviceLabel": "Service",
+      "serviceAny": "General question",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your question or issue",
+      "submitLabel": "Send inquiry",
+      "mailtoSubject": "Inquiry from the ANIKOM website",
+      "errors": {
+        "name": "Please enter your name",
+        "phone": "Please enter a phone number",
+        "message": "Please describe your question"
+      }
+    },
+    "mapTitle": "Our office on the map"
+  },
+  "footer": {
+    "homeLabel": "Anicom — home",
+    "description": "ANIKOM LLC was founded on 30 October 2000. 25+ years of experience in judicial and extrajudicial examinations and independent assessment.",
+    "descriptor": "Center for Research and Judicial Examinations",
+    "socialPending": "Social links pending approval.",
+    "exploreTitle": "Explore",
+    "servicesTitle": "Services",
+    "allServicesLabel": "All services",
+    "contactTitle": "Contact",
+    "contacts": [
+      {
+        "label": "Phone",
+        "value": "+374 10 57 75 41",
+        "href": "tel:+37410577541"
+      },
+      {
+        "label": "Email",
+        "value": "anikom-sa@mail.ru",
+        "href": "mailto:anikom-sa@mail.ru"
+      },
+      {
+        "label": "Office",
+        "value": "20/12 Abovyan St., Yerevan, Armenia (office 4)"
+      },
+      {
+        "label": "Hours",
+        "value": "Mon–Fri: 09:00–18:00, Sat: 10:00–14:00"
+      }
+    ],
+    "copyright": "© 2000–2026 ANIKOM LLC. All rights reserved.",
+    "previewNote": "Placeholder preview — approved content pending."
+  }
+}
