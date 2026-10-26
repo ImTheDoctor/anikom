@@ -17,13 +17,11 @@ export function CasesSection({ content, locale }: CasesSectionProps) {
   return (
     <section
       id="cases"
-      className="scroll-mt-16 border-t border-border py-16 sm:scroll-mt-20 md:py-20"
+      className="scroll-mt-16 py-16 sm:scroll-mt-20 md:py-20"
     >
       <Reveal>
         <SectionHeading
-          eyebrow={cases.eyebrow}
           title={cases.title}
-          description={cases.description}
           action={
             <ActionLink href={localizeHref(locale, "/cases")}>
               {cases.action}
@@ -37,7 +35,7 @@ export function CasesSection({ content, locale }: CasesSectionProps) {
         stagger
         className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4"
       >
-        {cases.items.map((item) => (
+        {cases.items.slice(0, 4).map((item) => (
           <CaseCard
             key={item.slug}
             item={item}

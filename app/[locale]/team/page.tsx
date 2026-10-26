@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight } from "lucide-react";
 import { ExpertsDirectory } from "@/components/experts/experts-directory";
 import { ContactCta } from "@/components/home/contact-cta";
+import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
@@ -33,9 +32,9 @@ export async function generateMetadata({
 }
 
 // Expert directory (owner reference design, Oct 2026): a compact hero band
-// with breadcrumb and stats over a filterable catalog — direction chips, a
-// filter sidebar (search / directions / experience), sort, grid/list views,
-// and pagination. The roster is draft demo data (design doc §11).
+// with breadcrumb and stats over a plain paginated card grid. Filtering,
+// sorting, and the grid/list view toggle were all removed by owner decision
+// (Oct 2026). The roster is draft demo data (design doc §11).
 export default async function ExpertsPage({
   params,
 }: PageProps<"/[locale]/team">) {
@@ -47,57 +46,37 @@ export default async function ExpertsPage({
 
   return (
     <PageShell content={content} locale={locale}>
-      <section className="bg-hero text-hero-foreground">
-        <div className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-15 2xl:max-w-[120rem]">
-          <nav aria-label={experts.breadcrumbLabel}>
-            <ol className="flex flex-wrap items-center gap-1.5 text-sm text-hero-muted">
-              <li>
-                <Link
-                  href={`/${locale}`}
-                  transitionTypes={["back"]}
-                  className="rounded-sm transition-colors hover:text-hero-foreground focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
-                >
-                  {experts.breadcrumbHome}
-                </Link>
-              </li>
-              <li aria-hidden="true">
-                <ChevronRight className="size-3.5" />
-              </li>
-              <li aria-current="page" className="text-hero-foreground">
-                {experts.title}
-              </li>
-            </ol>
-          </nav>
-
-          <h1 className="motion-rise mt-5 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
-            {experts.title}
-          </h1>
-          <p className="motion-rise mt-4 max-w-2xl text-base leading-relaxed text-hero-muted sm:text-lg [--motion-delay:80ms]">
-            {experts.description}
-          </p>
-
-          <dl className="motion-rise mt-10 grid max-w-3xl grid-cols-1 gap-6 border-t border-hero-border pt-6 sm:grid-cols-3 [--motion-delay:160ms]">
-            {experts.stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col">
-                <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-hero-muted uppercase">
-                  {stat.label}
-                </dt>
-                <dd className="order-1 font-display text-3xl leading-none text-hero-foreground sm:text-4xl">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-            <div className="flex flex-col">
-              <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-hero-muted uppercase">
-                {experts.rosterStatLabel}
+      <PageHero
+        breadcrumbLabel={experts.breadcrumbLabel}
+        crumbs={[
+          { label: experts.breadcrumbHome, href: `/${locale}` },
+          { label: experts.title },
+        ]}
+        title={experts.title}
+        description={experts.description}
+        image="/images/heroes/team.jpg"
+      >
+        <dl className="motion-rise mt-10 grid max-w-3xl grid-cols-1 gap-6 border-t border-hero-border pt-6 sm:grid-cols-3 [--motion-delay:160ms]">
+          {experts.stats.map((stat) => (
+            <div key={stat.label} className="flex flex-col">
+              <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-hero-foreground/80 uppercase">
+                {stat.label}
               </dt>
               <dd className="order-1 font-display text-3xl leading-none text-hero-foreground sm:text-4xl">
-                {team.items.length}
+                {stat.value}
               </dd>
             </div>
-          </dl>
-        </div>
-      </section>
+          ))}
+          <div className="flex flex-col">
+            <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-hero-foreground/80 uppercase">
+              {experts.rosterStatLabel}
+            </dt>
+            <dd className="order-1 font-display text-3xl leading-none text-hero-foreground sm:text-4xl">
+              {team.items.length}
+            </dd>
+          </div>
+        </dl>
+      </PageHero>
 
       <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
         <ExpertsDirectory

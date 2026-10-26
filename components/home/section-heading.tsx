@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type SectionHeadingProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   action?: ReactNode;
@@ -24,10 +24,17 @@ export function SectionHeading({
       )}
     >
       <div className="max-w-2xl">
-        <p className="text-xs font-medium tracking-[0.18em] text-primary uppercase">
-          {eyebrow}
-        </p>
-        <h2 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
+        {eyebrow ? (
+          <p className="text-xs font-medium tracking-[0.18em] text-primary uppercase">
+            {eyebrow}
+          </p>
+        ) : null}
+        <h2
+          className={cn(
+            "font-display text-3xl leading-tight sm:text-4xl",
+            eyebrow && "mt-3",
+          )}
+        >
           {title}
         </h2>
         {description ? (

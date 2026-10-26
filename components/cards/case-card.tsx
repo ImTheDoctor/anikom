@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ActionLink } from "@/components/action-link";
+import Link from "next/link";
 import type { HomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
 
@@ -11,9 +11,14 @@ type CaseCardProps = {
   actionLabel: string;
 };
 
+// Same interaction language as the team/expert cards: one stretched link
+// covers the card, the image zooms inside its frame and the serif title
+// draws a --primary underline on hover; the visible per-card action link is
+// gone and the accessible link name comes from the sr-only span
+// (cases.cardAction renders nowhere visible).
 export function CaseCard({ item, locale, actionLabel }: CaseCardProps) {
   return (
-    <li className="group flex min-w-0 flex-col">
+    <li className="group relative flex min-w-0 flex-col">
       <div className="relative aspect-[4/3] w-full overflow-hidden border border-border">
         <Image
           src={`/images/cases/${item.slug}.jpg`}
@@ -30,11 +35,15 @@ export function CaseCard({ item, locale, actionLabel }: CaseCardProps) {
         {item.title}
       </h3>
       <p className="mt-1 text-xs text-muted-foreground">{item.date}</p>
-      <div className="mt-auto pt-4">
-        <ActionLink href={`/${locale}/cases/${item.slug}`} className="text-xs">
-          {actionLabel}
-        </ActionLink>
-      </div>
+      <Link
+        href={`/${locale}/cases/${item.slug}`}
+        transitionTypes={["forward"]}
+        className="absolute inset-0 focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+      >
+        <span className="sr-only">
+          {actionLabel} — {item.title}
+        </span>
+      </Link>
     </li>
   );
 }

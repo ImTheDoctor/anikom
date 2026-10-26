@@ -20,11 +20,10 @@ export function TeamSection({ content, locale }: TeamSectionProps) {
   return (
     <section
       id="team"
-      className="scroll-mt-16 border-t border-border py-16 sm:scroll-mt-20 md:py-20"
+      className="scroll-mt-16 py-16 sm:scroll-mt-20 md:py-20"
     >
       <Reveal>
         <SectionHeading
-          eyebrow={team.eyebrow}
           title={team.title}
           action={
             <ActionLink href={localizeHref(locale, "/team")}>

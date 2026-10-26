@@ -110,7 +110,8 @@
   --hero-accent: oklch(0.78 0.09 342);
   --hero-border: oklch(1 0 0 / 12%);
 
-  /* Deep burgundy surface for the footer, featured and contact bands. Reuses
+  /* Deep burgundy surface for the footer, the process stepper and testimonial
+     carousel panels, the partner marquee panel, and the contact bands. Reuses
      the theme-independent hero text tokens above. Owner-set exact value:
      #501C3F (Oct 2026). */
   --brand-deep: oklch(0.3189 0.0906 342.34);
@@ -214,13 +215,16 @@
     transform: none;
   }
 
-  /* Stagger variant: the children (not the container) rise in, 60ms apart. */
+  /* Stagger variant: the children (not the container) rise in, 60ms apart.
+     Child hiding is gated on [data-reveal], which components/reveal.tsx sets
+     after hydration — the route-arrival fast path sets it to "shown", so
+     those instances (like SSR and no-JS markup) render plainly visible. */
   [data-reveal].reveal-stagger {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  .reveal-stagger > * {
+  [data-reveal].reveal-stagger > * {
     opacity: 0;
     transform: translateY(0.5rem);
     transition:
@@ -246,6 +250,52 @@
   }
   [data-reveal="shown"].reveal-stagger > :nth-child(n + 6) {
     transition-delay: 300ms;
+  }
+}
+
+/* Partner marquee (docs/design-system.md §7 "Motion"): the sector strip
+   flows continuously — the owner asked for non-stepping motion — translating
+   by exactly one copy of the list (−50%) per loop over a doubled track, so
+   the flow is seamless. Compositor-only transform; pauses on hover and
+   focus-within; does not run at all under prefers-reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee:hover,
+  .animate-marquee:focus-within {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Case-directory filter cascade (§7 "Motion"): re-keying the /cases grid on a
+   filter change remounts the cards and replays this one-shot rise; the delay
+   steps mirror .reveal-stagger. Inert under prefers-reduced-motion and the
+   cards stay in the DOM (server-rendered) without it. */
+@media (prefers-reduced-motion: no-preference) {
+  .filter-cascade > li {
+    animation: rise-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .filter-cascade > li:nth-child(2) {
+    animation-delay: 60ms;
+  }
+  .filter-cascade > li:nth-child(3) {
+    animation-delay: 120ms;
+  }
+  .filter-cascade > li:nth-child(4) {
+    animation-delay: 180ms;
+  }
+  .filter-cascade > li:nth-child(5) {
+    animation-delay: 240ms;
+  }
+  .filter-cascade > li:nth-child(n + 6) {
+    animation-delay: 300ms;
   }
 }
 

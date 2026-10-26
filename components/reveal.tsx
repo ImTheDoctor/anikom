@@ -46,9 +46,16 @@ export function Reveal({
       });
     }
 
-    // Mirrors the observer's viewport (rootMargin -12%, threshold 0.1).
+    // Mirrors the observer's viewport (rootMargin -12%, threshold 0).
     const aboveFold = el.getBoundingClientRect().top < window.innerHeight * 0.88;
-    if (routeArrival && aboveFold) return;
+    // Set "shown" explicitly rather than leaving no attribute: a browser (or
+    // dev-server cache) can still hold a stylesheet where bare
+    // .reveal-stagger > * hides children unconditionally — the attribute
+    // unhides them under every stylesheet version.
+    if (routeArrival && aboveFold) {
+      el.setAttribute("data-reveal", "shown");
+      return;
+    }
 
     el.setAttribute("data-reveal", "hidden");
     const observer = new IntersectionObserver(
@@ -58,7 +65,9 @@ export function Reveal({
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.1 },
+      // threshold 0, not 0.1: the catalog grid is ~1600px tall, so a 10%
+      // container threshold would keep a partially visible top row hidden.
+      { rootMargin: "0px 0px -12% 0px", threshold: 0 },
     );
     observer.observe(el);
     return () => observer.disconnect();

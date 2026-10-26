@@ -20,7 +20,9 @@ export function localizeHref(locale: Locale, href: string): string {
 // Keep this list in sync as pages are added.
 const localizedRoutePatterns = [
   "/",
+  "/about",
   "/services",
+  "/services/:slug",
   "/contact",
   "/cases",
   "/cases/:slug",
@@ -28,6 +30,8 @@ const localizedRoutePatterns = [
   "/team/:slug",
   "/news",
   "/news/:slug",
+  "/login",
+  "/register",
 ];
 
 function matchesRoutePattern(pathname: string, pattern: string): boolean {

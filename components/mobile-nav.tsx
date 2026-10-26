@@ -42,7 +42,7 @@ export function MobileNav({
   }, [open]);
 
   return (
-    <div className="flex items-center min-[1150px]:hidden">
+    <div className="flex items-center min-[1200px]:hidden">
       <button
         ref={toggleRef}
         type="button"

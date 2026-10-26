@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Check, ChevronDown, Globe } from "lucide-react";
+import { Check, Globe } from "lucide-react";
 import type { LanguageContent } from "@/lib/home-content";
 import {
   getLocalizedPathname,
@@ -63,16 +63,9 @@ export function LanguageSwitcher({
         aria-controls={panelId}
         aria-label={`${language.triggerLabel} (${language.names[locale]})`}
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-11 items-center gap-1 rounded-md px-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+        className="inline-flex size-11 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none aria-expanded:text-foreground"
       >
-        {locale.toUpperCase()}
-        <ChevronDown
-          className={cn(
-            "size-4 transition-transform",
-            open && "rotate-180",
-          )}
-          aria-hidden="true"
-        />
+        <Globe className="size-5" strokeWidth={1.75} aria-hidden="true" />
       </button>
 
       {open ? (

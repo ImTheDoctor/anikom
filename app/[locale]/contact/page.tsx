@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactCta } from "@/components/home/contact-cta";
+import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl, type Locale } from "@/lib/i18n";
@@ -58,46 +57,18 @@ export default async function ContactPage({
 
   return (
     <PageShell content={content} locale={localeSafe}>
-      {/* Hero band with the office photo as a faint texture (ContactCta
-          treatment), matching the /team catalog hero. */}
-      <section className="relative isolate overflow-hidden bg-hero text-hero-foreground">
-        <Image
-          src="/hero.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="-z-10 object-cover object-[70%_0%] opacity-15"
-        />
-        <div className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-15 2xl:max-w-[120rem]">
-          <nav aria-label={experts.breadcrumbLabel}>
-            <ol className="flex flex-wrap items-center gap-1.5 text-sm text-hero-muted">
-              <li>
-                <Link
-                  href={`/${localeSafe}`}
-                  transitionTypes={["back"]}
-                  className="rounded-sm transition-colors hover:text-hero-foreground focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
-                >
-                  {experts.breadcrumbHome}
-                </Link>
-              </li>
-              <li aria-hidden="true">
-                <ChevronRight className="size-3.5" />
-              </li>
-              <li aria-current="page" className="text-hero-foreground">
-                {contactPage.title}
-              </li>
-            </ol>
-          </nav>
-
-          <h1 className="motion-rise mt-5 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
-            {contactPage.title}
-          </h1>
-          <p className="motion-rise mt-4 max-w-2xl text-base leading-relaxed text-hero-muted sm:text-lg [--motion-delay:80ms]">
-            {contactPage.description}
-          </p>
-        </div>
-      </section>
+      {/* Hero band over the meeting-room photo (same treatment as the other
+          hero bands). */}
+      <PageHero
+        breadcrumbLabel={experts.breadcrumbLabel}
+        crumbs={[
+          { label: experts.breadcrumbHome, href: `/${localeSafe}` },
+          { label: contactPage.title },
+        ]}
+        title={contactPage.title}
+        description={contactPage.description}
+        image="/images/heroes/contact.jpg"
+      />
 
       {/* Contact details: one hairline grid, not floating cards. */}
       <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">

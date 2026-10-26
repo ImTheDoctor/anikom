@@ -22,16 +22,17 @@ export function HeroSection({ content, locale }: HeroSectionProps) {
       className="relative isolate overflow-hidden bg-hero text-hero-foreground"
     >
       <Image
-        src="/hero.png"
-        alt=""
+        src="/hero.webp"
+        alt="hero"
         fill
-        priority
+        preload
         sizes="100vw"
-        className="-z-10 object-cover object-[70%_0%]"
+        className="z-0 object-cover object-[70%_0%]"
       />
+
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-hero/75 md:bg-hero/60 lg:bg-hero/35"
+        className="absolute inset-0 z-0 bg-hero/75 md:bg-hero/60 lg:bg-hero/35"
       />
 
       <div className="mx-auto flex min-h-[calc(100svh-4rem)] w-full flex-col px-4 pt-14 pb-16 sm:min-h-[calc(100svh-5rem)] sm:px-6 sm:pt-16 md:pt-20 md:pb-24 lg:px-15 lg:pt-24 lg:pb-28 2xl:max-w-[120rem]">

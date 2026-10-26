@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { NewsCard } from "@/components/cards/news-card";
-import { ListPage } from "@/components/list-page";
-import { getHomeContent } from "@/lib/home-content";
+import { PageHero } from "@/components/page-hero";
+import { PageShell } from "@/components/page-shell";
+import { NewsFeedDirectory } from "@/components/news/feed-directory";
+import { NewsletterBanner } from "@/components/news/newsletter-banner";
+import { getHomeContent, newsFeedUi } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
 
 export async function generateMetadata({
@@ -37,24 +39,69 @@ export default async function NewsPage({
 
   const content = getHomeContent(locale);
 
+  // Card payload for the client boundary: the detail-page `body` paragraphs
+  // stay server-side.
+  const feedItems = content.news.items.map(
+    ({
+      slug,
+      categorySlug,
+      dateISO,
+      date,
+      title,
+      excerpt,
+      imageLabel,
+      authorSlug,
+      readMinutes,
+    }) => ({
+      slug,
+      categorySlug,
+      dateISO,
+      date,
+      title,
+      excerpt,
+      imageLabel,
+      authorSlug,
+      readMinutes,
+    }),
+  );
+
+  // Sidebar expert options = the roster members who actually author items.
+  const authorSlugs = [...new Set(feedItems.map((item) => item.authorSlug))];
+  const feedAuthors = content.team.items
+    .filter((expert) => authorSlugs.includes(expert.slug))
+    .map((expert) => ({ slug: expert.slug, name: expert.name }));
+
+  // The subscribe banner targets the office address from footer.contacts —
+  // the single source of truth for contact details.
+  const emailEntry = content.footer.contacts.find((entry) =>
+    entry.href?.startsWith("mailto:"),
+  );
+  const officeEmail = emailEntry?.href?.replace("mailto:", "") ?? "";
+
   return (
-    <ListPage
-      content={content}
-      locale={locale}
-      eyebrow={content.news.eyebrow}
-      title={content.news.title}
-      description={content.news.description}
-    >
-      <ul className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {content.news.items.map((item) => (
-          <NewsCard
-            key={item.slug}
-            item={item}
-            locale={locale}
-            actionLabel={content.news.cardAction}
-          />
-        ))}
-      </ul>
-    </ListPage>
+    <PageShell content={content} locale={locale}>
+      <PageHero
+        breadcrumbLabel={content.experts.breadcrumbLabel}
+        crumbs={[
+          { label: content.experts.breadcrumbHome, href: `/${locale}` },
+          { label: content.news.title },
+        ]}
+        title={content.news.title}
+        description={content.news.description}
+        image="/images/heroes/news.jpg"
+        imageClassName="-z-10 object-cover object-[50%_40%]"
+        overlayClassName="bg-hero/85 md:bg-hero/75 lg:bg-hero/70"
+      />
+      <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
+        <NewsFeedDirectory
+          items={feedItems}
+          authors={feedAuthors}
+          categories={content.news.categories}
+          ui={newsFeedUi(content.news)}
+          locale={locale}
+        />
+      </section>
+      <NewsletterBanner ui={content.news.newsletter} officeEmail={officeEmail} />
+    </PageShell>
   );
 }

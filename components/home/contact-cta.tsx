@@ -28,8 +28,11 @@ export function ContactCta({ content, locale }: ContactCtaProps) {
     >
       <div className="mx-auto w-full px-4 py-14 sm:px-6 md:py-20 lg:px-15 2xl:max-w-[120rem]">
         <div className="relative isolate overflow-hidden rounded-2xl bg-brand-deep text-hero-foreground">
+          {/* Dedicated asset — not /hero.png: next's dev LCP tracker keys by
+              resolved src, so a lazy next/image sharing the hero's src makes
+              the eager hero image report a false LCP warning. */}
           <Image
-            src="/hero.png"
+            src="/images/office-texture.jpg"
             alt=""
             fill
             sizes="(max-width: 1024px) 100vw, 90vw"

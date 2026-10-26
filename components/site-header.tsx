@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogIn } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { MobileNav } from "@/components/mobile-nav";
@@ -29,7 +30,7 @@ export function SiteHeader({ content, locale }: SiteHeaderProps) {
 
         <nav
           aria-label={content.navigation.primaryLabel}
-          className="hidden items-center gap-2 min-[1150px]:flex xl:gap-4"
+          className="hidden items-center gap-2 min-[1200px]:flex xl:gap-4"
         >
           {content.navigation.primary.map((item) => (
             <Link
@@ -44,7 +45,7 @@ export function SiteHeader({ content, locale }: SiteHeaderProps) {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <div className="hidden items-center gap-1 min-[1150px]:flex">
+          <div className="hidden items-center gap-1 min-[1200px]:flex">
             <LanguageSwitcher
               locale={locale}
               language={content.header.language}
@@ -52,11 +53,12 @@ export function SiteHeader({ content, locale }: SiteHeaderProps) {
           </div>
 
           <Link
-            href={localizeHref(locale, content.header.contactCta.href)}
+            href={localizeHref(locale, content.header.authCta.href)}
             transitionTypes={["forward"]}
             className={cn(buttonVariants({ size: "lg" }), "min-h-11 px-4")}
           >
-            {content.header.contactCta.label}
+            <LogIn strokeWidth={1.75} aria-hidden="true" />
+            {content.header.authCta.label}
           </Link>
           <MobileNav
             locale={locale}

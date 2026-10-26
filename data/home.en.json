@@ -13,24 +13,24 @@
     "mobileLabel": "Mobile primary",
     "primary": [
       {
-        "label": "Services",
+        "label": "Examinations",
         "href": "/services"
       },
       {
-        "label": "Process",
-        "href": "#process"
+        "label": "Cases",
+        "href": "/cases"
       },
       {
-        "label": "Clients",
-        "href": "#clients"
+        "label": "Blog",
+        "href": "/news"
       },
       {
         "label": "Experts",
         "href": "/team"
       },
       {
-        "label": "News",
-        "href": "#news"
+        "label": "About us",
+        "href": "/about"
       },
       {
         "label": "Contact",
@@ -39,7 +39,7 @@
     ],
     "sections": [
       {
-        "label": "Services",
+        "label": "Examinations",
         "href": "/services"
       },
       {
@@ -47,20 +47,24 @@
         "href": "#process"
       },
       {
-        "label": "Clients",
-        "href": "#clients"
+        "label": "Cases",
+        "href": "/cases"
+      },
+      {
+        "label": "Blog",
+        "href": "/news"
       },
       {
         "label": "Experts",
         "href": "/team"
       },
       {
-        "label": "Testimonials",
-        "href": "#testimonials"
+        "label": "About us",
+        "href": "/about"
       },
       {
-        "label": "News",
-        "href": "#news"
+        "label": "Testimonials",
+        "href": "#testimonials"
       },
       {
         "label": "Partners",
@@ -83,9 +87,9 @@
         "ru": "Русский"
       }
     },
-    "contactCta": {
-      "label": "Contact",
-      "href": "#contact"
+    "authCta": {
+      "label": "Sign in",
+      "href": "/login"
     }
   },
   "mobileNav": {
@@ -96,7 +100,7 @@
     "title": "Objective expertise for complex situations.",
     "description": "The ANIKOM center carries out judicial and extrajudicial examinations, property valuation, and measurement works. We help clients clarify complex situations with professional and well-substantiated conclusions.",
     "primaryCta": {
-      "label": "Explore services",
+      "label": "Explore examinations",
       "href": "#services"
     },
     "secondaryCta": {
@@ -127,8 +131,9 @@
     ]
   },
   "services": {
-    "heading": "Service areas",
-    "action": "View all services",
+    "heading": "Examinations",
+    "action": "View all examinations",
+    "metaDescription": "The center's expertise directions: judicial and construction-technical examinations, property and damage valuation, auto-technical, economic, and document research, geodesy and cadastre.",
     "items": [
       {
         "slug": "judicial-examinations",
@@ -169,6 +174,1263 @@
         "slug": "damage-assessment",
         "title": "Damage assessment",
         "description": "Determining the extent of caused damage and other case-specific research."
+      }
+    ]
+  },
+  "serviceCatalog": {
+    "judicial-examinations": {
+      "metaTitle": "Judicial examinations — types under the classifier",
+      "metaDescription": "Trace, ballistic, explosives, phototechnical and portrait, soil and biological examinations under codes 05–08 and 11 of the classifier: types, objects, and research tasks.",
+      "intro": [
+        "This direction brings together the classical forensic examinations under codes 05, 06, 07, 08, and 11 of the national classifier of judicial examination types. They are carried out within court proceedings and extrajudicially — at the request of individuals, advocates, and organizations.",
+        "The subjects of research are items of physical evidence: traces, weapons and ammunition, photographic materials, and objects of soil, plant, and animal origin. The study ends with a substantiated conclusion that can be presented in court."
+      ],
+      "codes": [
+        "05",
+        "06",
+        "07",
+        "08",
+        "11"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "05",
+          "title": "Phototechnical and portrait examination",
+          "subtypes": [
+            {
+              "code": "05-01",
+              "title": "Phototechnical examination of photographs"
+            },
+            {
+              "code": "05-02",
+              "title": "Portrait identification of a person from photographs"
+            }
+          ]
+        },
+        {
+          "code": "06",
+          "title": "Trace examination",
+          "subtypes": [
+            {
+              "code": "06-01",
+              "title": "Traces left by a person"
+            },
+            {
+              "code": "06-02",
+              "title": "Traces of objects and tools"
+            },
+            {
+              "code": "06-03",
+              "title": "Traces left by vehicles"
+            },
+            {
+              "code": "06-04",
+              "title": "Cold weapons"
+            },
+            {
+              "title": "Restoration of previous stamped markings on vehicles, weapons, objects, and equipment"
+            }
+          ]
+        },
+        {
+          "code": "07",
+          "title": "Ballistic examination",
+          "subtypes": [
+            {
+              "code": "07-01",
+              "title": "Firearms and ammunition"
+            },
+            {
+              "code": "07-02",
+              "title": "Firearm injuries and traces, circumstances of the shot"
+            },
+            {
+              "code": "07-03",
+              "title": "Shot traces and products (chemical analysis)"
+            }
+          ]
+        },
+        {
+          "code": "08",
+          "title": "Explosives examination",
+          "subtypes": [
+            {
+              "code": "08-01",
+              "title": "Explosive substances, explosion products, and traces"
+            },
+            {
+              "code": "08-02",
+              "title": "Ammunition, explosive devices, and explosion traces"
+            }
+          ]
+        },
+        {
+          "code": "11",
+          "title": "Soil and biological examination",
+          "subtypes": [
+            {
+              "code": "11-01",
+              "title": "Objects of soil origin"
+            },
+            {
+              "code": "11-02",
+              "title": "Objects of plant origin (without dendrochronology)"
+            },
+            {
+              "code": "11-03",
+              "title": "Objects of plant origin (with dendrochronology)"
+            },
+            {
+              "code": "11-04",
+              "title": "Objects of animal origin"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Physical evidence and traces at the scene",
+        "Firearms, cold weapons, and ammunition",
+        "Photographic materials and images of a person",
+        "Objects of soil, plant, and animal origin",
+        "Case materials and objects submitted for examination"
+      ],
+      "tasksHeading": "Examination tasks",
+      "taskCategories": [
+        {
+          "title": "Classification tasks",
+          "items": [
+            "Determining the group membership and type of objects",
+            "Determining the type of weapon and ammunition",
+            "Whether an item qualifies as a cold weapon"
+          ]
+        },
+        {
+          "title": "Diagnostic tasks",
+          "items": [
+            "Determining the mechanism and conditions of trace formation",
+            "Determining shot circumstances: direction and distance",
+            "Detecting signs of image alteration and editing",
+            "Determining the condition and origin of objects"
+          ]
+        },
+        {
+          "title": "Identification tasks",
+          "items": [
+            "Identifying a person from traces and images",
+            "Identifying a firearm from a bullet or cartridge case",
+            "Identifying an instrument from its traces",
+            "Establishing a whole from its parts"
+          ]
+        }
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "construction-technical-examinations": {
+      "metaTitle": "Construction-technical examinations — types under the classifier",
+      "metaDescription": "Construction-technical (13), fire-technical (12), and electrotechnical (17) examinations: building condition, quality of works, causes of fires and electrical failures.",
+      "intro": [
+        "This direction covers the study of construction objects and engineering systems under codes 13, 12, and 17 of the classifier. The examinations are carried out in judicial and extrajudicial proceedings — in disputes about work quality, structural defects, fires, and electrical accidents.",
+        "The research rests on the objects themselves and on documentation: design, as-built, and operating records."
+      ],
+      "codes": [
+        "13",
+        "12",
+        "17"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "13",
+          "title": "Construction-technical examination",
+          "subtypes": [
+            {
+              "code": "13-01",
+              "title": "Buildings, structures, linear engineering structures, and other construction objects"
+            },
+            {
+              "code": "13-02",
+              "title": "Urban development documents"
+            }
+          ]
+        },
+        {
+          "code": "12",
+          "title": "Fire-technical examination",
+          "subtypes": [
+            {
+              "code": "12-01",
+              "title": "Objects after a fire: seat and cause of ignition"
+            },
+            {
+              "code": "12-02",
+              "title": "Land plots affected by fire"
+            },
+            {
+              "code": "12-03",
+              "title": "Movable property affected by fire"
+            },
+            {
+              "code": "12-04",
+              "title": "Fire-hazard properties of materials and equipment"
+            },
+            {
+              "code": "12-05",
+              "title": "Compliance with fire safety norms"
+            }
+          ]
+        },
+        {
+          "code": "17",
+          "title": "Electrotechnical examination",
+          "subtypes": [
+            {
+              "code": "17-01",
+              "title": "Household radio-electronic, electrotechnical, and electromechanical devices"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Buildings, structures, and premises",
+        "Structural elements and materials",
+        "Objects and property affected by fire",
+        "Household electrical devices and equipment",
+        "Design, as-built, and operating documentation"
+      ],
+      "tasksHeading": "Examination tasks",
+      "taskCategories": [
+        {
+          "title": "Diagnostic tasks",
+          "items": [
+            "Determining the technical condition of structures and buildings",
+            "Establishing the causes of defects and damage",
+            "Locating the seat and cause of a fire",
+            "Establishing the causes of electrical failure modes"
+          ]
+        },
+        {
+          "title": "Classification tasks",
+          "items": [
+            "Determining compliance of works with design and norms",
+            "Determining the actual scope and quality of completed works",
+            "Determining the fire-hazard properties of materials and equipment"
+          ]
+        },
+        {
+          "title": "Situational tasks",
+          "items": [
+            "Establishing causal links between violations and consequences",
+            "Determining whether a building or structure can remain in use",
+            "Determining whether defects could have been detected during inspection and acceptance"
+          ]
+        }
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "property-valuation": {
+      "metaTitle": "Property valuation — commodity examination (code 16)",
+      "metaDescription": "Commodity examination and property valuation under code 16 of the classifier: food and non-food goods and services, vehicles and agricultural machinery, industrial complexes, real estate, construction materials and works.",
+      "intro": [
+        "The direction covers commodity examination and property valuation under code 16 of the classifier. The studies determine the properties, quality, and value of goods and services, vehicles and agricultural machinery, industrial complexes, real estate, construction materials and works.",
+        "Valuation is performed for court cases, transactions, reporting, and other purposes defined by law and contract."
+      ],
+      "codes": [
+        "16"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "16",
+          "title": "Commodity examination",
+          "subtypes": [
+            {
+              "code": "16-01",
+              "title": "Food and non-food goods, services, and their documents, incl. value indicators"
+            },
+            {
+              "code": "16-02",
+              "title": "Vehicles and agricultural machinery, incl. value indicators"
+            },
+            {
+              "code": "16-03",
+              "title": "Industrial and other commodity complexes with complex structural features"
+            },
+            {
+              "code": "16-05",
+              "title": "Real estate, incl. value indicators"
+            },
+            {
+              "code": "16-06",
+              "title": "Construction materials and works, incl. value indicators"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Food and non-food goods and services",
+        "Vehicles and agricultural machinery",
+        "Industrial and commodity complexes",
+        "Real estate",
+        "Construction materials and works"
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "auto-technical-examinations": {
+      "metaTitle": "Auto-technical examinations — types under the classifier",
+      "metaDescription": "Auto-technical examination under code 14: accident circumstances, vehicle condition, transport-trace studies, road conditions, and restoration of markings.",
+      "intro": [
+        "Auto-technical examination under code 14 of the classifier studies the circumstances of road traffic accidents, the technical condition of vehicles, interaction traces, and road conditions.",
+        "The direction is closely related to the transport-trace study of vehicle traces (code 06-03) and the restoration of destroyed marking designations."
+      ],
+      "codes": [
+        "14",
+        "06-03"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "14",
+          "title": "Auto-technical examination",
+          "subtypes": [
+            {
+              "code": "14-01",
+              "title": "Road traffic accident circumstances"
+            },
+            {
+              "code": "14-02",
+              "title": "Technical condition of vehicles"
+            },
+            {
+              "code": "14-03",
+              "title": "Transport-trace examination"
+            },
+            {
+              "code": "14-04",
+              "title": "Road conditions"
+            }
+          ]
+        },
+        {
+          "title": "Related examinations",
+          "subtypes": [
+            {
+              "code": "06-03",
+              "title": "Study of vehicle traces"
+            },
+            {
+              "title": "Restoration of destroyed vehicle marking designations"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Vehicles and their components",
+        "The scene of a road traffic accident",
+        "Traces of collision, contact, and braking",
+        "Road environment and driving conditions",
+        "Vehicle marking designations"
+      ],
+      "tasksHeading": "Examination tasks",
+      "taskCategories": [
+        {
+          "title": "Situational tasks",
+          "items": [
+            "Establishing the mechanism and circumstances of an accident",
+            "Determining vehicle speed and braking distance",
+            "Determining the moment of danger in traffic",
+            "Establishing whether the accident could have been avoided"
+          ]
+        },
+        {
+          "title": "Diagnostic tasks",
+          "items": [
+            "Determining the technical condition of a vehicle",
+            "Establishing the causes of failures and defects",
+            "Establishing a causal link between a defect and an accident",
+            "Determining whether the defect could have been detected before the accident"
+          ]
+        },
+        {
+          "title": "Identification tasks",
+          "items": [
+            "Establishing contact interaction between vehicles",
+            "Identifying a vehicle and its parts from traces",
+            "Establishing a whole from its parts"
+          ]
+        }
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "economic-accounting-examinations": {
+      "metaTitle": "Economic and accounting examinations (code 15)",
+      "metaDescription": "Economic examination under code 15 of the classifier: forensic accounting and financial-economic studies of documents, calculations, and financial operations.",
+      "intro": [
+        "Economic examination under code 15 of the classifier covers forensic accounting and financial-economic studies: the analysis of accounting documents, calculations, financial operations, and an organization's business activity.",
+        "The examinations are appointed in economic disputes and cases related to financial and business activity, and are also carried out at the request of organizations."
+      ],
+      "codes": [
+        "15"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "15",
+          "title": "Economic examination",
+          "subtypes": [
+            {
+              "code": "15-01",
+              "title": "Forensic accounting examination"
+            },
+            {
+              "code": "15-02",
+              "title": "Financial-economic examination"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Primary accounting documents",
+        "Accounting records and financial statements",
+        "Contracts and settlement documents",
+        "Data on financial operations and cash flows",
+        "Inventory and inspection materials"
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "document-research": {
+      "metaTitle": "Document research — examinations under codes 01, 03, 04, and 20",
+      "metaDescription": "Handwriting (01), document (03), video and audio recording (04), and computer-technical (20) examinations: manuscripts, signatures, seals, recordings, digital devices, and data.",
+      "intro": [
+        "The direction unites the study of documents and recordings under codes 01, 03, 04, and 20 of the classifier: handwriting, document, video and audio recording, and computer-technical examinations.",
+        "The subjects are manuscripts and signatures, methods of document production and seal impressions, banknotes, audiovisual materials, computers, mobile devices, and digital data."
+      ],
+      "codes": [
+        "01",
+        "03",
+        "04",
+        "20"
+      ],
+      "typesHeading": "Examination types and subtypes",
+      "types": [
+        {
+          "code": "01",
+          "title": "Handwriting examination",
+          "subtypes": [
+            {
+              "code": "01-01",
+              "title": "Handwritten texts, entries, and digital entries"
+            },
+            {
+              "code": "01-02",
+              "title": "Signatures"
+            }
+          ]
+        },
+        {
+          "code": "03",
+          "title": "Document examination",
+          "subtypes": [
+            {
+              "code": "03-01",
+              "title": "Method and means of document production and document details"
+            },
+            {
+              "code": "03-05",
+              "title": "Other objects"
+            }
+          ]
+        },
+        {
+          "code": "04",
+          "title": "Video and audio recording examination",
+          "subtypes": [
+            {
+              "code": "04-01",
+              "title": "Voice and sounding speech: transcription of recordings"
+            },
+            {
+              "code": "04-02",
+              "title": "Acoustic environment, conditions, means, and traces of recordings"
+            },
+            {
+              "code": "04-03",
+              "title": "Voice and sounding speech: identification of a person"
+            },
+            {
+              "code": "04-04",
+              "title": "Conditions, means, and traces of video recordings"
+            }
+          ]
+        },
+        {
+          "code": "20",
+          "title": "Computer-technical examination",
+          "subtypes": [
+            {
+              "code": "20-01",
+              "title": "Computer networks"
+            },
+            {
+              "code": "20-02",
+              "title": "Software"
+            },
+            {
+              "code": "20-03",
+              "title": "Information on computer hard drives, including deleted data"
+            },
+            {
+              "code": "20-04",
+              "title": "Information on digital video recorder drives, including deleted data"
+            },
+            {
+              "code": "20-05",
+              "title": "Information in the memory of mobile phones and tablets, including deleted data"
+            },
+            {
+              "code": "20-06",
+              "title": "Information on other digital storage media, including deleted data"
+            },
+            {
+              "code": "20-07",
+              "title": "Computer equipment: operability and intended use"
+            }
+          ]
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Handwritten texts, entries, and signatures",
+        "Printed and blank documents, seal and stamp impressions",
+        "Banknotes and securities",
+        "Video and audio recordings, storage media",
+        "Computers, mobile devices, and digital data"
+      ],
+      "tasksHeading": "Examination tasks",
+      "taskCategories": [
+        {
+          "title": "Identification tasks",
+          "items": [
+            "Establishing the author of a manuscript or signature",
+            "Identifying a person by voice and speech",
+            "Identifying the device used to produce a document or seal",
+            "Establishing a whole from its parts"
+          ]
+        },
+        {
+          "title": "Diagnostic tasks",
+          "items": [
+            "Establishing the fact and method of document alteration",
+            "Detecting signs of editing in a recording",
+            "Establishing the condition, conditions, and sequence of recording",
+            "Establishing the age of a document"
+          ]
+        },
+        {
+          "title": "Classification tasks",
+          "items": [
+            "Determining the type and method of document production",
+            "Determining the group membership of writing materials",
+            "Classifying technical devices and storage media"
+          ]
+        }
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "geodetic-cadastral-works": {
+      "metaTitle": "Geodetic and cadastral works",
+      "metaDescription": "Topographic and geodetic surveys, staking out plot boundaries on the ground, cadastral registration, and land-management examination in land disputes.",
+      "intro": [
+        "Geodetic and cadastral works are carried out outside the classifier of judicial examination types. They cover terrain surveys, staking out land plot boundaries on the ground, preparation of documents for cadastral registration, and studies in land disputes.",
+        "Land dispute studies border on soil examination (code 11-01) and real estate valuation (code 16-05) and, where necessary, are carried out together with them."
+      ],
+      "codes": [],
+      "typesHeading": "Types of works",
+      "types": [
+        {
+          "title": "Topographic and geodetic surveys of land plots and territories"
+        },
+        {
+          "title": "Staking out land plot boundaries on the ground"
+        },
+        {
+          "title": "Cadastral registration and preparation of technical plans"
+        },
+        {
+          "title": "Land-management examination in land disputes"
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Land plots and their boundaries",
+        "Buildings, structures, and premises",
+        "Geodetic points and boundary marks",
+        "Topographic and cadastral materials",
+        "Title and land-management documents"
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    },
+    "damage-assessment": {
+      "metaTitle": "Damage assessment",
+      "metaDescription": "Determining the extent of damage from fire, flooding and utility failures, road accidents, construction defects, and property spoilage — with related examination types.",
+      "intro": [
+        "Damage assessment is a complex direction outside the classifier of judicial examination types. The extent of damage is determined from a study of the damaged property and a calculation of the cost of restoring it.",
+        "The methodological basis is provided by related examination types: fire-technical (12), construction-technical (13), auto-technical (14), materials science (09), and commodity (16) examinations."
+      ],
+      "codes": [],
+      "typesHeading": "Types by source of damage",
+      "types": [
+        {
+          "title": "Damage from fire"
+        },
+        {
+          "title": "Damage from flooding and failures of utility systems"
+        },
+        {
+          "title": "Damage after a road traffic accident"
+        },
+        {
+          "title": "Damage from construction defects"
+        },
+        {
+          "title": "Damage from property spoilage"
+        }
+      ],
+      "objectsHeading": "Objects of examination",
+      "objects": [
+        "Damaged buildings, premises, and finishes",
+        "Movable property, furniture, and household appliances",
+        "Vehicles",
+        "Engineering systems and equipment",
+        "Goods and other damaged property"
+      ],
+      "expertsHeading": "Experts of the direction",
+      "casesHeading": "Practice",
+      "otherHeading": "Other directions"
+    }
+  },
+  "serviceClassifier": {
+    "heading": "Examination types by classifier code",
+    "description": "The full list of examination types and subtypes under the national classifier (codes 01–20), plus directions without classifier codes. The list is for reference.",
+    "objectsHeading": "Objects of examination",
+    "tasksHeading": "Examination tasks",
+    "otherHeading": "Other directions",
+    "subtypesHeading": "Subtypes",
+    "directionLabel": "Direction",
+    "types": [
+      {
+        "code": "01",
+        "slug": "handwriting-examination",
+        "serviceSlug": "document-research",
+        "title": "Handwriting examination",
+        "description": "Identifying the executor of handwritten texts, entries, and signatures.",
+        "subtypes": [
+          {
+            "code": "01-01",
+            "title": "Handwritten texts, entries, and digital entries"
+          },
+          {
+            "code": "01-02",
+            "title": "Signatures"
+          }
+        ]
+      },
+      {
+        "code": "03",
+        "slug": "document-examination",
+        "serviceSlug": "document-research",
+        "title": "Document examination",
+        "description": "Document production methods, document details, and other objects of document examination.",
+        "subtypes": [
+          {
+            "code": "03-01",
+            "title": "Method and means of document production and document details"
+          },
+          {
+            "code": "03-05",
+            "title": "Other objects"
+          }
+        ]
+      },
+      {
+        "code": "04",
+        "slug": "video-audio-recording-examination",
+        "serviceSlug": "document-research",
+        "title": "Video and audio recording examination",
+        "description": "Study of voice, speech, video and audio recordings, and their recording conditions.",
+        "subtypes": [
+          {
+            "code": "04-01",
+            "title": "Voice and sounding speech: transcription of recordings"
+          },
+          {
+            "code": "04-02",
+            "title": "Acoustic environment, conditions, means, and traces of recordings"
+          },
+          {
+            "code": "04-03",
+            "title": "Voice and sounding speech: identification of a person"
+          },
+          {
+            "code": "04-04",
+            "title": "Conditions, means, and traces of video recordings"
+          }
+        ]
+      },
+      {
+        "code": "05",
+        "slug": "phototechnical-portrait-examination",
+        "serviceSlug": "judicial-examinations",
+        "title": "Phototechnical and portrait examination",
+        "description": "Phototechnical study of photographs and identification of a person from images.",
+        "subtypes": [
+          {
+            "code": "05-01",
+            "title": "Phototechnical examination of photographs"
+          },
+          {
+            "code": "05-02",
+            "title": "Portrait identification of a person from photographs"
+          }
+        ]
+      },
+      {
+        "code": "06",
+        "slug": "trace-examination",
+        "serviceSlug": "judicial-examinations",
+        "title": "Trace examination",
+        "description": "Human, tool, and vehicle traces, cold weapons, and marking designations.",
+        "subtypes": [
+          {
+            "code": "06-01",
+            "title": "Traces left by a person"
+          },
+          {
+            "code": "06-02",
+            "title": "Traces of objects and tools"
+          },
+          {
+            "code": "06-03",
+            "title": "Traces left by vehicles"
+          },
+          {
+            "code": "06-04",
+            "title": "Cold weapons"
+          },
+          {
+            "title": "Restoration of previous stamped markings on vehicles, weapons, objects, and equipment"
+          }
+        ]
+      },
+      {
+        "code": "07",
+        "slug": "ballistic-examination",
+        "serviceSlug": "judicial-examinations",
+        "title": "Ballistic examination",
+        "description": "Firearms, ammunition, shot circumstances, and shot traces.",
+        "subtypes": [
+          {
+            "code": "07-01",
+            "title": "Firearms and ammunition"
+          },
+          {
+            "code": "07-02",
+            "title": "Firearm injuries and traces, circumstances of the shot"
+          },
+          {
+            "code": "07-03",
+            "title": "Shot traces and products (chemical analysis)"
+          }
+        ]
+      },
+      {
+        "code": "08",
+        "slug": "explosives-examination",
+        "serviceSlug": "judicial-examinations",
+        "title": "Explosives examination",
+        "description": "Explosive substances, ammunition, explosive devices, and explosion traces.",
+        "subtypes": [
+          {
+            "code": "08-01",
+            "title": "Explosive substances, explosion products, and traces"
+          },
+          {
+            "code": "08-02",
+            "title": "Ammunition, explosive devices, and explosion traces"
+          }
+        ]
+      },
+      {
+        "code": "09",
+        "slug": "materials-science-examination",
+        "title": "Materials science examination (physico-chemical research)",
+        "description": "Physico-chemical study of fibers, paints, metals, polymers, narcotics, and other substances.",
+        "objects": [
+          "Fibers and fabrics",
+          "Paints and coatings",
+          "Petroleum products, fuels, and lubricants",
+          "Metals, alloys, and precious stones",
+          "Glass, ceramics, and polymer materials",
+          "Narcotic, potent, and other substances"
+        ],
+        "taskCategories": [
+          {
+            "title": "Classification tasks",
+            "items": [
+              "Determining the group membership of a substance or material",
+              "Classifying fibers, paints, and polymer materials",
+              "Whether a substance is narcotic, potent, or toxic"
+            ]
+          },
+          {
+            "title": "Diagnostic tasks",
+            "items": [
+              "Establishing the composition and origin of a substance",
+              "Establishing the homogeneity or difference of compared materials",
+              "Detecting falsification of precious stones and metals"
+            ]
+          }
+        ],
+        "subtypes": [
+          {
+            "code": "09-01",
+            "title": "Fibers and fabrics"
+          },
+          {
+            "code": "09-02",
+            "title": "Paints and coatings"
+          },
+          {
+            "code": "09-03",
+            "title": "Petroleum products, fuels, and lubricants"
+          },
+          {
+            "code": "09-04",
+            "title": "Metals and alloys"
+          },
+          {
+            "code": "09-06",
+            "title": "Precious and semi-precious stones, minerals, and ores"
+          },
+          {
+            "code": "09-07",
+            "title": "Glass, silicate, and ceramic materials"
+          },
+          {
+            "code": "09-08",
+            "title": "Rubber, plastics, and other polymer materials"
+          },
+          {
+            "code": "09-09",
+            "title": "Narcotic and psychotropic substances, precursors, medicines, potent and toxic substances"
+          },
+          {
+            "code": "09-11",
+            "title": "Substances of unknown origin"
+          }
+        ]
+      },
+      {
+        "code": "10",
+        "slug": "food-beverage-examination",
+        "title": "Food and beverage examination",
+        "description": "Quality and safety of food products and beverages.",
+        "objects": [
+          "Food products and food raw materials",
+          "Alcoholic and non-alcoholic beverages"
+        ],
+        "taskCategories": [
+          {
+            "title": "Classification tasks",
+            "items": [
+              "Whether a product matches its labeling and normative requirements",
+              "Determining the type and name of a product",
+              "Classifying beverages by strength and composition"
+            ]
+          },
+          {
+            "title": "Diagnostic tasks",
+            "items": [
+              "Determining the quality indicators of products and raw materials",
+              "Detecting falsification and dilution",
+              "Determining safety indicators (except microbiological)"
+            ]
+          }
+        ],
+        "subtypes": [
+          {
+            "code": "10-01",
+            "title": "Food products and raw materials: quality indicators"
+          },
+          {
+            "code": "10-02",
+            "title": "Food products: safety indicators (except microbiological)"
+          },
+          {
+            "code": "10-03",
+            "title": "Food products: microbiological indicators"
+          },
+          {
+            "code": "10-04",
+            "title": "Alcoholic, low-alcohol, and non-alcoholic beverages: quality indicators"
+          }
+        ]
+      },
+      {
+        "code": "11",
+        "slug": "soil-biological-examination",
+        "serviceSlug": "judicial-examinations",
+        "title": "Soil and biological examination",
+        "description": "Objects of soil, plant, and animal origin.",
+        "subtypes": [
+          {
+            "code": "11-01",
+            "title": "Objects of soil origin"
+          },
+          {
+            "code": "11-02",
+            "title": "Objects of plant origin (without dendrochronology)"
+          },
+          {
+            "code": "11-03",
+            "title": "Objects of plant origin (with dendrochronology)"
+          },
+          {
+            "code": "11-04",
+            "title": "Objects of animal origin"
+          }
+        ]
+      },
+      {
+        "code": "12",
+        "slug": "fire-technical-examination",
+        "serviceSlug": "construction-technical-examinations",
+        "title": "Fire-technical examination",
+        "description": "Fire seat and cause, affected objects, fire-hazard properties of materials.",
+        "subtypes": [
+          {
+            "code": "12-01",
+            "title": "Objects after a fire: seat and cause of ignition"
+          },
+          {
+            "code": "12-02",
+            "title": "Land plots affected by fire"
+          },
+          {
+            "code": "12-03",
+            "title": "Movable property affected by fire"
+          },
+          {
+            "code": "12-04",
+            "title": "Fire-hazard properties of materials and equipment"
+          },
+          {
+            "code": "12-05",
+            "title": "Compliance with fire safety norms"
+          }
+        ]
+      },
+      {
+        "code": "13",
+        "slug": "construction-technical-examination",
+        "serviceSlug": "construction-technical-examinations",
+        "title": "Construction-technical examination",
+        "description": "Technical condition of buildings and structures, construction objects, and urban development documents.",
+        "subtypes": [
+          {
+            "code": "13-01",
+            "title": "Buildings, structures, linear engineering structures, and other construction objects"
+          },
+          {
+            "code": "13-02",
+            "title": "Urban development documents"
+          }
+        ]
+      },
+      {
+        "code": "14",
+        "slug": "auto-technical-examination",
+        "serviceSlug": "auto-technical-examinations",
+        "title": "Auto-technical examination",
+        "description": "Accident circumstances, vehicle technical condition, and road conditions.",
+        "subtypes": [
+          {
+            "code": "14-01",
+            "title": "Road traffic accident circumstances"
+          },
+          {
+            "code": "14-02",
+            "title": "Technical condition of vehicles"
+          },
+          {
+            "code": "14-03",
+            "title": "Transport-trace examination"
+          },
+          {
+            "code": "14-04",
+            "title": "Road conditions"
+          }
+        ]
+      },
+      {
+        "code": "15",
+        "slug": "economic-examination",
+        "serviceSlug": "economic-accounting-examinations",
+        "title": "Economic examination",
+        "description": "Forensic accounting and financial-economic studies.",
+        "subtypes": [
+          {
+            "code": "15-01",
+            "title": "Forensic accounting examination"
+          },
+          {
+            "code": "15-02",
+            "title": "Financial-economic examination"
+          }
+        ]
+      },
+      {
+        "code": "16",
+        "slug": "commodity-examination",
+        "serviceSlug": "property-valuation",
+        "title": "Commodity examination",
+        "description": "Goods, services, vehicles, and real estate: properties, quality, and value.",
+        "subtypes": [
+          {
+            "code": "16-01",
+            "title": "Food and non-food goods, services, and their documents, incl. value indicators"
+          },
+          {
+            "code": "16-02",
+            "title": "Vehicles and agricultural machinery, incl. value indicators"
+          },
+          {
+            "code": "16-03",
+            "title": "Industrial and other commodity complexes with complex structural features"
+          },
+          {
+            "code": "16-05",
+            "title": "Real estate, incl. value indicators"
+          },
+          {
+            "code": "16-06",
+            "title": "Construction materials and works, incl. value indicators"
+          }
+        ]
+      },
+      {
+        "code": "17",
+        "slug": "electrotechnical-examination",
+        "serviceSlug": "construction-technical-examinations",
+        "title": "Electrotechnical examination",
+        "description": "Household radio-electronic, electrotechnical, and electromechanical devices.",
+        "subtypes": [
+          {
+            "code": "17-01",
+            "title": "Household radio-electronic, electrotechnical, and electromechanical devices"
+          }
+        ]
+      },
+      {
+        "code": "20",
+        "slug": "computer-technical-examination",
+        "serviceSlug": "document-research",
+        "title": "Computer-technical examination",
+        "description": "Computers, networks, mobile devices, and digital data, including recovery of deleted information.",
+        "subtypes": [
+          {
+            "code": "20-01",
+            "title": "Computer networks"
+          },
+          {
+            "code": "20-02",
+            "title": "Software"
+          },
+          {
+            "code": "20-03",
+            "title": "Information on computer hard drives, including deleted data"
+          },
+          {
+            "code": "20-04",
+            "title": "Information on digital video recorder drives, including deleted data"
+          },
+          {
+            "code": "20-05",
+            "title": "Information in the memory of mobile phones and tablets, including deleted data"
+          },
+          {
+            "code": "20-06",
+            "title": "Information on other digital storage media, including deleted data"
+          },
+          {
+            "code": "20-07",
+            "title": "Computer equipment: operability and intended use"
+          }
+        ]
+      },
+      {
+        "slug": "psychological-examination",
+        "title": "Psychological examination",
+        "description": "Psychological characteristics of proceedings participants and psychological influence.",
+        "objects": [
+          "Participants in criminal and civil proceedings",
+          "Minors",
+          "Victims, witnesses, and the accused"
+        ],
+        "taskCategories": [
+          {
+            "title": "Diagnostic tasks",
+            "items": [
+              "Establishing individual psychological characteristics",
+              "Detecting emotional states, including severe mental suffering",
+              "Establishing the fact and nature of psychological influence"
+            ]
+          },
+          {
+            "title": "Situational tasks",
+            "items": [
+              "Assessing the ability to correctly perceive circumstances and testify",
+              "Assessing whether behavior matches age and mental characteristics"
+            ]
+          }
+        ],
+        "subtypes": [
+          {
+            "title": "Examination of minors"
+          },
+          {
+            "title": "Examinations in cases of violence-related crimes (including against sexual inviolability and sexual freedom)"
+          },
+          {
+            "title": "Examination of emotional states, including severe mental suffering"
+          },
+          {
+            "title": "Examination of individual psychological and socio-psychological characteristics"
+          },
+          {
+            "title": "Examination of psychological influence"
+          },
+          {
+            "title": "Posthumous examinations and suicide attempt examinations"
+          },
+          {
+            "title": "Other psychological research (including psychophysiological)"
+          }
+        ]
+      },
+      {
+        "slug": "forensic-psychiatric-examination",
+        "title": "Forensic psychiatric examination",
+        "description": "Sanity, procedural capacity, and other forensic psychiatric questions.",
+        "objects": [
+          "Accused persons in criminal cases",
+          "Victims and witnesses",
+          "Plaintiffs and defendants in civil cases"
+        ],
+        "taskCategories": [
+          {
+            "title": "Diagnostic tasks",
+            "items": [
+              "Establishing sanity or insanity",
+              "Establishing procedural capacity and the ability to testify",
+              "Determining a helpless state and the degree of health damage"
+            ]
+          },
+          {
+            "title": "Situational tasks",
+            "items": [
+              "Assessing the social dangerousness of the accused",
+              "Posthumous assessment of mental state"
+            ]
+          }
+        ],
+        "subtypes": [
+          {
+            "title": "Sanity of accused persons in criminal cases"
+          },
+          {
+            "title": "Assessment of procedural capacity and ability to testify (accused, victims, witnesses)"
+          },
+          {
+            "title": "Assessment of the social dangerousness of the accused"
+          },
+          {
+            "title": "Assessment of a person's helpless state and the degree of health damage"
+          },
+          {
+            "title": "Posthumous forensic psychiatric examinations"
+          }
+        ]
+      },
+      {
+        "slug": "cultural-values-examination",
+        "title": "Cultural values examination",
+        "description": "Cultural values: fine and applied arts, numismatics, and other fields.",
+        "objects": [
+          "Works of fine and decorative-applied art",
+          "Book and printed monuments",
+          "Archaeological objects",
+          "Musical instruments, numismatics, carpets"
+        ],
+        "taskCategories": [
+          {
+            "title": "Classification tasks",
+            "items": [
+              "Whether an item has cultural value",
+              "Whether an item belongs to art, craft, or everyday use"
+            ]
+          },
+          {
+            "title": "Diagnostic tasks",
+            "items": [
+              "Establishing the time and place of creation",
+              "Detecting fakes and later alterations",
+              "Establishing the author, school, or production center"
+            ]
+          }
+        ],
+        "subtypes": [
+          {
+            "title": "Fine arts"
+          },
+          {
+            "title": "Decorative and applied arts"
+          },
+          {
+            "title": "Book and printed heritage"
+          },
+          {
+            "title": "Archaeology"
+          },
+          {
+            "title": "Musical instruments"
+          },
+          {
+            "title": "Numismatics"
+          },
+          {
+            "title": "Carpets"
+          }
+        ]
       }
     ]
   },
@@ -225,82 +1487,180 @@
       "title": "Professional, objective, substantiated",
       "description": "Our goal is to help clients clarify complex situations, value property, determine the extent of damage, and obtain the professional conclusions they need. Our work rests on research, factual analysis, and an expert approach.",
       "cta": {
-        "label": "Explore services",
+        "label": "Explore examinations",
         "href": "#services"
       }
     }
   },
   "cases": {
     "eyebrow": "Practice",
-    "title": "Selected cases",
+    "title": "Cases",
     "description": "Examples of expert work across our main directions.",
     "action": "View all cases",
     "cardAction": "Case details",
     "items": [
       {
         "slug": "residential-building",
+        "serviceSlug": "construction-technical-examinations",
         "category": "Construction-technical",
         "title": "Technical condition examination of a residential building",
         "date": "Yerevan · 2026",
-        "imageLabel": "Residential apartment building"
+        "imageLabel": "Residential apartment building",
+        "examinationType": "Construction-technical examination",
+        "summary": "A court-appointed technical condition examination of a nine-storey residential building where the residents had reported progressing cracks in load-bearing walls and moisture in the basement.",
+        "task": "The court needed an independent assessment of the building's technical condition: whether the reported defects threaten structural safety, what caused them, and what repair works are required.",
+        "work": [
+          "Review of the building's design and as-built documentation",
+          "Visual and instrumental inspection of load-bearing structures, facades and common areas",
+          "Measurement of crack widths and deformation markers with follow-up monitoring",
+          "Analysis of the foundation condition and the basement moisture regime",
+          "Comparison of the revealed defects with the normative requirements for safe operation"
+        ],
+        "result": "The conclusion described the building's actual technical condition, classified the defects by cause and severity, and formulated a list of necessary repair works. The report was accepted by the court as the basis for obliging the management company to carry out the repairs."
       },
       {
         "slug": "car-accident",
+        "serviceSlug": "auto-technical-examinations",
         "category": "Auto-technical",
         "title": "Circumstances and damage study after a road accident",
         "date": "Yerevan · 2025",
-        "imageLabel": "Car"
+        "imageLabel": "Car",
+        "examinationType": "Auto-technical examination",
+        "summary": "An auto-technical examination after a collision between a passenger car and a delivery van at a city intersection, appointed within a civil dispute over compensation.",
+        "task": "Determine the mechanism of the collision, the speed and trajectories of the vehicles before the impact, and whether the drivers' actions complied with the traffic rules; separately assess the extent of damage to the car.",
+        "work": [
+          "Study of the case materials, the accident scene schematic and the vehicle documents",
+          "Analysis of the vehicles' kinematics before and at the moment of the collision",
+          "Assessment of the technical condition of the brakes, steering and lights of both vehicles",
+          "Verification of the damage extent against the submitted repair estimate"
+        ],
+        "result": "The examination established the collision mechanism and the traffic signal mode at the moment of the accident, which allowed the court to distribute liability between the parties. The damage calculation was corrected: part of the claimed works was not related to the accident."
       },
       {
         "slug": "shopping-center",
+        "serviceSlug": "property-valuation",
         "category": "Valuation",
         "title": "Real estate valuation of a shopping center",
         "date": "Yerevan · 2025",
-        "imageLabel": "Modern commercial building"
+        "imageLabel": "Modern commercial building",
+        "examinationType": "Real estate valuation",
+        "summary": "A market valuation of a shopping center building with an adjacent land plot, prepared at a bank's request for a collateral transaction.",
+        "task": "Determine the market value of the property as of the valuation date, analyzing its income potential, technical condition and the state of the commercial real estate market.",
+        "work": [
+          "Inspection and description of the building and the land plot",
+          "Analysis of the lease agreements and the center's actual income",
+          "Study of the commercial real estate market and comparable transactions",
+          "Value calculation by the income, comparative and cost approaches with reconciliation of the results"
+        ],
+        "result": "The report determined the market and liquidation value of the property with a full justification of the applied approaches. The valuation was accepted by the bank for the collateral transaction."
       },
       {
         "slug": "land-surveying",
+        "serviceSlug": "geodetic-cadastral-works",
         "category": "Geodesy & cadastre",
         "title": "Land plot boundary surveying and cadastral works",
         "date": "Kotayk · 2025",
-        "imageLabel": "Surveying works at a construction site"
+        "imageLabel": "Surveying works at a construction site",
+        "examinationType": "Geodetic and cadastral works",
+        "summary": "Boundary surveying and cadastral works on a disputed land plot in the Kotayk region, where according to the cadastre the neighboring plot boundaries overlapped.",
+        "task": "Restore the actual boundaries of the plot on the ground, compare them with the cadastral records, and establish the causes of the boundary overlap with the neighboring plots.",
+        "work": [
+          "Analysis of the title documents and cadastral maps of the plot and the neighboring plots",
+          "Field surveying with an electronic total station and GNSS equipment",
+          "Comparison of the measured boundaries with the coordinates recorded in the cadastre",
+          "Preparation of a boundary plan and a conclusion on the causes of the discrepancy"
+        ],
+        "result": "The works established the actual position of the boundaries and quantified the deviation from the cadastral data. The boundary plan allowed the parties to correct the records and resolve the dispute without further litigation."
+      },
+      {
+        "slug": "property-dispute",
+        "serviceSlug": "judicial-examinations",
+        "category": "Judicial",
+        "title": "Composite examination in a property ownership dispute",
+        "date": "Yerevan · 2025",
+        "imageLabel": "Binders with case documents",
+        "examinationType": "Composite judicial examination",
+        "summary": "A composite judicial examination appointed in a dispute over the ownership of a commercial property: the contested transaction documents required both document research and a valuation of the property.",
+        "task": "Verify the authenticity and the time of execution of the signatures on the sale agreement and its copies, and determine the market value of the property for the period stated in the disputed documents.",
+        "work": [
+          "Document research of the agreement: paper, printing features, signatures and entries",
+          "Comparison of the handwriting samples with the parties' signature specimens",
+          "Technical examination of the copies for signs of partial replacement of the text",
+          "Market valuation of the property for the period stated in the documents"
+        ],
+        "result": "The research revealed signs of a later addition in one of the copies and established the value of the property for the required period. The composite conclusion gave the court a single evidentiary basis for the decision."
+      },
+      {
+        "slug": "construction-defects",
+        "serviceSlug": "construction-technical-examinations",
+        "category": "Construction-technical",
+        "title": "Construction defects examination in a new residential complex",
+        "date": "Yerevan · 2026",
+        "imageLabel": "Wall with cracks and peeling paint",
+        "examinationType": "Construction quality examination",
+        "summary": "An examination of the quality of construction and finishing works in a newly commissioned residential complex, initiated by a buyer who refused to accept the apartment.",
+        "task": "Verify whether the revealed defects — cracks in partition walls, uneven floor screeds and poor window installation — are construction defects, and determine the scope and cost of their elimination.",
+        "work": [
+          "Review of the construction documentation and the acceptance certificate",
+          "Instrumental inspection of the apartment: walls, floors, window openings and utility systems",
+          "Identification and classification of the defects with photo fixation",
+          "Calculation of the scope and cost of the remedial works"
+        ],
+        "result": "The conclusion confirmed the presence of defects attributable to the developer and calculated the cost of their elimination. The parties settled the dispute, and the developer eliminated the defects at his own expense."
+      },
+      {
+        "slug": "apartment-valuation",
+        "serviceSlug": "property-valuation",
+        "category": "Valuation",
+        "title": "Market valuation of apartments in a civil dispute",
+        "date": "Yerevan · 2026",
+        "imageLabel": "Modern apartment interior",
+        "examinationType": "Real estate valuation",
+        "summary": "A valuation of two apartments in the center of Yerevan, appointed by a court in an inheritance division dispute between co-owners.",
+        "task": "Determine the market value of each apartment as of a single date so that the court could divide the estate equitably between the parties.",
+        "work": [
+          "Inspection and description of both apartments and verification of their legal status",
+          "Analysis of the residential property market segment in the respective districts",
+          "Selection of comparable transactions and adjustment for the differences",
+          "Final value determination by the comparative approach with a sensitivity check"
+        ],
+        "result": "The report provided a justified market value for each property. The court used the valuation to determine the compensation due to the party who did not receive a share of the property."
+      },
+      {
+        "slug": "fire-damage",
+        "serviceSlug": "damage-assessment",
+        "category": "Damage assessment",
+        "title": "Damage assessment after a fire in commercial premises",
+        "date": "Yerevan · 2025",
+        "imageLabel": "Fire-damaged room",
+        "examinationType": "Damage assessment",
+        "summary": "An assessment of the damage caused by a fire in premises rented by a retail company, prepared for an insurance claim and a dispute with the lessor.",
+        "task": "Determine the extent of the damage to the premises, the finishing, the equipment and the goods, and calculate the total amount of losses caused by the fire and the firefighting operations.",
+        "work": [
+          "Inspection of the premises and photo fixation of the damage",
+          "Analysis of the documents on the property, the equipment and the stock",
+          "Assessment of the repair works needed to restore the premises",
+          "Calculation of the total losses with a breakdown by category"
+        ],
+        "result": "The report calculated the full amount of the losses, separating the fire damage from the consequential damage caused by firefighting water. The calculated figures were used in the insurance settlement."
       }
-    ]
-  },
-  "clients": {
-    "eyebrow": "Clients",
-    "title": "Who we work with",
-    "description": "Our services are used by individuals, companies, lawyers, courts, property owners, and sector professionals.",
-    "items": [
-      {
-        "title": "Individuals",
-        "description": "Property valuation, damage determination, and arranging the examinations you need."
-      },
-      {
-        "title": "Companies and organizations",
-        "description": "Economic, construction-technical, and other examinations for business matters."
-      },
-      {
-        "title": "Lawyers and advocates",
-        "description": "Expert conclusions and guidance for case work."
-      },
-      {
-        "title": "Courts and law enforcement",
-        "description": "Judicial examinations under the procedures established by law."
-      },
-      {
-        "title": "Property owners and investors",
-        "description": "Property valuation and studies of the technical condition of buildings."
-      },
-      {
-        "title": "Sector professionals",
-        "description": "Surveying, cadastral, and other specialized research."
-      }
-    ]
+    ],
+    "filtersLabel": "Filter cases by examination direction",
+    "allFilterLabel": "All cases",
+    "resultsLabel": "Cases: {count}",
+    "detail": {
+      "taskHeading": "Task",
+      "workHeading": "Research performed",
+      "resultHeading": "Result",
+      "factsHeading": "Case facts",
+      "directionLabel": "Direction",
+      "typeLabel": "Examination",
+      "placeYearLabel": "Place and year",
+      "otherHeading": "Other practice cases"
+    }
   },
   "team": {
-    "eyebrow": "People / Experts",
-    "title": "Our experts",
+    "title": "Experts",
     "action": "View all profiles",
     "cardAction": "Profile",
     "items": [
@@ -909,8 +2269,8 @@
     "previousPageLabel": "Previous page",
     "nextPageLabel": "Next page",
     "goToPageLabel": "Go to page {page}",
-    "emptyTitle": "No experts match your filters",
-    "emptyDescription": "Try changing or clearing the filters to see the full roster.",
+    "emptyTitle": "No experts to show yet",
+    "emptyDescription": "The expert roster is currently being updated — please check back later.",
     "profileUi": {
       "aboutTitle": "About",
       "educationTitle": "Education",
@@ -927,6 +2287,8 @@
     "title": "Client feedback",
     "description": "What our clients say about working with us.",
     "ratingLabel": "5/5",
+    "prevLabel": "Previous testimonial",
+    "nextLabel": "Next testimonial",
     "items": [
       {
         "quote": "The construction-technical examination conclusion became the decisive evidence in the case. The work was delivered on time, with detailed justification.",
@@ -945,36 +2307,297 @@
         "author": "Tigran Sargsyan",
         "organization": "Individual client",
         "imageLabel": "Profile photo of Tigran Sargsyan"
+      },
+      {
+        "quote": "The document examination confirmed that the signature had been forged. The detailed, well-founded report was accepted by the court without further questions.",
+        "author": "Lilit Avagyan",
+        "organization": "Notary, Yerevan",
+        "imageLabel": "Profile photo of Lilit Avagyan"
+      },
+      {
+        "quote": "The accounting examination revealed material irregularities in the financial statements. The work was done thoroughly and within the statutory deadline.",
+        "author": "Armen Ghazaryan",
+        "organization": "Law firm, Yerevan",
+        "imageLabel": "Profile photo of Armen Ghazaryan"
+      },
+      {
+        "quote": "The cadastral works were carried out precisely and on schedule. All submitted materials were accepted by the cadastre committee without further corrections.",
+        "author": "Vahe Danielyan",
+        "organization": "Construction company, Yerevan",
+        "imageLabel": "Profile photo of Vahe Danielyan"
       }
     ]
   },
   "news": {
-    "eyebrow": "Blog",
-    "title": "News & articles",
-    "description": "Useful materials about examinations, valuation, and your rights.",
-    "action": "View all news",
+    "title": "Blog",
+    "description": "Articles, guides, and practical materials on examinations, valuation, and your rights — prepared by our experts.",
+    "action": "View all articles",
     "cardAction": "Read more",
+    "filtersLabel": "Filters",
+    "categories": [
+      {
+        "slug": "examinations",
+        "title": "Examinations"
+      },
+      {
+        "slug": "guides",
+        "title": "Guides"
+      },
+      {
+        "slug": "valuation",
+        "title": "Valuation"
+      },
+      {
+        "slug": "rights",
+        "title": "Your rights"
+      },
+      {
+        "slug": "practice",
+        "title": "Court practice"
+      },
+      {
+        "slug": "legislation",
+        "title": "Legislation"
+      }
+    ],
+    "categoriesHeading": "Categories",
+    "allCategoriesLabel": "All articles",
+    "expertsHeading": "Experts",
+    "allExpertsLabel": "All experts",
+    "yearsHeading": "Years",
+    "allYearsLabel": "All years",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Search by title…",
+    "resetLabel": "Reset filters",
+    "resultsLabel": "Articles: {count}",
+    "sortLabel": "Sort",
+    "sortOptions": [
+      {
+        "value": "newest",
+        "label": "Newest first"
+      },
+      {
+        "value": "oldest",
+        "label": "Oldest first"
+      }
+    ],
+    "gridViewLabel": "Grid",
+    "listViewLabel": "List",
+    "paginationLabel": "Pagination",
+    "previousPageLabel": "Previous page",
+    "nextPageLabel": "Next page",
+    "goToPageLabel": "Go to page {page}",
+    "emptyTitle": "No articles found",
+    "emptyDescription": "Try a different search or reset the filters to see the results.",
+    "readTimeUnit": "min read",
+    "authorLabel": "Author",
+    "newsletter": {
+      "title": "Subscribe to our blog",
+      "description": "New articles and useful materials, straight to your inbox.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email",
+      "submitLabel": "Subscribe",
+      "mailtoSubject": "Blog subscription",
+      "note": "Submitting opens your email application with a prepared message.",
+      "errorLabel": "Please check the email address."
+    },
+    "detail": {
+      "relatedHeading": "More articles",
+      "authorHeading": "Article author",
+      "authorProfileLabel": "Expert profile"
+    },
     "items": [
       {
         "slug": "judicial-examination",
-        "category": "Knowledge base",
+        "categorySlug": "examinations",
+        "dateISO": "2026-10-02",
         "date": "October 2, 2026",
         "title": "What is a judicial examination and when do you need one",
-        "imageLabel": "Gavel"
+        "excerpt": "A judicial examination is one of the main sources of evidence in a case. We explain when a court orders one and what questions are put to the expert.",
+        "imageLabel": "Gavel",
+        "authorSlug": "araik-stepanyan",
+        "readMinutes": 7,
+        "body": [
+          "A judicial examination is a study ordered by the court to establish the facts of a case on a scientific basis. When resolving a dispute requires specialised knowledge — in construction, valuation, accounting, or engineering — the court refers the matter to a qualified expert.",
+          "The questions put to the expert are formulated by the parties and approved by the court. They may concern the causes of damage, the quality of works, the value of property, or the reliability of documents. How precisely the questions are worded determines the practical value of the conclusion.",
+          "The conclusion is assessed by the court within the general system of evidence, together with the other materials of the case. That is why it is essential that the research is carried out independently, transparently, and with sound methodology."
+        ]
       },
       {
         "slug": "property-valuation",
-        "category": "Guide",
+        "categorySlug": "guides",
+        "dateISO": "2026-09-18",
         "date": "September 18, 2026",
         "title": "Property valuation: what documents you need",
-        "imageLabel": "Signing documents"
+        "excerpt": "The accuracy and turnaround of a valuation largely depend on a complete document set. We list the package required for real estate and vehicles.",
+        "imageLabel": "Signing documents",
+        "authorSlug": "mariam-gevorgyan",
+        "readMinutes": 6,
+        "body": [
+          "A real estate valuation usually requires the ownership document, the cadastral passport, and the owner's identification. If the valuation is prepared for lending or for a court case, additional documents related to the matter may also be needed.",
+          "For vehicles the basis is the registration certificate and the technical passport; in accident cases, also photographs of the damage and the service invoices.",
+          "A complete package shortens the valuation period and rules out repeated visits. If a document is missing, the expert will help identify how to obtain it before the work begins."
+        ]
       },
       {
         "slug": "auto-examination",
-        "category": "Knowledge base",
+        "categorySlug": "examinations",
+        "dateISO": "2026-08-25",
         "date": "August 25, 2026",
         "title": "Auto-technical examination after an accident: step by step",
-        "imageLabel": "Car engine"
+        "excerpt": "From the first actions at the scene to the final conclusion — a short guide that protects your rights.",
+        "imageLabel": "Car engine",
+        "authorSlug": "vahagn-martirosyan",
+        "readMinutes": 5,
+        "body": [
+          "Right after an accident, record the scene: photograph the location, the position of the vehicles, and the visible damage. These become the baseline material for the later examination.",
+          "An auto-technical examination answers the questions that cannot be resolved by eye: the mechanism of the crash, whether the damage matches it, and the scope and cost of repairs.",
+          "The conclusion can support an insurance claim, pre-trial negotiations, or a lawsuit. The more precise the research, the stronger your position."
+        ]
+      },
+      {
+        "slug": "expert-conclusion-in-court",
+        "categorySlug": "practice",
+        "dateISO": "2026-07-14",
+        "date": "July 14, 2026",
+        "title": "Reading an expert conclusion in court",
+        "excerpt": "The structure of a conclusion — from introduction to findings — and which sections matter most for the outcome of the case.",
+        "imageLabel": "Hearing documents",
+        "authorSlug": "araik-stepanyan",
+        "readMinutes": 8,
+        "body": [
+          "Every conclusion has three parts: introductory (who ordered the research and on what basis), analytical (which methods and results), and final (the expert's answers to the questions posed).",
+          "When reading, note that under each answer the expert cites the method and the sources. Cases where a question went unanswered or received a qualified answer are stated as well — they may ground additional questions.",
+          "The parties may ask the court to have the conclusion clarified or to order a repeat examination if there are serious grounds to doubt its methodology."
+        ]
+      },
+      {
+        "slug": "construction-technical-expertise",
+        "categorySlug": "examinations",
+        "dateISO": "2026-06-20",
+        "date": "June 20, 2026",
+        "title": "Construction-technical expertise in construction disputes",
+        "excerpt": "From quality requirements to the causes of defects — why a construction dispute is decided by an on-site investigation.",
+        "imageLabel": "Construction site",
+        "authorSlug": "tigran-ohanyan",
+        "readMinutes": 9,
+        "body": [
+          "Construction disputes usually arise over the scope, quality, or timing of works. Documents alone rarely resolve them: an on-site inspection, measurements, and an assessment of materials are needed.",
+          "A construction-technical examination answers whether the completed works match the design and the standards, what the defects are, what caused them, and what their remediation will cost.",
+          "Such a conclusion lets the parties move a contested issue from emotions into the field of facts — measurable indicators."
+        ]
+      },
+      {
+        "slug": "damage-assessment-after-incident",
+        "categorySlug": "valuation",
+        "dateISO": "2026-05-10",
+        "date": "May 10, 2026",
+        "title": "Damage assessment after an incident: steps and documents",
+        "excerpt": "In case of water, fire, or property damage — how to document the loss so it is accepted in an insurance or court proceeding.",
+        "imageLabel": "Damaged property",
+        "authorSlug": "gor-vardanyan",
+        "readMinutes": 6,
+        "body": [
+          "A damage assessment starts with recording the circumstances: photographs, witness details, service reports and invoices. These documents tie the damage to a specific incident.",
+          "The expert calculates the actual restoration cost, taking depreciation and local market prices into account, and formulates a conclusion that can be submitted to the insurer or the court.",
+          "Timing matters: the sooner the state of things is recorded, the less room there is to dispute the valuation."
+        ]
+      },
+      {
+        "slug": "accounting-expertise-disputes",
+        "categorySlug": "examinations",
+        "dateISO": "2026-04-03",
+        "date": "April 3, 2026",
+        "title": "Accounting expertise in economic disputes",
+        "excerpt": "Financial figures often decide the outcome of a case. When is an accounting examination needed and what can it show?",
+        "imageLabel": "Financial records",
+        "authorSlug": "nane-kirakosyan",
+        "readMinutes": 7,
+        "body": [
+          "Economic disputes — debt, shareholder, contractual — often come down to the same question: what does the accounting actually show? That is exactly where an accounting examination comes in.",
+          "The expert reconstructs the accounting picture from primary documents, verifies the correctness of the calculations, and provides answers about the monetary figures in the conclusion.",
+          "Such research also helps investors and managers understand the real financial position before going to court."
+        ]
+      },
+      {
+        "slug": "real-estate-valuation-methods",
+        "categorySlug": "valuation",
+        "dateISO": "2025-12-15",
+        "date": "December 15, 2025",
+        "title": "Real estate valuation methods: comparative, income, and cost",
+        "excerpt": "Why the same property yields three different values under three methods — and which method fits which case.",
+        "imageLabel": "Residential building",
+        "authorSlug": "mariam-gevorgyan",
+        "readMinutes": 8,
+        "body": [
+          "The comparative method relies on recently closed deals on the market and is justified when enough similar objects exist. The income method values a property through the income it generates — for commercial and rental real estate.",
+          "The cost method calculates what an identical object would cost to build today, minus depreciation. It applies to special-purpose properties and insurance questions.",
+          "The appraiser chooses the method based on the type of the object and the purpose of the valuation, and explains the choice in the conclusion. That choice determines the final figure."
+        ]
+      },
+      {
+        "slug": "document-research-authenticity",
+        "categorySlug": "rights",
+        "dateISO": "2025-11-05",
+        "date": "November 5, 2025",
+        "title": "Document research: when the reliability of a signature matters",
+        "excerpt": "A technical examination of a seal, signature, or text can decide a dispute over an inheritance, a contract, or a debt.",
+        "imageLabel": "Document with signature",
+        "authorSlug": "sargis-baghdasaryan",
+        "readMinutes": 5,
+        "body": [
+          "When a contested document appears in a case — a will, a contract, a loan receipt — the parties usually stand by their own versions. Technical examination replaces that standoff with facts.",
+          "The examination can answer whether the signature was made by the named person, whether the text was written in one sitting, and whether the document was altered.",
+          "The findings can ground both criminal and civil proceedings, which is why the research must follow procedural requirements."
+        ]
+      },
+      {
+        "slug": "cadastral-works-boundaries",
+        "categorySlug": "guides",
+        "dateISO": "2025-09-22",
+        "date": "September 22, 2025",
+        "title": "Geodetic and cadastral works: checking boundaries before a purchase",
+        "excerpt": "The real boundaries of a plot and the cadastral data do not always match. How to avoid a dispute with the neighbours.",
+        "imageLabel": "Land survey",
+        "authorSlug": "hayk-hovakimyan",
+        "readMinutes": 7,
+        "body": [
+          "One of the main risks when buying land is a mismatch between the cadastral map and the terrain. Geodetic measurements reveal the problem before the transaction.",
+          "Cadastral works include establishing the plot on the ground, calculating its area, and, where necessary, correcting the data in the cadastral system.",
+          "Measurements made before the purchase are inexpensive insurance against boundary disputes and costly re-issuing of documents."
+        ]
+      },
+      {
+        "slug": "your-rights-during-expertise",
+        "categorySlug": "rights",
+        "dateISO": "2025-06-18",
+        "date": "June 18, 2025",
+        "title": "Your rights during a judicial examination",
+        "excerpt": "The parties are not passive observers. What rights you have when an examination is ordered and while it is carried out.",
+        "imageLabel": "Desk with documents",
+        "authorSlug": "ani-petrosyan",
+        "readMinutes": 6,
+        "body": [
+          "At the stage of ordering the examination, the parties may propose questions to the expert, submit their documents, and ask for an expert of a particular specialisation.",
+          "During the research you may read the conclusion, request clarifications and, with convincing grounds, challenge it and ask for a repeat examination.",
+          "An active position does not mean distrust of the expert: it is a procedural mechanism that makes the case more transparent."
+        ]
+      },
+      {
+        "slug": "legal-regulation-of-expertise",
+        "categorySlug": "legislation",
+        "dateISO": "2024-12-10",
+        "date": "December 10, 2024",
+        "title": "The legal regulation of judicial expertise: key provisions",
+        "excerpt": "Who may act as an expert, what requirements a conclusion must meet, and what the expert's responsibility means.",
+        "imageLabel": "Book of laws",
+        "authorSlug": "areg-nersisyan",
+        "readMinutes": 9,
+        "body": [
+          "Judicial examinations are governed by the procedural codes and the legislation on expert activity. They define who may act as an expert and what requirements the research must meet.",
+          "A conclusion is evidence only when it was obtained lawfully and meets the formal requirements: the methodology, the initial data, the expert's details and signatures.",
+          "Even then the conclusion is not decisive in advance: the court assesses it in the course of the hearing. That balance is what keeps the quality of expert work high."
+        ]
       }
     ]
   },
@@ -982,6 +2605,8 @@
     "eyebrow": "Partners",
     "title": "Working alongside",
     "description": "We cooperate with organizations in legal, construction, insurance, and other sectors.",
+    "prevLabel": "Previous sector",
+    "nextLabel": "Next sector",
     "items": [
       {
         "name": "Law firms"
@@ -1043,14 +2668,97 @@
     },
     "mapTitle": "Our office on the map"
   },
+  "authPage": {
+    "login": {
+      "metaTitle": "Sign in",
+      "metaDescription": "Sign in to your Anicom account.",
+      "title": "Sign in",
+      "description": "Enter your email and password to continue.",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submitLabel": "Sign in",
+      "switchText": "Don't have an account?",
+      "switchCta": "Create account",
+      "unavailableNote": "Online sign-in is not available yet."
+    },
+    "register": {
+      "metaTitle": "Create account",
+      "metaDescription": "Create a new Anicom account.",
+      "title": "Create account",
+      "description": "Fill in your details to create a new account.",
+      "nameLabel": "Full name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submitLabel": "Create account",
+      "switchText": "Already have an account?",
+      "switchCta": "Sign in",
+      "unavailableNote": "Online registration is not available yet."
+    }
+  },
+  "aboutPage": {
+    "metaTitle": "About us",
+    "metaDescription": "The ANIKOM center for research and judicial examinations: our mission, goals, functions, and areas of activity. More than 25 years of experience.",
+    "title": "About us",
+    "description": "For more than 25 years, the ANIKOM center has helped clients clarify complex situations with objective, well-substantiated expert conclusions.",
+    "missionTitle": "Our mission",
+    "mission": [
+      "ANIKOM LLC was founded on 30 October 2000 as a center for research and judicial examinations. The center carries out judicial and extrajudicial examinations, property valuation, geodetic and cadastral works, and damage assessment.",
+      "Our mission is to deliver objective, independent, and evidence-based conclusions that courts, public bodies, companies, and individuals can rely on. We work so that every conclusion stands up to professional and legal scrutiny."
+    ],
+    "stats": [
+      {
+        "value": "25+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "10000+",
+        "label": "Completed examinations"
+      },
+      {
+        "value": "8",
+        "label": "Areas of activity"
+      }
+    ],
+    "goalsHeading": "Our goals",
+    "goals": [
+      "Developing the field of judicial examinations and raising the quality of research",
+      "Carrying out judicial and extrajudicial examinations in criminal, administrative, and civil cases",
+      "Developing and applying current research methods and methodological approaches",
+      "Fostering a professional environment and the qualifications of our experts",
+      "Ensuring clear and well-substantiated results for every client"
+    ],
+    "functionsHeading": "Our functions",
+    "functionGroups": [
+      {
+        "title": "Core functions",
+        "items": [
+          "Judicial examinations ordered by courts and law-enforcement bodies",
+          "Extrajudicial examinations requested by companies, attorneys, and individuals",
+          "Valuation of real and movable property",
+          "Geodetic and cadastral works",
+          "Determining the extent of caused damage"
+        ]
+      },
+      {
+        "title": "Additional activities",
+        "items": [
+          "Expert consultations on examination matters",
+          "Reviewing and assessing conclusions prepared by other experts",
+          "Research and methodological works",
+          "Preliminary review of materials and documents submitted for examination"
+        ]
+      }
+    ],
+    "directionsHeading": "Areas of activity"
+  },
   "footer": {
     "homeLabel": "Anicom — home",
     "description": "ANIKOM LLC was founded on 30 October 2000. 25+ years of experience in judicial and extrajudicial examinations and independent assessment.",
     "descriptor": "Center for Research and Judicial Examinations",
     "socialPending": "Social links pending approval.",
     "exploreTitle": "Explore",
-    "servicesTitle": "Services",
-    "allServicesLabel": "All services",
+    "servicesTitle": "Examinations",
+    "allServicesLabel": "All examinations",
     "contactTitle": "Contact",
     "contacts": [
       {
