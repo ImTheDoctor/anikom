@@ -188,7 +188,7 @@ export default async function ServiceDetailPage({
         image={`/images/heroes/${item.slug}.jpg`}
         overlayClassName="bg-hero/85 md:bg-hero/75 lg:bg-hero/70"
       >
-        <div className="motion-rise mt-4 max-w-2xl space-y-4 [--motion-delay:80ms]">
+        <div className="motion-rise mx-auto mt-4 max-w-2xl space-y-4 [--motion-delay:80ms]">
           {catalog.intro.map((paragraph) => (
             <p
               key={paragraph}
@@ -199,7 +199,7 @@ export default async function ServiceDetailPage({
           ))}
         </div>
         {catalog.codes.length > 0 ? (
-          <ul className="motion-rise mt-6 flex flex-wrap gap-2 [--motion-delay:160ms]">
+          <ul className="motion-rise mt-6 flex flex-wrap justify-center gap-2 [--motion-delay:160ms]">
             {catalog.codes.map((code) => (
               <li
                 key={code}

@@ -62,7 +62,7 @@ export function ServiceTypeDetail({
         overlayClassName="bg-hero/85 md:bg-hero/75 lg:bg-hero/70"
       >
         {type.code ? (
-          <ul className="motion-rise mt-6 flex flex-wrap gap-2 [--motion-delay:160ms]">
+          <ul className="motion-rise mt-6 flex flex-wrap justify-center gap-2 [--motion-delay:160ms]">
             <li className="rounded-full border border-hero-border px-3 py-1 font-mono text-[11px] tracking-[0.16em] text-hero-accent">
               {type.code}
             </li>

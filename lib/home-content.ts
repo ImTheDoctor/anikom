@@ -334,6 +334,10 @@ export type HomeContent = {
       experienceLabel: string;
       languagesLabel: string;
       certificatesLabel: string;
+      // Lightbox close button on the certificate gallery.
+      closeLabel: string;
+      // Visible eye-icon affordance that opens a certificate scan.
+      viewCertificateLabel: string;
     };
   };
   testimonials: {

@@ -56,7 +56,7 @@ export default async function ExpertsPage({
         description={experts.description}
         image="/images/heroes/team.jpg"
       >
-        <dl className="motion-rise mt-10 grid max-w-3xl grid-cols-1 gap-6 border-t border-hero-border pt-6 sm:grid-cols-3 [--motion-delay:160ms]">
+        <dl className="motion-rise mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-6 border-t border-hero-border pt-6 text-center sm:grid-cols-3 [--motion-delay:160ms]">
           {experts.stats.map((stat) => (
             <div key={stat.label} className="flex flex-col">
               <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-hero-foreground/80 uppercase">
