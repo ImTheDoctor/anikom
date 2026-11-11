@@ -387,3 +387,22 @@
     animation-delay: 0s !important;
   }
 }
+
+/* FAQ accordion (Base UI, Nov 12 2026): chevron rotation on expand — plain
+   CSS rules because Tailwind named-group variants were not emitted for this file
+   component. */
+[data-slot="accordion-trigger"] [data-slot="accordion-chevron"] {
+  transition: transform 200ms ease-out;
+}
+
+[data-slot="accordion-trigger"][aria-expanded="true"]
+  [data-slot="accordion-chevron"] {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="accordion-trigger"] [data-slot="accordion-chevron"] {
+    transition: none;
+    transform: none;
+  }
+}

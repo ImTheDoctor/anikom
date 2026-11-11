@@ -467,6 +467,19 @@ export type HomeContent = {
     };
     mapTitle: string;
   };
+  // FAQ page /[locale]/faq (owner request, Nov 2026). Draft copy written by
+  // the agent — the owner will replace it (design doc §11).
+  faq: {
+    metaTitle: string;
+    metaDescription: string;
+    title: string;
+    description: string;
+    items: {
+      id: string;
+      question: string;
+      answer: string;
+    }[];
+  };
   // Placeholder auth pages /[locale]/login and /[locale]/register
   // (owner request, Oct 2026). The MVP has no auth backend, so the forms are
   // preview UI only; copy is draft pending client sign-off (design doc §11).
@@ -521,6 +534,11 @@ export type HomeContent = {
       label: string;
       value: string;
       href?: string;
+      // Same-cell secondary line (the office's second email address).
+      secondary?: {
+        value: string;
+        href?: string;
+      };
     }[];
     copyright: string;
     previewNote: string;

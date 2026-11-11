@@ -2381,12 +2381,11 @@
       {
         "label": "Email",
         "value": "anikom-sa@mail.ru",
-        "href": "mailto:anikom-sa@mail.ru"
-      },
-      {
-        "label": "Email",
-        "value": "anikomhdpk@gmail.com",
-        "href": "mailto:anikomhdpk@gmail.com"
+        "href": "mailto:anikom-sa@mail.ru",
+        "secondary": {
+          "value": "anikomhdpk@gmail.com",
+          "href": "mailto:anikomhdpk@gmail.com"
+        }
       },
       {
         "label": "Office",
@@ -2399,5 +2398,63 @@
     ],
     "copyright": "© 2000–2026 ANIKOM LLC. All rights reserved.",
     "previewNote": "Placeholder preview — approved content pending."
+  },
+  "faq": {
+    "metaTitle": "Frequently asked questions",
+    "metaDescription": "Frequently asked questions about ANICOM center examinations, valuation, documents, timelines and service costs.",
+    "title": "Frequently asked questions",
+    "description": "The most common questions about our examinations, valuation and the way we work. If you can't find the answer, call or write to us.",
+    "items": [
+      {
+        "id": "q1",
+        "question": "What examinations do you conduct?",
+        "answer": "Judicial and extrajudicial examinations: construction-technical and soil-science, commodity (including valuation of real and movable property), accounting and economic, agrotechnical and agro-commodity, materials-science, environmental, auto-technical and road-accident related, handwriting, document, ballistics (cold weapons) and computer examinations."
+      },
+      {
+        "id": "q2",
+        "question": "How does a judicial examination differ from an extrajudicial one?",
+        "answer": "A judicial examination is appointed by a decision of the court or the body conducting the proceedings in criminal or civil cases. An extrajudicial examination is carried out on a civil-law contractual basis at the client's request. In both cases you receive an expert conclusion or opinion in the manner prescribed by RA legislation."
+      },
+      {
+        "id": "q3",
+        "question": "How do I order an examination or a valuation?",
+        "answer": "By phone at +374 10 57 75 41 or +374 10 55 68 42, by email, or at our office: Yerevan, Abovyan 20/12, office 4. After reviewing the materials we conclude a contract and set the timeline."
+      },
+      {
+        "id": "q4",
+        "question": "Which documents are required?",
+        "answer": "It depends on the type of examination. Usually an identity document and materials related to the subject of research — property documents, technical documentation, case materials. We provide the exact list upon request."
+      },
+      {
+        "id": "q5",
+        "question": "How long does an examination take?",
+        "answer": "The timeline depends on the type, scope and number of objects — from a few days to a few weeks. The exact deadline is fixed in the contract before the work starts."
+      },
+      {
+        "id": "q6",
+        "question": "How much do the services cost?",
+        "answer": "The cost depends on the type, scope and urgency of the examination. We calculate it after a preliminary review of the materials and communicate it before the contract is signed — no hidden fees."
+      },
+      {
+        "id": "q7",
+        "question": "Will the conclusion be valid in court?",
+        "answer": "Yes. The center's experts hold judicial qualification certificates issued by the qualification commissions of the National Academy of Sciences of the RA and the RA Ministry of Justice, as well as the Motor Insurers' Bureau of Armenia. Examinations are carried out in accordance with RA legislation."
+      },
+      {
+        "id": "q8",
+        "question": "Do you perform property valuation?",
+        "answer": "Yes. Specialists qualified by the RA Cadastre Committee perform market valuation of any property — real estate, vehicles, equipment, shares, intellectual property — and issue a Valuation Report."
+      },
+      {
+        "id": "q9",
+        "question": "Do you assess damage after a road accident?",
+        "answer": "Yes. We determine the damage caused to vehicles, as well as damage to any other property within the compulsory motor third-party liability (MTPL) insurance sphere."
+      },
+      {
+        "id": "q10",
+        "question": "Do you work with advocates and organizations?",
+        "answer": "Yes. The center is ready to conduct examinations for members of the RA Chamber of Advocates and their clients, as well as for organizations and citizens of any form of ownership — both one-off and on an ongoing basis."
+      }
+    ]
   }
 }

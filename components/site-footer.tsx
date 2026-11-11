@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, AtSign, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
 import type { HomeContent } from "@/lib/home-content";
 import { localizeHref, type Locale } from "@/lib/i18n";
 
-const contactIcons = [Phone, Mail, AtSign, MapPin, Clock];
+const contactIcons = [Phone, Mail, MapPin, Clock];
 
 const socialPlaceholders = [
   {
@@ -156,7 +156,7 @@ export function SiteFooter({ content, locale }: SiteFooterProps) {
               {footer.contactTitle}
             </h2>
             <ul className="mt-3 space-y-2.5">
-              {footer.contacts.map(({ label, value, href }, index) => {
+              {footer.contacts.map(({ label, value, href, secondary }, index) => {
                 const Icon = contactIcons[index] ?? MapPin;
                 return (
                   <li
@@ -180,6 +180,14 @@ export function SiteFooter({ content, locale }: SiteFooterProps) {
                       ) : (
                         <span className="text-hero-muted">{value}</span>
                       )}
+                      {secondary?.href ? (
+                        <a
+                          href={secondary.href}
+                          className="block text-hero-foreground underline-offset-4 transition-colors hover:text-hero-accent hover:underline focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
+                        >
+                          {secondary.value}
+                        </a>
+                      ) : null}
                     </span>
                   </li>
                 );

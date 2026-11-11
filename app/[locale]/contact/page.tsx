@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AtSign, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
@@ -8,10 +9,10 @@ import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl, type Locale } from "@/lib/i18n";
 
-// Same icon order as the footer contact column (phone, email, second email,
-// office, hours) — the strip renders footer.contacts, keeping the approved
-// details the single source of truth.
-const contactIcons = [Phone, Mail, AtSign, MapPin, Clock];
+// Same icon order as the footer contact column (phone, email with its
+// secondary address, office, hours) — the strip renders footer.contacts,
+// keeping the approved details the single source of truth.
+const contactIcons = [Phone, Mail, MapPin, Clock];
 
 export async function generateMetadata({
   params,
@@ -49,7 +50,7 @@ export default async function ContactPage({
 
   const localeSafe: Locale = locale;
   const content = getHomeContent(localeSafe);
-  const { contactPage, footer, services, experts } = content;
+  const { contactPage, footer, services, experts, faq } = content;
   const emailEntry = footer.contacts.find((entry) =>
     entry.href?.startsWith("mailto:"),
   );
@@ -73,7 +74,7 @@ export default async function ContactPage({
       {/* Contact details: one hairline grid, not floating cards. */}
       <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
         <h2 className="sr-only">{contactPage.infoTitle}</h2>
-        <ul className="motion-rise grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5 [--motion-delay:160ms]">
+        <ul className="motion-rise grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4 [--motion-delay:160ms]">
           {footer.contacts.map((entry, index) => {
             const Icon = contactIcons[index] ?? MapPin;
             return (
@@ -89,7 +90,7 @@ export default async function ContactPage({
                 {entry.href ? (
                   <a
                     href={entry.href}
-                    className="mt-1.5 inline-block text-sm leading-snug font-medium underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+                    className="mt-1.5 block text-sm leading-snug font-medium underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
                   >
                     {entry.value}
                   </a>
@@ -98,6 +99,14 @@ export default async function ContactPage({
                     {entry.value}
                   </p>
                 )}
+                {entry.secondary?.href ? (
+                  <a
+                    href={entry.secondary.href}
+                    className="text-sm leading-snug font-medium underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+                  >
+                    {entry.secondary.value}
+                  </a>
+                ) : null}
               </li>
             );
           })}
@@ -131,6 +140,34 @@ export default async function ContactPage({
               referrerPolicy="no-referrer-when-downgrade"
               className="h-80 w-full lg:h-full lg:min-h-[36rem]"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ accordion (owner request, Nov 2026 — draft copy): self-service
+          answers before the shared contact banner. */}
+      <section
+        aria-labelledby="contact-faq"
+        className="border-t border-border"
+      >
+        <div className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
+          <h2
+            id="contact-faq"
+            className="text-center font-display text-2xl leading-snug sm:text-3xl"
+          >
+            {faq.title}
+          </h2>
+          <div className="mx-auto mt-8 max-w-4xl border-t border-border">
+            <Accordion>
+              {faq.items.map((item) => (
+                <AccordionItem key={item.id}>
+                  <AccordionTrigger className="font-display text-lg leading-snug sm:text-xl">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent>{item.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
