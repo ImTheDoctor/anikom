@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
+import { ZoomImage } from "@/components/zoom-image";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
 
@@ -149,6 +150,35 @@ export default async function AboutPage({
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Qualifications & recognition (real data from the client's official
+          proposal document + the MY ARMENIA honorary diploma, Nov 2026). */}
+      <section
+        aria-labelledby="about-qualification"
+        className="border-t border-border"
+      >
+        <div className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
+          <h2
+            id="about-qualification"
+            className="font-display text-2xl leading-snug sm:text-3xl"
+          >
+            {aboutPage.qualificationTitle}
+          </h2>
+          <div className="mt-8 grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:gap-12">
+            <p className="max-w-3xl text-base leading-relaxed">
+              {aboutPage.qualificationText}
+            </p>
+            <div className="min-w-0">
+              <ZoomImage
+                src={aboutPage.awardImage}
+                alt={aboutPage.awardImageLabel}
+                caption={aboutPage.awardCaption}
+                closeLabel={experts.profileUi.closeLabel}
+              />
+            </div>
           </div>
         </div>
       </section>

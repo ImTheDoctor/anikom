@@ -498,6 +498,15 @@ export type HomeContent = {
       items: string[];
     }[];
     directionsHeading: string;
+    // Real credentials from the client's official proposal document (Nov
+    // 2026): certificate-issuing bodies + the full qualification certificate
+    // number list.
+    qualificationTitle: string;
+    qualificationText: string;
+    // MY ARMENIA honorary diploma scan (2026) with caption.
+    awardImage: string;
+    awardImageLabel: string;
+    awardCaption: string;
   };
   footer: {
     homeLabel: string;

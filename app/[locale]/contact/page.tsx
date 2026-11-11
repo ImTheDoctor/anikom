@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { AtSign, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
@@ -8,10 +8,10 @@ import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl, type Locale } from "@/lib/i18n";
 
-// Same icon order as the footer contact column (phone, email, office, hours)
-// — the strip renders footer.contacts, keeping the approved details the
-// single source of truth.
-const contactIcons = [Phone, Mail, MapPin, Clock];
+// Same icon order as the footer contact column (phone, email, second email,
+// office, hours) — the strip renders footer.contacts, keeping the approved
+// details the single source of truth.
+const contactIcons = [Phone, Mail, AtSign, MapPin, Clock];
 
 export async function generateMetadata({
   params,
@@ -73,7 +73,7 @@ export default async function ContactPage({
       {/* Contact details: one hairline grid, not floating cards. */}
       <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
         <h2 className="sr-only">{contactPage.infoTitle}</h2>
-        <ul className="motion-rise grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4 [--motion-delay:160ms]">
+        <ul className="motion-rise grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5 [--motion-delay:160ms]">
           {footer.contacts.map((entry, index) => {
             const Icon = contactIcons[index] ?? MapPin;
             return (

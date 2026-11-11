@@ -157,9 +157,6 @@ export default async function ServiceDetailPage({
 
   const { locale, content, item, catalog } = found;
   const { services, cases, team, experts } = content;
-  const titleBySlug = new Map(
-    services.items.map((service) => [service.slug, service.title]),
-  );
   const directionExperts = team.items
     .filter((expert) => expert.directions.includes(item.slug))
     .slice(0, 4);
@@ -317,9 +314,7 @@ export default async function ServiceDetailPage({
                 <ExpertCard
                   key={expert.slug}
                   item={expert}
-                  directionLabels={expert.directions
-                    .map((slug) => titleBySlug.get(slug))
-                    .filter((title): title is string => Boolean(title))}
+                 
                   locale={locale}
                   actionLabel={experts.cardAction}
                 />

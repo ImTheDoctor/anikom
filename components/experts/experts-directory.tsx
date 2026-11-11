@@ -6,7 +6,7 @@
 // card grid in its data order. The server passes the full localized roster
 // and copy; no data fetching happens here.
 
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   ExpertCard,
@@ -21,14 +21,12 @@ const PAGE_SIZE = 9;
 
 type ExpertsDirectoryProps = {
   items: ExpertCardItem[];
-  services: { slug: string; title: string }[];
   experts: HomeContent["experts"];
   locale: Locale;
 };
 
 export function ExpertsDirectory({
   items,
-  services,
   experts,
   locale,
 }: ExpertsDirectoryProps) {
@@ -36,10 +34,6 @@ export function ExpertsDirectory({
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  const titleBySlug = useMemo(
-    () => new Map(services.map((s) => [s.slug, s.title])),
-    [services],
-  );
 
   const pageCount = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
@@ -83,9 +77,7 @@ export function ExpertsDirectory({
             <ExpertCard
               key={item.slug}
               item={item}
-              directionLabels={item.directions
-                .map((slug) => titleBySlug.get(slug))
-                .filter((title): title is string => Boolean(title))}
+             
               locale={locale}
               actionLabel={experts.cardAction}
             />

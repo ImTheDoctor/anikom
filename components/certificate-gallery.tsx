@@ -76,11 +76,11 @@ export function CertificateGallery({
                 {viewCertificateLabel} — {certificate.title}
               </span>
             </button>
-            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4">
+            <div className="flex flex-col gap-y-1 py-4 sm:grid sm:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] sm:items-baseline sm:gap-x-6">
               <p className="text-sm font-medium transition-colors duration-150 group-hover:text-primary">
                 {certificate.title}
               </p>
-              <div className="flex items-center gap-x-5 gap-y-1">
+              <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1 sm:justify-end">
                 <p className="text-sm text-muted-foreground">
                   {[certificate.issuer, certificate.year, certificate.number]
                     .filter(Boolean)

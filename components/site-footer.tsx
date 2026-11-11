@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, AtSign, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
 import type { HomeContent } from "@/lib/home-content";
 import { localizeHref, type Locale } from "@/lib/i18n";
 
-const contactIcons = [MapPin, Phone, Mail, Clock];
+const contactIcons = [Phone, Mail, AtSign, MapPin, Clock];
 
 const socialPlaceholders = [
   {

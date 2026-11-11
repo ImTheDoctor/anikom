@@ -1717,6 +1717,13 @@
               "year": "2012",
               "image": "/images/certificates/araik-stepanyan/01-retraining-ysu-law-2012.jpg",
               "imageLabel": "Retraining certificate, YSU (2012)"
+            },
+            {
+              "title": "Certificate of participation — “European Practices in Forensic Examination and Modern Trends in Digital Forensics” seminar",
+              "issuer": "Chamber of Experts and Criminologists of RA",
+              "year": "2026",
+              "image": "/images/certificates/araik-stepanyan/seminar-participation-certificate-2026.jpeg",
+              "imageLabel": "Seminar participation certificate, 2026"
             }
           ]
         }
@@ -2291,11 +2298,12 @@
     "metaTitle": "About us",
     "metaDescription": "The ANIKOM center for research and judicial examinations: our mission, goals, functions, and areas of activity. More than 26 years of experience.",
     "title": "About us",
-    "description": "For more than 26 years, the ANIKOM center has helped clients clarify complex situations with objective, well-substantiated expert conclusions.",
+    "description": "A specialized expert institution since 2000 — judicial and extrajudicial examinations, valuation, geodesy and professional consultancy on the order of any economic entity.",
     "missionTitle": "Our mission",
     "mission": [
-      "ANIKOM LLC was founded on 30 October 2000 as a center for research and judicial examinations. The center carries out judicial and extrajudicial examinations, property valuation, geodetic and cadastral works, and damage assessment.",
-      "Our mission is to deliver objective, independent, and evidence-based conclusions that courts, public bodies, companies, and individuals can rely on. We work so that every conclusion stands up to professional and legal scrutiny."
+      "«ANICOM» LLC was founded on 30 October 2000 as a center for research and judicial examinations. For more than 26 years the specialized expert institution has been providing services to any economic entity — both judicial examinations by court decisions in criminal or civil cases and extrajudicial ones on a civil-law contractual basis.",
+      "All of the center's experts have many years of specialized expert experience and judicial qualification certificates. They have been — or currently are — heads of relevant departments of the NAS RA «National Bureau of Expertise» and/or the RA Ministry of Justice «Expert Center», or skilled, experienced experts.",
+      "Our mission is to deliver objective, independent and fact-based conclusions that courts, state bodies, organizations and individual citizens can rely on. We work so that every conclusion withstands professional and legal scrutiny."
     ],
     "stats": [
       {
@@ -2313,35 +2321,47 @@
     ],
     "goalsHeading": "Our goals",
     "goals": [
-      "Developing the field of judicial examinations and raising the quality of research",
-      "Carrying out judicial and extrajudicial examinations in criminal, administrative, and civil cases",
-      "Developing and applying current research methods and methodological approaches",
-      "Fostering a professional environment and the qualifications of our experts",
-      "Ensuring clear and well-substantiated results for every client"
+      "Conducting judicial and extrajudicial examinations on the order of any economic entity — by court decisions and on a contractual basis",
+      "Conducting examinations for members of the RA Chamber of Advocates and their clients",
+      "Providing valuation reports by qualified specialists in the manner prescribed by RA legislation",
+      "Professional paid consultancy in the fields of examinations and valuation",
+      "Serving economic entities of any form of ownership"
     ],
     "functionsHeading": "Our functions",
     "functionGroups": [
       {
-        "title": "Core functions",
+        "title": "Examinations",
         "items": [
-          "Judicial examinations ordered by courts and law-enforcement bodies",
-          "Extrajudicial examinations requested by companies, attorneys, and individuals",
-          "Valuation of real and movable property",
-          "Geodetic and cadastral works",
-          "Determining the extent of caused damage"
+          "Judicial construction-technical and soil-science examinations",
+          "Judicial commodity examinations (including valuation of real and movable property)",
+          "Judicial accounting and judicial economic examinations",
+          "Judicial agrotechnical, agricultural, biological (including fiber) and agro-commodity examinations",
+          "Judicial materials-science and environmental examinations",
+          "Road-accident circumstances, auto-technical, auto-trace and auto-commodity examinations, MTPL damage examinations",
+          "Judicial handwriting, document, ballistics (cold weapons) and computer examinations"
         ]
       },
       {
-        "title": "Additional activities",
+        "title": "Valuation and other professional services",
         "items": [
-          "Expert consultations on examination matters",
-          "Reviewing and assessing conclusions prepared by other experts",
-          "Research and methodological works",
-          "Preliminary review of materials and documents submitted for examination"
+          "Inventory, market valuation or revaluation of enterprises' fixed assets and material (including intangible) values",
+          "Market valuation of production facilities, machinery, mechanisms and hazardous production facilities",
+          "Market valuation of vehicles (including airborne, railway, waterborne)",
+          "Market valuation of any property",
+          "Market valuation of shares (including share separation)",
+          "Consultancy on real estate transactions, market valuation and examination",
+          "Measurement/registration, geodesy, cartography",
+          "Valuation of intellectual property and other intangible assets, valuation of rights (examination)",
+          "Business plan analysis and valuation, inventory and valuation of assets in liquidation and insolvency cases, organization and conduct of auctions"
         ]
       }
     ],
-    "directionsHeading": "Areas of activity"
+    "directionsHeading": "Areas of activity",
+    "qualificationTitle": "Qualifications and recognition",
+    "qualificationText": "All of the center's experts hold judicial qualification certificates issued by the qualification commissions of the National Academy of Sciences of the RA and the RA Ministry of Justice, as well as the examination commission of the Motor Insurers' Bureau of Armenia; valuation specialists are qualified by the RA Cadastre Committee. The activity is carried out under qualification certificates ԳԳ-2024-2, 098, 099, 100, 236, 243, 244, 298, 063, 273, 211, 212, 0337, 0180, 239 and certificate N00004 of the Motor Insurers' Bureau of Armenia.",
+    "awardImage": "/images/about/patvogir-2026.jpeg",
+    "awardImageLabel": "«My Armenia» honorary diploma (2026)",
+    "awardCaption": "Honorary diploma awarded to the ANICOM company for services to national security and public interests («My Armenia», Yerevan, 2026)"
   },
   "footer": {
     "homeLabel": "Anicom — home",
@@ -2362,6 +2382,11 @@
         "label": "Email",
         "value": "anikom-sa@mail.ru",
         "href": "mailto:anikom-sa@mail.ru"
+      },
+      {
+        "label": "Email",
+        "value": "anikomhdpk@gmail.com",
+        "href": "mailto:anikomhdpk@gmail.com"
       },
       {
         "label": "Office",

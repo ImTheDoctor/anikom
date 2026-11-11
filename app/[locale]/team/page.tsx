@@ -99,10 +99,6 @@ export default async function ExpertsPage({
               experience,
             }),
           )}
-          services={content.services.items.map(({ slug, title }) => ({
-            slug,
-            title,
-          }))}
           experts={experts}
           locale={locale}
         />

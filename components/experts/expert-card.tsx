@@ -10,38 +10,18 @@ export type ExpertCardItem = Omit<ExpertItem, "profile">;
 
 type ExpertCardProps = {
   item: ExpertCardItem;
-  directionLabels: string[];
   locale: Locale;
   actionLabel: string;
 };
 
-function DirectionTags({ labels }: { labels: string[] }) {
-  if (!labels.length) return null;
-  return (
-    <ul className="mt-3 flex min-w-0 flex-wrap gap-1.5">
-      {labels.map((label) => (
-        <li
-          key={label}
-          title={label}
-          className="max-w-full truncate rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground"
-        >
-          {label}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 // Same interaction language as the homepage TeamCard: the whole card is one
 // stretched link, the circular arrow is the single visible affordance, and
-// the accessible link name comes from the sr-only span. The card carries the
-// experience badge and direction tags from the roster data.
-export function ExpertCard({
-  item,
-  directionLabels,
-  locale,
-  actionLabel,
-}: ExpertCardProps) {
+// the accessible link name comes from the sr-only span. Owner request,
+// Nov 11, 2026: all copy sits on a frosted-glass panel at the bottom of the
+// portrait (brand-deep glass — the sanctioned dark-panel surface), and only
+// the name + role stay on the panel ("остальное убрать — пол картинки
+// не видно"); experience and directions live in the profile data only.
+export function ExpertCard({ item, locale, actionLabel }: ExpertCardProps) {
   return (
     <li className="group relative flex min-w-0 flex-col transition-shadow duration-300 hover:shadow-md">
       <div className="relative aspect-[3/4] w-full overflow-hidden border border-border">
@@ -54,20 +34,17 @@ export function ExpertCard({
         />
         <span
           aria-hidden="true"
-          className="absolute top-3 right-3 inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-primary transition-colors duration-150 group-hover:border-primary"
+          className="absolute top-3 right-3 z-10 inline-flex size-9 items-center justify-center rounded-full border border-border bg-background text-primary transition-colors duration-150 group-hover:border-primary"
         >
           <ArrowRight className="size-4" strokeWidth={1.5} />
         </span>
-        <span className="absolute bottom-3 left-3 inline-flex items-center rounded-full bg-background px-2.5 py-1 text-xs font-medium text-foreground">
-          {item.experience}
-        </span>
-      </div>
-      <div className="flex flex-1 flex-col border-x border-b border-border bg-card p-4 sm:p-5">
-        <h3 className="font-display text-lg leading-snug sm:text-xl">
-          {item.name}
-        </h3>
-        <p className="mt-1 text-sm text-muted-foreground">{item.role}</p>
-        <DirectionTags labels={directionLabels} />
+
+        <div className="absolute inset-x-0 bottom-0 border-t border-hero-border bg-brand-deep/75 p-4 backdrop-blur-md sm:p-5">
+          <h3 className="font-display text-lg leading-snug text-hero-foreground sm:text-xl">
+            {item.name}
+          </h3>
+          <p className="mt-1 text-xs text-hero-foreground/80">{item.role}</p>
+        </div>
       </div>
       <Link
         href={`/${locale}/team/${item.slug}`}

@@ -66,11 +66,8 @@ export default async function TeamDetailPage({
   if (!found) notFound();
 
   const { locale, content, item } = found;
-  const { experts, team, services } = content;
+  const { experts, team } = content;
   const ui = experts.profileUi;
-  const titleBySlug = new Map(
-    services.items.map((service) => [service.slug, service.title]),
-  );
   const withScans = item.profile.certificates.filter(
     (certificate) => certificate.image,
   );
@@ -231,9 +228,7 @@ export default async function TeamDetailPage({
               <ExpertCard
                 key={other.slug}
                 item={other}
-                directionLabels={other.directions
-                  .map((slug) => titleBySlug.get(slug))
-                  .filter((title): title is string => Boolean(title))}
+               
                 locale={locale}
                 actionLabel={experts.cardAction}
               />

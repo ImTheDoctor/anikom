@@ -22,7 +22,7 @@ Brand assets: primary color **#A54686** (token `--primary`). `public/logo.png` i
 - Follow `docs/design-system.md`: type scale (Playfair Display for display headings only, Geist for UI/body), spacing steps, hairline borders, radii, full-opacity brand focus rings, state-only motion, and accessibility rules.
 - Primary buttons use `--primary-hover`; do not reintroduce `bg-primary/80` (fails AA, see design doc §2).
 - Logo: render via `components/brand-mark.tsx` / `next/image`; never recolor, crop, or place the black-artwork crest directly on dark surfaces — mount it on a light plaque.
-- No gradients, glassmorphism, decorative animation, emoji icons, or invented company facts/marketing copy.
+- No gradients, glassmorphism, decorative animation, emoji icons, or invented company facts/marketing copy. (Owner-approved exception, Nov 11 2026: the expert-card frosted bottom panel — `bg-brand-deep/75 backdrop-blur-md` — in `components/experts/expert-card.tsx`.)
 
 ## TypeScript and Next.js conventions
 
