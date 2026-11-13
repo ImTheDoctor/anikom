@@ -58,14 +58,20 @@ function HeaderCtaLink({
     <Link
       href={localizeHref(locale, cta.href)}
       transitionTypes={["forward"]}
-      className={cn(buttonVariants({ size: "lg" }), "min-h-11 px-4")}
+      // The Armenian cabinet label does not fit beside the crest plaque and
+      // the menu toggle at 375px — icon-only below sm (label stays for
+      // screen readers), text from sm up.
+      className={cn(
+        buttonVariants({ size: "lg" }),
+        "min-h-11 w-11 justify-center px-0 sm:w-auto sm:px-4",
+      )}
     >
       {icon === "sign-in" ? (
         <LogIn strokeWidth={1.75} aria-hidden="true" />
       ) : (
         <UserRound strokeWidth={1.75} aria-hidden="true" />
       )}
-      {cta.label}
+      <span className="hidden sm:inline">{cta.label}</span>
     </Link>
   );
 }
@@ -75,7 +81,10 @@ function HeaderCtaFallback() {
   return (
     <div
       aria-hidden="true"
-      className={cn(buttonVariants({ size: "lg" }), "invisible min-h-11 px-4")}
+      className={cn(
+        buttonVariants({ size: "lg" }),
+        "invisible min-h-11 w-11 px-0 sm:w-auto sm:px-4",
+      )}
     />
   );
 }

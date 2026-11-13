@@ -1,7 +1,6 @@
 import { ActionLink } from "@/components/action-link";
 import { CaseCard } from "@/components/cards/case-card";
 import { SectionHeading } from "@/components/home/section-heading";
-import { Reveal } from "@/components/reveal";
 import type { HomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
@@ -19,22 +18,16 @@ export function CasesSection({ content, locale }: CasesSectionProps) {
       id="cases"
       className="scroll-mt-16 py-16 sm:scroll-mt-20 md:py-20"
     >
-      <Reveal>
-        <SectionHeading
-          title={cases.title}
-          action={
-            <ActionLink href={localizeHref(locale, "/cases")}>
-              {cases.action}
-            </ActionLink>
-          }
-        />
-      </Reveal>
+      <SectionHeading
+        title={cases.title}
+        action={
+          <ActionLink href={localizeHref(locale, "/cases")}>
+            {cases.action}
+          </ActionLink>
+        }
+      />
 
-      <Reveal
-        as="ul"
-        stagger
-        className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4"
-      >
+      <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-4">
         {cases.items.slice(0, 4).map((item) => (
           <CaseCard
             key={item.slug}
@@ -43,7 +36,7 @@ export function CasesSection({ content, locale }: CasesSectionProps) {
             actionLabel={cases.cardAction}
           />
         ))}
-      </Reveal>
+      </ul>
     </section>
   );
 }

@@ -23,7 +23,6 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { Reveal } from "@/components/reveal";
 import type { HomeContent } from "@/lib/home-content";
 import { localizeHref, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -196,149 +195,144 @@ export function ProcessSection({ content, locale }: ProcessSectionProps) {
           }
         }}
       >
-        <Reveal stagger>
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
-            <div className="max-w-2xl">
-              <p className="text-xs font-medium tracking-[0.18em] text-hero-accent uppercase">
-                {process.eyebrow}
-              </p>
-              <h2
-                id="process-heading"
-                className="mt-3 font-display text-3xl leading-tight sm:text-4xl"
-              >
-                {process.title}
-              </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-hero-muted sm:text-base">
-                {process.description}
-              </p>
-            </div>
-            <Link
-              href={localizeHref(locale, process.action.href)}
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "min-h-11 shrink-0 border-hero-foreground/40 bg-transparent px-4 text-hero-foreground shadow-none hover:bg-hero-foreground/10 hover:text-hero-foreground focus-visible:border-hero-accent focus-visible:ring-hero-accent",
-              )}
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+          <div className="max-w-2xl">
+            <h2
+              id="process-heading"
+              className="font-display text-3xl leading-tight sm:text-4xl"
             >
-              {process.action.label}
-              <ArrowRight
-                className="size-4 transition-transform duration-150 group-hover/button:translate-x-0.5"
-                aria-hidden="true"
-              />
-            </Link>
+              {process.title}
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-hero-muted sm:text-base">
+              {process.description}
+            </p>
           </div>
-
-          <div
-            role="tablist"
-            aria-label={process.title}
-            onKeyDown={onTablistKeyDown}
-            className="mt-10 grid grid-cols-5 gap-2 sm:mt-12 sm:gap-4"
+          <Link
+            href={localizeHref(locale, process.action.href)}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "min-h-11 shrink-0 border-hero-foreground/40 bg-transparent px-4 text-hero-foreground shadow-none hover:bg-hero-foreground/10 hover:text-hero-foreground focus-visible:border-hero-accent focus-visible:ring-hero-accent",
+            )}
           >
-            {steps.map((step, index) => (
-              <button
-                key={step.number}
-                ref={(el) => {
-                  tabRefs.current[index] = el;
-                }}
-                type="button"
-                role="tab"
-                id={`process-tab-${index}`}
-                aria-selected={index === active}
-                aria-controls="process-panel"
-                tabIndex={index === active ? 0 : -1}
-                onClick={() => select(index)}
-                className="group flex min-h-11 flex-col items-start gap-2 rounded-sm text-left focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
+            {process.action.label}
+            <ArrowRight
+              className="size-4 transition-transform duration-150 group-hover/button:translate-x-0.5"
+              aria-hidden="true"
+            />
+          </Link>
+        </div>
+
+        <div
+          role="tablist"
+          aria-label={process.title}
+          onKeyDown={onTablistKeyDown}
+          className="mt-10 grid grid-cols-5 gap-2 sm:mt-12 sm:gap-4"
+        >
+          {steps.map((step, index) => (
+            <button
+              key={step.number}
+              ref={(el) => {
+                tabRefs.current[index] = el;
+              }}
+              type="button"
+              role="tab"
+              id={`process-tab-${index}`}
+              aria-selected={index === active}
+              aria-controls="process-panel"
+              tabIndex={index === active ? 0 : -1}
+              onClick={() => select(index)}
+              className="group flex min-h-11 flex-col items-start gap-2 rounded-sm text-left focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
+            >
+              <span
+                className={cn(
+                  "font-mono text-xs tracking-[0.16em]",
+                  index === active
+                    ? "text-hero-accent"
+                    : "text-hero-muted transition-colors group-hover:text-hero-foreground",
+                )}
               >
+                {step.number}
+              </span>
+              <span
+                className={cn(
+                  "hidden text-sm font-medium lg:block",
+                  index === active
+                    ? "text-hero-foreground"
+                    : "text-hero-muted transition-colors group-hover:text-hero-foreground",
+                )}
+              >
+                {step.title}
+              </span>
+              <span className="block h-0.5 w-full overflow-hidden rounded-full bg-hero-foreground/15">
                 <span
-                  className={cn(
-                    "font-mono text-xs tracking-[0.16em]",
-                    index === active
-                      ? "text-hero-accent"
-                      : "text-hero-muted transition-colors group-hover:text-hero-foreground",
-                  )}
-                >
-                  {step.number}
-                </span>
-                <span
-                  className={cn(
-                    "hidden text-sm font-medium lg:block",
-                    index === active
-                      ? "text-hero-foreground"
-                      : "text-hero-muted transition-colors group-hover:text-hero-foreground",
-                  )}
-                >
-                  {step.title}
-                </span>
-                <span className="block h-0.5 w-full overflow-hidden rounded-full bg-hero-foreground/15">
-                  <span
-                    ref={(el) => {
-                      fillRefs.current[index] = el;
-                    }}
-                    className={cn(
-                      "block h-full w-full origin-left scale-x-0",
-                      index < active ? "bg-hero-accent/60" : "bg-hero-accent",
-                    )}
-                  />
-                </span>
-              </button>
-            ))}
-          </div>
-
-          {/* Equal-height grid stack: all five panels share one cell, so the
-              tallest description fixes the height and auto-advance never
-              shifts layout. Inactive panels are visibility-hidden. */}
-          <div
-            id="process-panel"
-            role="tabpanel"
-            aria-labelledby={`process-tab-${active}`}
-            aria-live={interacting || reducedMotion ? "polite" : "off"}
-            className="mt-8 grid sm:mt-10"
-          >
-            {steps.map((step, index) => {
-              const Icon = stepIcons[index];
-              return (
-                <div
-                  key={step.number}
                   ref={(el) => {
-                    panelRefs.current[index] = el;
+                    fillRefs.current[index] = el;
                   }}
                   className={cn(
-                    "col-start-1 row-start-1",
-                    index !== active && "invisible",
+                    "block h-full w-full origin-left scale-x-0",
+                    index < active ? "bg-hero-accent/60" : "bg-hero-accent",
                   )}
-                >
-                  {/* Number stacks above the copy below sm: Armenian step
-                      titles are single long words that cannot shrink inside a
-                      side-by-side row at 375px. */}
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-                    <span
-                      aria-hidden="true"
-                      className="font-display text-6xl leading-none text-hero-accent sm:text-7xl"
-                    >
-                      {step.number}
-                    </span>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-3">
-                        <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-hero-border text-hero-accent">
-                          <Icon
-                            className="size-5"
-                            strokeWidth={1.5}
-                            aria-hidden="true"
-                          />
-                        </span>
-                        <h3 className="font-display text-2xl leading-snug">
-                          {step.title}
-                        </h3>
-                      </div>
-                      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-hero-muted sm:text-base">
-                        {step.description}
-                      </p>
+                />
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Equal-height grid stack: all five panels share one cell, so the
+            tallest description fixes the height and auto-advance never
+            shifts layout. Inactive panels are visibility-hidden. */}
+        <div
+          id="process-panel"
+          role="tabpanel"
+          aria-labelledby={`process-tab-${active}`}
+          aria-live={interacting || reducedMotion ? "polite" : "off"}
+          className="mt-8 grid sm:mt-10"
+        >
+          {steps.map((step, index) => {
+            const Icon = stepIcons[index];
+            return (
+              <div
+                key={step.number}
+                ref={(el) => {
+                  panelRefs.current[index] = el;
+                }}
+                className={cn(
+                  "col-start-1 row-start-1",
+                  index !== active && "invisible",
+                )}
+              >
+                {/* Number stacks above the copy below sm: Armenian step
+                    titles are single long words that cannot shrink inside a
+                    side-by-side row at 375px. */}
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-6xl leading-none text-hero-accent sm:text-7xl"
+                  >
+                    {step.number}
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-3">
+                      <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-hero-border text-hero-accent">
+                        <Icon
+                          className="size-5"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <h3 className="font-display text-2xl leading-snug">
+                        {step.title}
+                      </h3>
                     </div>
+                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-hero-muted sm:text-base">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </Reveal>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

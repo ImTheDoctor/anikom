@@ -1,7 +1,6 @@
 import { ActionLink } from "@/components/action-link";
 import { NewsCard } from "@/components/news/news-card";
 import { SectionHeading } from "@/components/home/section-heading";
-import { Reveal } from "@/components/reveal";
 import type { HomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
@@ -31,22 +30,16 @@ export function NewsSection({ content, locale }: NewsSectionProps) {
       id="news"
       className="scroll-mt-16 py-16 sm:scroll-mt-20 md:py-20"
     >
-      <Reveal>
-        <SectionHeading
-          title={news.title}
-          action={
-            <ActionLink href={localizeHref(locale, "/news")}>
-              {news.action}
-            </ActionLink>
-          }
-        />
-      </Reveal>
+      <SectionHeading
+        title={news.title}
+        action={
+          <ActionLink href={localizeHref(locale, "/news")}>
+            {news.action}
+          </ActionLink>
+        }
+      />
 
-      <Reveal
-        as="ul"
-        stagger
-        className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
-      >
+      <ul className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {news.items.slice(0, 3).map((item) => (
           <NewsCard
             key={item.slug}
@@ -59,7 +52,7 @@ export function NewsSection({ content, locale }: NewsSectionProps) {
             variant="grid"
           />
         ))}
-      </Reveal>
+      </ul>
     </section>
   );
 }

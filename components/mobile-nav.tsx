@@ -50,7 +50,7 @@ export function MobileNav({
         aria-controls="mobile-navigation"
         aria-label={open ? closeLabel : openLabel}
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex size-11 items-center justify-center rounded-md border border-border bg-background text-foreground transition-colors hover:bg-muted focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+        className="inline-flex size-11 items-center justify-center rounded-md border border-hero-border bg-transparent text-hero-foreground transition-colors hover:bg-hero-foreground/10 focus-visible:border-hero-accent focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
       >
         {open ? (
           <X className="size-5" strokeWidth={1.75} aria-hidden="true" />

@@ -63,7 +63,7 @@ export function LanguageSwitcher({
         aria-controls={panelId}
         aria-label={`${language.triggerLabel} (${language.names[locale]})`}
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex size-11 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none aria-expanded:text-foreground"
+        className="inline-flex size-11 items-center justify-center rounded-md text-hero-muted transition-colors hover:bg-hero-foreground/10 hover:text-hero-foreground focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none aria-expanded:text-hero-foreground"
       >
         <Globe className="size-5" strokeWidth={1.75} aria-hidden="true" />
       </button>
