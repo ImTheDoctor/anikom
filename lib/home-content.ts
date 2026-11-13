@@ -133,21 +133,116 @@ export type NewsItem = {
   body: string[];
 };
 
-// Copy for the placeholder auth pages /[locale]/login and /[locale]/register.
-// `nameLabel` is set only on the register variant; the form component uses its
-// presence to pick the field set and the password autocomplete hint.
+// Copy for the auth pages /[locale]/login and /[locale]/register. Both run
+// the same email → six-digit-code flow (the test API registers an account on
+// first sign-in); only the framing copy differs. `codeHint` carries an
+// "{email}" placeholder the form replaces with the entered address. The
+// profile-name labels are set only on the register variant — registration
+// collects them for the API's verify call.
 export type AuthPageContent = {
   metaTitle: string;
   metaDescription: string;
   title: string;
   description: string;
-  nameLabel?: string;
   emailLabel: string;
-  passwordLabel: string;
+  emailPlaceholder: string;
+  firstNameLabel?: string;
+  lastNameLabel?: string;
+  birthDateLabel?: string;
   submitLabel: string;
+  codeLabel: string;
+  codeHint: string;
+  codeSubmitLabel: string;
+  resendLabel: string;
+  changeEmailLabel: string;
   switchText: string;
   switchCta: string;
-  unavailableNote: string;
+  errors: {
+    invalidCode: string;
+    tooManyRequests: string;
+    generic: string;
+  };
+};
+
+// Copy for the account page /[locale]/me: identity rows + the inline profile
+// editor (PATCH /v1/auth/me) + logout.
+export type AccountPageContent = {
+  metaTitle: string;
+  metaDescription: string;
+  title: string;
+  emailLabel: string;
+  idLabel: string;
+  roleLabel: string;
+  profileHeading: string;
+  firstNameLabel: string;
+  lastNameLabel: string;
+  birthDateLabel: string;
+  saveLabel: string;
+  savedNote: string;
+  saveError: string;
+  logoutLabel: string;
+};
+
+// Copy for the personal cabinet /[locale]/me/* (overview, profile, documents,
+// settings + the expert-only placeholders). The profile editor keeps its
+// labels in AccountPageContent (ProfileForm's props type).
+export type CabinetPageContent = {
+  meta: {
+    title: string;
+    description: string;
+  };
+  nav: {
+    label: string;
+    overview: string;
+    profile: string;
+    documents: string;
+    settings: string;
+    // Group label above the expert-only items; hidden on mobile.
+    expertLabel: string;
+    clients: string;
+    requests: string;
+  };
+  overview: {
+    title: string;
+  };
+  // Display name for the API role enum (unknown roles render raw).
+  roles: {
+    client: string;
+    expert: string;
+  };
+  avatar: {
+    label: string;
+    upload: string;
+    replace: string;
+    delete: string;
+    saved: string;
+    error: string;
+  };
+  documents: {
+    upload: string;
+    uploadHint: string;
+    empty: string;
+    emptyHint: string;
+    loading: string;
+    error: string;
+    retry: string;
+    download: string;
+    delete: string;
+    deleteConfirm: string;
+    deleteError: string;
+    deleted: string;
+    uploadError: string;
+    statusProcessing: string;
+    statusFailed: string;
+  };
+  comingSoon: {
+    title: string;
+    description: string;
+  };
+  unavailable: {
+    title: string;
+    description: string;
+  };
 };
 
 export type HomeContent = {
@@ -170,6 +265,8 @@ export type HomeContent = {
     homeLabel: string;
     language: LanguageContent;
     authCta: LinkContent;
+    // Logged-in header CTA (same slot as authCta, session-resolved server-side).
+    cabinetCta: LinkContent;
   };
   mobileNav: {
     openLabel: string;
@@ -480,13 +577,16 @@ export type HomeContent = {
       answer: string;
     }[];
   };
-  // Placeholder auth pages /[locale]/login and /[locale]/register
-  // (owner request, Oct 2026). The MVP has no auth backend, so the forms are
-  // preview UI only; copy is draft pending client sign-off (design doc §11).
+  // Auth pages /[locale]/login and /[locale]/register (one email → code flow
+  // via the test auth API) and the account page /[locale]/me. Copy is draft
+  // pending client sign-off (design doc §11).
   authPage: {
     login: AuthPageContent;
     register: AuthPageContent;
+    account: AccountPageContent;
   };
+  // Personal cabinet /[locale]/me/* (owner-approved backend CabinetModule).
+  cabinetPage: CabinetPageContent;
   // Dedicated /[locale]/about page («Մեր մասին»), modeled on the reference
   // "our center" page structure: mission, goals, functions, directions.
   // Copy is owner-authorized draft pending client sign-off (design doc §11);

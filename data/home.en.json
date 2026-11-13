@@ -90,6 +90,10 @@
     "authCta": {
       "label": "Sign in",
       "href": "/login"
+    },
+    "cabinetCta": {
+      "label": "My account",
+      "href": "/me"
     }
   },
   "mobileNav": {
@@ -2272,26 +2276,118 @@
       "metaTitle": "Sign in",
       "metaDescription": "Sign in to your Anicom account.",
       "title": "Sign in",
-      "description": "Enter your email and password to continue.",
+      "description": "Enter your email and we will send a six-digit code. A new address creates an account automatically.",
       "emailLabel": "Email",
-      "passwordLabel": "Password",
-      "submitLabel": "Sign in",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Send code",
+      "codeLabel": "Code from the email",
+      "codeHint": "We sent a six-digit code to {email}.",
+      "codeSubmitLabel": "Sign in",
+      "resendLabel": "Send the code again",
+      "changeEmailLabel": "Change address",
       "switchText": "Don't have an account?",
       "switchCta": "Create account",
-      "unavailableNote": "Online sign-in is not available yet."
+      "errors": {
+        "invalidCode": "Wrong or expired code. Request a new one.",
+        "tooManyRequests": "Too many attempts. Wait a minute and try again.",
+        "generic": "Something went wrong. Please try again."
+      }
     },
     "register": {
       "metaTitle": "Create account",
-      "metaDescription": "Create a new Anicom account.",
+      "metaDescription": "Create your Anicom account.",
       "title": "Create account",
-      "description": "Fill in your details to create a new account.",
-      "nameLabel": "Full name",
+      "description": "Enter your name and email — we will send a six-digit confirmation code. Your account is created once you enter it.",
       "emailLabel": "Email",
-      "passwordLabel": "Password",
-      "submitLabel": "Create account",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Send code",
+      "codeLabel": "Code from the email",
+      "codeHint": "We sent a six-digit code to {email}.",
+      "codeSubmitLabel": "Create account",
+      "resendLabel": "Send the code again",
+      "changeEmailLabel": "Change address",
       "switchText": "Already have an account?",
       "switchCta": "Sign in",
-      "unavailableNote": "Online registration is not available yet."
+      "errors": {
+        "invalidCode": "Wrong or expired code. Request a new one.",
+        "tooManyRequests": "Too many attempts. Wait a minute and try again.",
+        "generic": "Something went wrong. Please try again."
+      },
+      "firstNameLabel": "First name",
+      "lastNameLabel": "Last name",
+      "birthDateLabel": "Date of birth"
+    },
+    "account": {
+      "metaTitle": "Account",
+      "metaDescription": "Your Anicom account.",
+      "title": "Account",
+      "emailLabel": "Email",
+      "idLabel": "ID",
+      "roleLabel": "Role",
+      "logoutLabel": "Sign out",
+      "profileHeading": "Profile",
+      "firstNameLabel": "First name",
+      "lastNameLabel": "Last name",
+      "birthDateLabel": "Date of birth",
+      "saveLabel": "Save",
+      "savedNote": "Changes saved.",
+      "saveError": "Could not save. Please try again."
+    }
+  },
+  "cabinetPage": {
+    "meta": {
+      "title": "Personal cabinet",
+      "description": "Your Anicom personal cabinet: profile, documents and settings."
+    },
+    "nav": {
+      "label": "Cabinet sections",
+      "overview": "Overview",
+      "profile": "Profile",
+      "documents": "Documents",
+      "settings": "Settings",
+      "expertLabel": "Expert",
+      "clients": "My clients",
+      "requests": "My requests"
+    },
+    "overview": {
+      "title": "Overview"
+    },
+    "roles": {
+      "client": "Client",
+      "expert": "Expert"
+    },
+    "avatar": {
+      "label": "Profile photo",
+      "upload": "Upload photo",
+      "replace": "Replace photo",
+      "delete": "Delete photo",
+      "saved": "Photo updated.",
+      "error": "The photo could not be updated. Please try again."
+    },
+    "documents": {
+      "upload": "Upload document",
+      "uploadHint": "PDF, JPEG or PNG.",
+      "empty": "No documents yet",
+      "emptyHint": "Uploaded PDF, JPEG and PNG files will appear here.",
+      "loading": "Loading…",
+      "error": "The document list could not be loaded. Please try again.",
+      "retry": "Retry",
+      "download": "Download",
+      "delete": "Delete",
+      "deleteConfirm": "Confirm deletion",
+      "deleteError": "The document could not be deleted. Please try again.",
+      "deleted": "The document has been deleted.",
+      "uploadError": "The file could not be uploaded. PDF, JPEG and PNG files within the service size limit are supported.",
+      "statusProcessing": "Processing",
+      "statusFailed": "Failed"
+    },
+    "comingSoon": {
+      "title": "Coming soon",
+      "description": "This section is in development and will appear in one of the upcoming updates."
+    },
+    "unavailable": {
+      "title": "Service temporarily unavailable",
+      "description": "The cabinet service is not responding right now. Please try again later."
     }
   },
   "aboutPage": {

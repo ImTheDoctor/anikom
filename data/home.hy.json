@@ -90,6 +90,10 @@
     "authCta": {
       "label": "Մուտք",
       "href": "/login"
+    },
+    "cabinetCta": {
+      "label": "Անձնական հաշիվ",
+      "href": "/me"
     }
   },
   "mobileNav": {
@@ -2272,26 +2276,118 @@
       "metaTitle": "Մուտք",
       "metaDescription": "Մուտք անձնական հաշիվ։",
       "title": "Մուտք անձնական հաշիվ",
-      "description": "Մուտքագրեք ձեր էլ. փոստը և գաղտնաբառը։",
+      "description": "Մուտքագրեք ձեր էլ. փոստը՝ մենք կուղարկենք վեցանիշ կոդ։ Նոր հասցեն ավտոմատ ստեղծում է հաշիվ։",
       "emailLabel": "Էլ. փոստ",
-      "passwordLabel": "Գաղտնաբառ",
-      "submitLabel": "Մուտք գործել",
-      "switchText": "Դեռ հաշիվ չունե՞ք։",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Ուղարկել կոդը",
+      "codeLabel": "Նամակով ստացված կոդ",
+      "codeHint": "Վեցանիշ կոդն ուղարկվել է {email} հասցեին։",
+      "codeSubmitLabel": "Մուտք գործել",
+      "resendLabel": "Կրկին ուղարկել կոդը",
+      "changeEmailLabel": "Փոխել հասցեն",
+      "switchText": "Հաշիվ չունե՞ք։",
       "switchCta": "Գրանցվել",
-      "unavailableNote": "Առցանց մուտքը դեռ հասանելի չէ։"
+      "errors": {
+        "invalidCode": "Կոդը սխալ է կամ սպառվել է։ Պահանջեք նորը։",
+        "tooManyRequests": "Չափազանց շատ փորձեր։ Սպասեք մեկ րոպե և փորձեք կրկին։",
+        "generic": "Ինչ-որ բան սխալ գնաց։ Փորձեք կրկին։"
+      }
     },
     "register": {
       "metaTitle": "Գրանցում",
-      "metaDescription": "Նոր հաշվի գրանցում։",
-      "title": "Գրանցում",
-      "description": "Լրացրեք տվյալները՝ նոր հաշիվ ստեղծելու համար։",
-      "nameLabel": "Անուն Ազգանուն",
+      "metaDescription": "Գրանցում անձնական հաշիվ։",
+      "title": "Հաշվի ստեղծում",
+      "description": "Մուտքագրեք անունն ու էլ. փոստը՝ կուղարկենք վեցանիշ հաստատման կոդ։ Հաշիվը ստեղծվում է կոդը մուտքագրելուց հետո։",
       "emailLabel": "Էլ. փոստ",
-      "passwordLabel": "Գաղտնաբառ",
-      "submitLabel": "Գրանցվել",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Ուղարկել կոդը",
+      "codeLabel": "Նամակով ստացված կոդ",
+      "codeHint": "Վեցանիշ կոդն ուղարկվել է {email} հասցեին։",
+      "codeSubmitLabel": "Ստեղծել հաշիվ",
+      "resendLabel": "Կրկին ուղարկել կոդը",
+      "changeEmailLabel": "Փոխել հասցեն",
       "switchText": "Արդեն հաշիվ ունե՞ք։",
       "switchCta": "Մուտք գործել",
-      "unavailableNote": "Առցանց գրանցումը դեռ հասանելի չէ։"
+      "errors": {
+        "invalidCode": "Կոդը սխալ է կամ սպառվել է։ Պահանջեք նորը։",
+        "tooManyRequests": "Չափազանց շատ փորձեր։ Սպասեք մեկ րոպե և փորձեք կրկին։",
+        "generic": "Ինչ-որ բան սխալ գնաց։ Փորձեք կրկին։"
+      },
+      "firstNameLabel": "Անուն",
+      "lastNameLabel": "Ազգանուն",
+      "birthDateLabel": "Ծննդյան ամսաթիվ"
+    },
+    "account": {
+      "metaTitle": "Անձնական հաշիվ",
+      "metaDescription": "Անձնական հաշիվ Anicom։",
+      "title": "Անձնական հաշիվ",
+      "emailLabel": "Էլ. փոստ",
+      "idLabel": "ID",
+      "roleLabel": "Դեր",
+      "logoutLabel": "Ելք",
+      "profileHeading": "Պրոֆիլ",
+      "firstNameLabel": "Անուն",
+      "lastNameLabel": "Ազգանուն",
+      "birthDateLabel": "Ծննդյան ամսաթիվ",
+      "saveLabel": "Պահպանել",
+      "savedNote": "Փոփոխությունները պահպանված են։",
+      "saveError": "Չհաջողվեց պահպանել։ Փորձեք կրկին։"
+    }
+  },
+  "cabinetPage": {
+    "meta": {
+      "title": "Անձնական հաշիվ",
+      "description": "Ձեր անձնական հաշիվը Anicom՝ պրոֆիլ, փաստաթղթեր և կարգավորումներ։"
+    },
+    "nav": {
+      "label": "Հաշվի բաժիններ",
+      "overview": "Ընդհանուր",
+      "profile": "Պրոֆիլ",
+      "documents": "Փաստաթղթեր",
+      "settings": "Կարգավորումներ",
+      "expertLabel": "Փորձագետ",
+      "clients": "Իմ հաճախորդները",
+      "requests": "Իմ հայտերը"
+    },
+    "overview": {
+      "title": "Ընդհանուր"
+    },
+    "roles": {
+      "client": "Հաճախորդ",
+      "expert": "Փորձագետ"
+    },
+    "avatar": {
+      "label": "Պրոֆիլի լուսանկար",
+      "upload": "Բեռնել լուսանկար",
+      "replace": "Փոխարինել լուսանկարը",
+      "delete": "Հեռացնել լուսանկարը",
+      "saved": "Լուսանկարը թարմացված է։",
+      "error": "Լուսանկարը չհաջողվեց թարմացնել։ Փորձեք կրկին։"
+    },
+    "documents": {
+      "upload": "Վերբեռնել փաստաթուղթ",
+      "uploadHint": "PDF, JPEG կամ PNG։",
+      "empty": "Փաստաթղթեր դեռ չկան",
+      "emptyHint": "Այստեղ կհայտնվեն վերբեռնված PDF, JPEG և PNG ֆայլերը։",
+      "loading": "Բեռնվում է…",
+      "error": "Փաստաթղթերի ցանկը չհաջողվեց բեռնել։ Փորձեք կրկին։",
+      "retry": "Կրկին",
+      "download": "Ներբեռնել",
+      "delete": "Հեռացնել",
+      "deleteConfirm": "Հաստատել հեռացումը",
+      "deleteError": "Փաստաթուղթը չհաջողվեց հեռացնել։ Փորձեք կրկին։",
+      "deleted": "Փաստաթուղթը հեռացված է։",
+      "uploadError": "Ֆայլը չհաջողվեց վերբեռնել։ Աջակցվում են PDF, JPEG և PNG ֆայլեր՝ սահմանված ծավալի սահմանում։",
+      "statusProcessing": "Մշակվում է",
+      "statusFailed": "Սխալ"
+    },
+    "comingSoon": {
+      "title": "Շուտով",
+      "description": "Բաժինը մշակման փուլում է և կհայտնվի հաջորդ թարմացումներից մեկում։"
+    },
+    "unavailable": {
+      "title": "Սպասարկումն ժամանակավոր անհասանելի է",
+      "description": "Հաշվի սպասարկումն այս պահին չի պատասխանում։ Փորձեք ավելի ուշ։"
     }
   },
   "aboutPage": {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AuthForm } from "@/components/auth/auth-form";
+import { OtpAuthForm } from "@/components/auth/otp-auth-form";
 import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl, type Locale } from "@/lib/i18n";
@@ -29,9 +29,9 @@ export async function generateMetadata({
   };
 }
 
-// Placeholder registration page (owner request, Oct 2026). Same preview-only
-// treatment as /login: no backend, submit shows the localized note. Links
-// across to /login.
+// Registration page over the test auth API: the same email → six-digit-code
+// flow as /login — the API creates the account automatically on first
+// sign-in. Links across to /login.
 export default async function RegisterPage({
   params,
 }: PageProps<"/[locale]/register">) {
@@ -54,7 +54,7 @@ export default async function RegisterPage({
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             {register.description}
           </p>
-          <AuthForm copy={register} />
+          <OtpAuthForm copy={register} locale={localeSafe} variant="register" />
           <p className="mt-6 text-center text-sm text-muted-foreground">
             {register.switchText}{" "}
             <Link

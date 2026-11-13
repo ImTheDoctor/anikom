@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { LogIn } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
+import { HeaderCta } from "@/components/header-session-cta";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { MobileNav } from "@/components/mobile-nav";
-import { buttonVariants } from "@/components/ui/button";
 import type { HomeContent } from "@/lib/home-content";
 import { localizeHref, type Locale } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
 
 type SiteHeaderProps = {
   content: HomeContent;
@@ -52,14 +50,11 @@ export function SiteHeader({ content, locale }: SiteHeaderProps) {
             />
           </div>
 
-          <Link
-            href={localizeHref(locale, content.header.authCta.href)}
-            transitionTypes={["forward"]}
-            className={cn(buttonVariants({ size: "lg" }), "min-h-11 px-4")}
-          >
-            <LogIn strokeWidth={1.75} aria-hidden="true" />
-            {content.header.authCta.label}
-          </Link>
+          <HeaderCta
+            authCta={content.header.authCta}
+            cabinetCta={content.header.cabinetCta}
+            locale={locale}
+          />
           <MobileNav
             locale={locale}
             nav={content.navigation.primary}

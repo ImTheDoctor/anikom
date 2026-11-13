@@ -90,6 +90,10 @@
     "authCta": {
       "label": "Войти",
       "href": "/login"
+    },
+    "cabinetCta": {
+      "label": "Личный кабинет",
+      "href": "/me"
     }
   },
   "mobileNav": {
@@ -2272,26 +2276,118 @@
       "metaTitle": "Вход",
       "metaDescription": "Вход в личный кабинет Anicom.",
       "title": "Вход в личный кабинет",
-      "description": "Введите эл. почту и пароль, чтобы продолжить.",
+      "description": "Введите эл. почту — мы отправим на неё шестизначный код. Новый адрес создаст аккаунт автоматически.",
       "emailLabel": "Эл. почта",
-      "passwordLabel": "Пароль",
-      "submitLabel": "Войти",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Отправить код",
+      "codeLabel": "Код из письма",
+      "codeHint": "Мы отправили шестизначный код на {email}.",
+      "codeSubmitLabel": "Войти",
+      "resendLabel": "Отправить код ещё раз",
+      "changeEmailLabel": "Изменить адрес",
       "switchText": "Нет аккаунта?",
       "switchCta": "Зарегистрироваться",
-      "unavailableNote": "Вход в личный кабинет пока недоступен."
+      "errors": {
+        "invalidCode": "Неверный или истёкший код. Запросите новый.",
+        "tooManyRequests": "Слишком много попыток. Подождите минуту и попробуйте снова.",
+        "generic": "Что-то пошло не так. Попробуйте ещё раз."
+      }
     },
     "register": {
       "metaTitle": "Регистрация",
-      "metaDescription": "Регистрация нового аккаунта Anicom.",
-      "title": "Регистрация",
-      "description": "Заполните данные, чтобы создать новый аккаунт.",
-      "nameLabel": "Имя и фамилия",
+      "metaDescription": "Регистрация в личном кабинете Anicom.",
+      "title": "Создание аккаунта",
+      "description": "Укажите имя и эл. почту — пришлём шестизначный код подтверждения. Аккаунт создаётся после ввода кода.",
       "emailLabel": "Эл. почта",
-      "passwordLabel": "Пароль",
-      "submitLabel": "Зарегистрироваться",
+      "emailPlaceholder": "name@example.com",
+      "submitLabel": "Отправить код",
+      "codeLabel": "Код из письма",
+      "codeHint": "Мы отправили шестизначный код на {email}.",
+      "codeSubmitLabel": "Создать аккаунт",
+      "resendLabel": "Отправить код ещё раз",
+      "changeEmailLabel": "Изменить адрес",
       "switchText": "Уже есть аккаунт?",
       "switchCta": "Войти",
-      "unavailableNote": "Регистрация пока недоступна."
+      "errors": {
+        "invalidCode": "Неверный или истёкший код. Запросите новый.",
+        "tooManyRequests": "Слишком много попыток. Подождите минуту и попробуйте снова.",
+        "generic": "Что-то пошло не так. Попробуйте ещё раз."
+      },
+      "firstNameLabel": "Имя",
+      "lastNameLabel": "Фамилия",
+      "birthDateLabel": "Дата рождения"
+    },
+    "account": {
+      "metaTitle": "Личный кабинет",
+      "metaDescription": "Личный кабинет Anicom.",
+      "title": "Личный кабинет",
+      "emailLabel": "Эл. почта",
+      "idLabel": "ID",
+      "roleLabel": "Роль",
+      "logoutLabel": "Выйти",
+      "profileHeading": "Профиль",
+      "firstNameLabel": "Имя",
+      "lastNameLabel": "Фамилия",
+      "birthDateLabel": "Дата рождения",
+      "saveLabel": "Сохранить",
+      "savedNote": "Изменения сохранены.",
+      "saveError": "Не удалось сохранить. Попробуйте ещё раз."
+    }
+  },
+  "cabinetPage": {
+    "meta": {
+      "title": "Личный кабинет",
+      "description": "Ваш личный кабинет Anicom: профиль, документы и настройки."
+    },
+    "nav": {
+      "label": "Разделы кабинета",
+      "overview": "Обзор",
+      "profile": "Профиль",
+      "documents": "Документы",
+      "settings": "Настройки",
+      "expertLabel": "Эксперт",
+      "clients": "Мои клиенты",
+      "requests": "Мои заявки"
+    },
+    "overview": {
+      "title": "Обзор"
+    },
+    "roles": {
+      "client": "Клиент",
+      "expert": "Эксперт"
+    },
+    "avatar": {
+      "label": "Фотография профиля",
+      "upload": "Загрузить фото",
+      "replace": "Заменить фото",
+      "delete": "Удалить фото",
+      "saved": "Фото обновлено.",
+      "error": "Не удалось обновить фото. Попробуйте ещё раз."
+    },
+    "documents": {
+      "upload": "Загрузить документ",
+      "uploadHint": "PDF, JPEG или PNG.",
+      "empty": "Документов пока нет",
+      "emptyHint": "Здесь появятся загруженные файлы PDF, JPEG и PNG.",
+      "loading": "Загрузка…",
+      "error": "Не удалось загрузить список документов. Попробуйте ещё раз.",
+      "retry": "Повторить",
+      "download": "Скачать",
+      "delete": "Удалить",
+      "deleteConfirm": "Подтвердить удаление",
+      "deleteError": "Не удалось удалить документ. Попробуйте ещё раз.",
+      "deleted": "Документ удалён.",
+      "uploadError": "Не удалось загрузить файл. Поддерживаются PDF, JPEG и PNG в пределах лимита размера сервиса.",
+      "statusProcessing": "Обработка",
+      "statusFailed": "Ошибка"
+    },
+    "comingSoon": {
+      "title": "Скоро",
+      "description": "Раздел в разработке и появится в одном из ближайших обновлений."
+    },
+    "unavailable": {
+      "title": "Сервис временно недоступен",
+      "description": "Сервис кабинета сейчас не отвечает. Попробуйте позже."
     }
   },
   "aboutPage": {

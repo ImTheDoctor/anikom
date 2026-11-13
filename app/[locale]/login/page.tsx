@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AuthForm } from "@/components/auth/auth-form";
+import { OtpAuthForm } from "@/components/auth/otp-auth-form";
 import { PageShell } from "@/components/page-shell";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl, type Locale } from "@/lib/i18n";
@@ -29,9 +29,8 @@ export async function generateMetadata({
   };
 }
 
-// Placeholder sign-in page (owner request, Oct 2026). The MVP has no auth
-// backend: the form is preview UI, and a submit shows the localized
-// "not available yet" note. Links across to /register.
+// Sign-in page over the test auth API: one email → six-digit-code flow
+// (the API creates the account on first sign-in). Links across to /register.
 export default async function LoginPage({
   params,
 }: PageProps<"/[locale]/login">) {
@@ -54,7 +53,7 @@ export default async function LoginPage({
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             {login.description}
           </p>
-          <AuthForm copy={login} />
+          <OtpAuthForm copy={login} locale={localeSafe} variant="login" />
           <p className="mt-6 text-center text-sm text-muted-foreground">
             {login.switchText}{" "}
             <Link

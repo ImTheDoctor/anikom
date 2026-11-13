@@ -32,6 +32,12 @@ const localizedRoutePatterns = [
   "/news/:slug",
   "/login",
   "/register",
+  "/me",
+  "/me/profile",
+  "/me/documents",
+  "/me/settings",
+  "/me/clients",
+  "/me/requests",
 ];
 
 function matchesRoutePattern(pathname: string, pattern: string): boolean {
