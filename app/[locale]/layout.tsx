@@ -2,8 +2,6 @@ import {
   Geist,
   Geist_Mono,
   Noto_Sans_Armenian,
-  Noto_Serif_Armenian,
-  Playfair_Display,
 } from "next/font/google";
 import "../globals.css";
 import { getHomeContent } from "@/lib/home-content";
@@ -24,20 +22,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-});
-
 const notoSansArmenian = Noto_Sans_Armenian({
   variable: "--font-noto-sans-armenian",
-  subsets: ["armenian"],
-  display: "swap",
-});
-
-const notoSerifArmenian = Noto_Serif_Armenian({
-  variable: "--font-noto-serif-armenian",
   subsets: ["armenian"],
   display: "swap",
 });
@@ -57,7 +43,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={activeLocale}
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${notoSansArmenian.variable} ${notoSerifArmenian.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${notoSansArmenian.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         <a

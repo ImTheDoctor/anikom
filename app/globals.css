@@ -7,7 +7,7 @@
   /* Reference loaded families by name so Armenian glyphs reach the Noto faces
      before next/font's generated metric fallback families. */
   --font-sans: "Geist", "Noto Sans Armenian", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", "Noto Serif Armenian", Georgia, "Times New Roman", serif;
+  --font-display: "Geist", "Noto Sans Armenian", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Shadow scale — the shadcn preset ships no shadow tokens and Tailwind v4.3
@@ -176,6 +176,16 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+/* docx-mode display face (docs/design-system.md §3): all font-display
+   headings and figures render sans semibold with a slightly tightened
+   tracking — the serif's 400-weight look does not carry over to Geist.
+   Kept unlayered so it wins over the generated utility without per-call
+   font-weight classes. */
+.font-display {
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* Purposeful motion (docs/design-system.md §7 "Motion"). One-time entry

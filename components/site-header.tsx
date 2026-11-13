@@ -13,14 +13,20 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ content, locale }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background [view-transition-name:site-header]">
+    <header className="sticky top-0 z-40 border-b border-hero-border bg-brand-deep text-hero-foreground [view-transition-name:site-header]">
       <div className="mx-auto flex h-16 w-full items-center justify-between gap-3 px-4 sm:h-20 sm:px-6 lg:px-15 2xl:max-w-[120rem]">
         <Link
           href={`/${locale}`}
           aria-label={content.header.homeLabel}
-          className="flex min-h-11 shrink-0 items-center gap-3 rounded-sm focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+          className="flex min-h-11 shrink-0 items-center gap-3 rounded-sm focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
         >
-          <BrandMark className="h-10 sm:h-12" preload />
+          {/* The crest artwork is monolithic black — on the dark header it
+              mounts on a light plaque (same pattern as the footer brand
+              block; docs/design-system.md §8). The crest keeps the §5 40px
+              mobile minimum inside the plaque. */}
+          <span className="inline-flex items-center bg-background p-1">
+            <BrandMark className="h-10 sm:h-12" preload />
+          </span>
           <span className="text-base leading-none font-semibold tracking-[0.2em] sm:text-lg">
             {content.common.brandName}
           </span>
@@ -35,7 +41,7 @@ export function SiteHeader({ content, locale }: SiteHeaderProps) {
               key={item.href}
               href={localizeHref(locale, item.href)}
               transitionTypes={["forward"]}
-              className="flex min-h-11 items-center rounded-sm px-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring focus-visible:outline-none"
+              className="flex min-h-11 items-center rounded-sm px-1.5 text-sm font-medium text-hero-muted transition-colors hover:text-hero-foreground focus-visible:ring-3 focus-visible:ring-hero-accent focus-visible:outline-none"
             >
               {item.label}
             </Link>

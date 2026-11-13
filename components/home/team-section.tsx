@@ -1,7 +1,6 @@
 import { ActionLink } from "@/components/action-link";
 import { TeamCard } from "@/components/cards/team-card";
 import { SectionHeading } from "@/components/home/section-heading";
-import { Reveal } from "@/components/reveal";
 import type { HomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
 import { localizeHref } from "@/lib/i18n";
@@ -22,22 +21,16 @@ export function TeamSection({ content, locale }: TeamSectionProps) {
       id="team"
       className="scroll-mt-16 py-16 sm:scroll-mt-20 md:py-20"
     >
-      <Reveal>
-        <SectionHeading
-          title={team.title}
-          action={
-            <ActionLink href={localizeHref(locale, "/team")}>
-              {team.action}
-            </ActionLink>
-          }
-        />
-      </Reveal>
+      <SectionHeading
+        title={team.title}
+        action={
+          <ActionLink href={localizeHref(locale, "/team")}>
+            {team.action}
+          </ActionLink>
+        }
+      />
 
-      <Reveal
-        as="ul"
-        stagger
-        className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
-      >
+      <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {team.items.slice(0, 4).map((item) => (
           <TeamCard
             key={item.slug}
@@ -46,7 +39,7 @@ export function TeamSection({ content, locale }: TeamSectionProps) {
             actionLabel={team.cardAction}
           />
         ))}
-      </Reveal>
+      </ul>
     </section>
   );
 }

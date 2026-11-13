@@ -6,7 +6,7 @@ Instructions for AI coding agents (Qoder, OpenCode) working in `anicom-web`.
 
 Anicom corporate website MVP. Product: a professional, corporate B2B site targeting Armenian (`hy`), English (`en`), and Russian (`ru`) audiences. Localized routes (`/hy`, `/en`, `/ru`) and JSON-backed copy exist; no backend, database, CMS, authentication, or third-party i18n library — do not introduce these without explicit approval.
 
-Stack (verified, do not upgrade): Next.js 16.4.3 App Router · React 19.3.0 · TypeScript (strict) · Tailwind CSS v4 · shadcn/ui with the **Vega preset** on **Base UI** · `cn` package for class merging · `lucide-react` icons · `next/font` (Geist Sans, Geist Mono, Playfair Display, Noto Sans/Serif Armenian) · pnpm 10.
+Stack (verified, do not upgrade): Next.js 16.4.3 App Router · React 19.3.0 · TypeScript (strict) · Tailwind CSS v4 · shadcn/ui with the **Vega preset** on **Base UI** · `cn` package for class merging · `lucide-react` icons · `next/font` (Geist Sans, Geist Mono, Noto Sans Armenian — display headings share the sans at weight 600, the serif faces were removed Nov 14 2026) · pnpm 10.
 
 Brand assets: primary color **#A54686** (token `--primary`). `public/logo.png` is a temporary AI-generated crest placeholder (pending the client's official coat of arms) — treat it as provisional artwork. Services come from the client-approved company profile (eight expertise directions), not from the crest. See `docs/design-system.md` §2, §5, §11.
 

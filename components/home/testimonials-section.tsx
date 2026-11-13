@@ -15,7 +15,6 @@ import {
 } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Reveal } from "@/components/reveal";
 import type { HomeContent } from "@/lib/home-content";
 
 // Auto-advance delay: 4s per quote (owner pacing, Oct 26).
@@ -145,87 +144,82 @@ export function TestimonialsSection({ content }: TestimonialsSectionProps) {
           }
         }}
       >
-        <Reveal stagger>
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
-            <div className="max-w-2xl">
-              <p className="text-xs font-medium tracking-[0.18em] text-hero-accent uppercase">
-                {testimonials.eyebrow}
-              </p>
-              <h2
-                id="testimonials-heading"
-                className="mt-3 font-display text-3xl leading-tight sm:text-4xl"
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+          <div className="max-w-2xl">
+            <h2
+              id="testimonials-heading"
+              className="font-display text-3xl leading-tight sm:text-4xl"
+            >
+              {testimonials.title}
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-hero-muted sm:text-base">
+              {testimonials.description}
+            </p>
+          </div>
+          <div className="flex items-center gap-4 sm:gap-5 sm:pb-1">
+            <span
+              aria-live={interacting || reducedMotion ? "polite" : "off"}
+              className="font-mono text-xs text-hero-muted"
+            >
+              {String(selectedIndex + 1).padStart(2, "0")} /{" "}
+              {String(total).padStart(2, "0")}
+            </span>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={scrollPrev}
+                aria-label={testimonials.prevLabel}
+                className={arrowButtonClass}
               >
-                {testimonials.title}
-              </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-hero-muted sm:text-base">
-                {testimonials.description}
-              </p>
-            </div>
-            <div className="flex items-center gap-4 sm:gap-5 sm:pb-1">
-              <span
-                aria-live={interacting || reducedMotion ? "polite" : "off"}
-                className="font-mono text-xs text-hero-muted"
+                <ArrowLeft
+                  className="size-4"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+              </button>
+              <button
+                type="button"
+                onClick={scrollNext}
+                aria-label={testimonials.nextLabel}
+                className={arrowButtonClass}
               >
-                {String(selectedIndex + 1).padStart(2, "0")} /{" "}
-                {String(total).padStart(2, "0")}
-              </span>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={scrollPrev}
-                  aria-label={testimonials.prevLabel}
-                  className={arrowButtonClass}
-                >
-                  <ArrowLeft
-                    className="size-4"
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
-                </button>
-                <button
-                  type="button"
-                  onClick={scrollNext}
-                  aria-label={testimonials.nextLabel}
-                  className={arrowButtonClass}
-                >
-                  <ArrowRight
-                    className="size-4"
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
-                </button>
-              </div>
+                <ArrowRight
+                  className="size-4"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+              </button>
             </div>
           </div>
+        </div>
 
-          <div
-            ref={emblaRef}
-            role="group"
-            aria-label={testimonials.title}
-            tabIndex={0}
-            onKeyDown={handleKeyDown}
-            className="mt-10 overflow-hidden focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-hero-accent sm:mt-12"
-          >
-            <ul className="flex">
-              {testimonials.items.map((testimonial) => (
-                <li
-                  key={testimonial.author}
-                  className="min-w-0 flex-[0_0_100%] border-l border-hero-border pl-6 sm:pl-8"
-                >
-                  <blockquote className="max-w-3xl font-display text-2xl leading-snug sm:text-3xl">
-                    “{testimonial.quote}”
-                  </blockquote>
-                  <footer className="mt-6">
-                    <p className="text-sm font-medium">{testimonial.author}</p>
-                    <p className="mt-0.5 text-xs text-hero-muted">
-                      {testimonial.organization}
-                    </p>
-                  </footer>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
+        <div
+          ref={emblaRef}
+          role="group"
+          aria-label={testimonials.title}
+          tabIndex={0}
+          onKeyDown={handleKeyDown}
+          className="mt-10 overflow-hidden focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-hero-accent sm:mt-12"
+        >
+          <ul className="flex">
+            {testimonials.items.map((testimonial) => (
+              <li
+                key={testimonial.author}
+                className="min-w-0 flex-[0_0_100%] border-l border-hero-border pl-6 sm:pl-8"
+              >
+                <blockquote className="max-w-3xl font-display text-2xl leading-snug sm:text-3xl">
+                  “{testimonial.quote}”
+                </blockquote>
+                <footer className="mt-6">
+                  <p className="text-sm font-medium">{testimonial.author}</p>
+                  <p className="mt-0.5 text-xs text-hero-muted">
+                    {testimonial.organization}
+                  </p>
+                </footer>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
