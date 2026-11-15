@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-11-15T21:36:43.960Z",
+  "sessionId": "sess_2494da89-43d3-4fd3-bdaf-158b7978a5dd",
+  "event": "PostToolUse",
+  "toolName": "Edit",
+  "file": "C:/Users/Henrik/.zcode/cli/memories/projects/anicom-web-683cac88824d1c04/memory/MEMORY.md",
+  "outcome": "clear",
+  "coverage": "complete",
+  "findingCount": 0,
+  "durationMs": 10,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}

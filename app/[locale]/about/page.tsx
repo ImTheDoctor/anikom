@@ -6,6 +6,7 @@ import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
 import { ZoomImage } from "@/components/zoom-image";
+import { getAboutPage } from "@/lib/about-api";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
 
@@ -15,12 +16,12 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
 
-  const { aboutPage } = getHomeContent(locale);
+  const about = await getAboutPage(locale);
 
   return {
     metadataBase: new URL(siteUrl),
-    title: `${aboutPage.metaTitle} — Anicom`,
-    description: aboutPage.metaDescription,
+    title: `${about.metaTitle} — Anicom`,
+    description: about.metaDescription,
     alternates: {
       canonical: `/${locale}/about`,
       languages: {
@@ -37,8 +38,9 @@ export async function generateMetadata({
 // page of justexpert.am): dark hero band with breadcrumb, mission with the
 // client-approved figures, goals, functions in two categorized lists, the
 // eight directions as hairline rows linking to their detail pages, and the
-// shared contact banner. All copy lives in the aboutPage JSON block (draft
-// pending client sign-off — design doc §11).
+// shared contact banner. Content comes from the backend About module
+// (GET /v1/about, lib/about-api.ts); the aboutPage JSON block stays as the
+// offline fallback. Draft copy pending client sign-off — design doc §11.
 export default async function AboutPage({
   params,
 }: PageProps<"/[locale]/about">) {
@@ -46,7 +48,8 @@ export default async function AboutPage({
   if (!isLocale(locale)) notFound();
 
   const content = getHomeContent(locale);
-  const { aboutPage, experts, services } = content;
+  const about = await getAboutPage(locale);
+  const { experts, services } = content;
 
   return (
     <PageShell content={content} locale={locale}>
@@ -54,11 +57,11 @@ export default async function AboutPage({
         breadcrumbLabel={experts.breadcrumbLabel}
         crumbs={[
           { label: experts.breadcrumbHome, href: `/${locale}` },
-          { label: aboutPage.title },
+          { label: about.title },
         ]}
-        title={aboutPage.title}
-        description={aboutPage.description}
-        image="/images/heroes/about.jpg"
+        title={about.title}
+        description={about.description}
+        image={about.heroImageUrl ?? "/images/heroes/about.jpg"}
         imageClassName="-z-10 object-cover object-[50%_25%]"
         overlayClassName="bg-hero/85 md:bg-hero/75 lg:bg-hero/70"
       />
@@ -71,17 +74,17 @@ export default async function AboutPage({
           id="about-mission"
           className="font-display text-2xl leading-snug sm:text-3xl"
         >
-          {aboutPage.missionTitle}
+          {about.missionTitle}
         </h2>
         <div className="mt-6 max-w-2xl space-y-4">
-          {aboutPage.mission.map((paragraph) => (
+          {about.mission.map((paragraph) => (
             <p key={paragraph} className="text-base leading-relaxed">
               {paragraph}
             </p>
           ))}
         </div>
         <dl className="mt-10 grid max-w-3xl grid-cols-1 gap-6 border-t border-border pt-6 sm:grid-cols-3">
-          {aboutPage.stats.map((stat) => (
+          {about.stats.map((stat) => (
             <div key={stat.label} className="flex flex-col">
               <dt className="order-2 mt-2 text-[11px] leading-snug font-medium tracking-[0.14em] text-muted-foreground uppercase">
                 {stat.label}
@@ -100,10 +103,10 @@ export default async function AboutPage({
             id="about-goals"
             className="font-display text-2xl leading-snug sm:text-3xl"
           >
-            {aboutPage.goalsHeading}
+            {about.goalsHeading}
           </h2>
           <ul className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2">
-            {aboutPage.goals.map((goal) => (
+            {about.goals.map((goal) => (
               <li
                 key={goal}
                 className="flex gap-3 text-base leading-relaxed"
@@ -127,10 +130,10 @@ export default async function AboutPage({
             id="about-functions"
             className="font-display text-2xl leading-snug sm:text-3xl"
           >
-            {aboutPage.functionsHeading}
+            {about.functionsHeading}
           </h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:gap-10">
-            {aboutPage.functionGroups.map((group) => (
+            {about.functionGroups.map((group) => (
               <div key={group.title} className="min-w-0">
                 <h3 className="text-xs font-medium tracking-[0.18em] text-primary uppercase">
                   {group.title}
@@ -165,17 +168,17 @@ export default async function AboutPage({
             id="about-qualification"
             className="font-display text-2xl leading-snug sm:text-3xl"
           >
-            {aboutPage.qualificationTitle}
+            {about.qualificationTitle}
           </h2>
           <div className="mt-8 grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:gap-12">
             <p className="max-w-3xl text-base leading-relaxed">
-              {aboutPage.qualificationText}
+              {about.qualificationText}
             </p>
             <div className="min-w-0">
               <ZoomImage
-                src={aboutPage.awardImage}
-                alt={aboutPage.awardImageLabel}
-                caption={aboutPage.awardCaption}
+                src={about.awardImageUrl ?? "/images/about/patvogir-2026.jpeg"}
+                alt={about.awardImageLabel}
+                caption={about.awardCaption}
                 closeLabel={experts.profileUi.closeLabel}
               />
             </div>
@@ -192,7 +195,7 @@ export default async function AboutPage({
             id="about-directions"
             className="font-display text-2xl leading-snug sm:text-3xl"
           >
-            {aboutPage.directionsHeading}
+            {about.directionsHeading}
           </h2>
           <ul className="mt-8 border-t border-border">
             {services.items.map((item, index) => (
