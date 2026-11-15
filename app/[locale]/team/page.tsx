@@ -4,6 +4,7 @@ import { ExpertsDirectory } from "@/components/experts/experts-directory";
 import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
+import { getExpertRoster } from "@/lib/experts-api";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
 
@@ -34,7 +35,8 @@ export async function generateMetadata({
 // Expert directory (owner reference design, Oct 2026): a compact hero band
 // with breadcrumb and stats over a plain paginated card grid. Filtering,
 // sorting, and the grid/list view toggle were all removed by owner decision
-// (Oct 2026). The roster is draft demo data (design doc §11).
+// (Oct 2026). The roster comes from the backend Experts module
+// (lib/experts-api.ts); the JSON seed is its offline fallback.
 export default async function ExpertsPage({
   params,
 }: PageProps<"/[locale]/team">) {
@@ -42,7 +44,8 @@ export default async function ExpertsPage({
   if (!isLocale(locale)) notFound();
 
   const content = getHomeContent(locale);
-  const { experts, team } = content;
+  const { experts } = content;
+  const roster = await getExpertRoster(locale);
 
   return (
     <PageShell content={content} locale={locale}>
@@ -72,7 +75,7 @@ export default async function ExpertsPage({
               {experts.rosterStatLabel}
             </dt>
             <dd className="order-1 font-display text-3xl leading-none text-hero-foreground sm:text-4xl">
-              {team.items.length}
+              {roster.total}
             </dd>
           </div>
         </dl>
@@ -80,25 +83,7 @@ export default async function ExpertsPage({
 
       <section className="mx-auto w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-15 2xl:max-w-[120rem]">
         <ExpertsDirectory
-          items={team.items.map(
-            ({
-              slug,
-              name,
-              role,
-              imageLabel,
-              directions,
-              experienceYears,
-              experience,
-            }) => ({
-              slug,
-              name,
-              role,
-              imageLabel,
-              directions,
-              experienceYears,
-              experience,
-            }),
-          )}
+          items={roster.items}
           experts={experts}
           locale={locale}
         />

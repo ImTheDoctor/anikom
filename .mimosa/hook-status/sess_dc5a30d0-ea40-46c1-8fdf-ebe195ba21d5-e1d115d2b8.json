@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-11-15T20:17:49.075Z",
+  "sessionId": "sess_dc5a30d0-ea40-46c1-8fdf-ebe195ba21d5",
+  "event": "PostToolUse",
+  "toolName": "Edit",
+  "file": "C:/Users/Henrik/.zcode/cli/memories/projects/anicom-web-683cac88824d1c04/memory/experts-backend-contract.md",
+  "outcome": "clear",
+  "coverage": "complete",
+  "findingCount": 0,
+  "durationMs": 11,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}
