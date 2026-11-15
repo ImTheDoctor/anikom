@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20261115T201801841Z-14692-eec9d5425259",
+  "runId": "20261115T201801841Z-14692-eec9d5425259",
+  "runStatus": "completed",
+  "coverage": {
+    "status": "complete",
+    "reasons": []
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": "e9d82cc1461871f8e97be201317b5a625d73b385",
+  "diffHash": "361db41906a9b6361da356f72e09545dba4456420febea7031be380b4674cdf0",
+  "rulesVersion": "unavailable",
+  "sessionHash": "e1d115d2b8edb4a66cc5246593066042e29637690495a61c0684abd0c6ea3429",
+  "reportRef": ".mimosa/reports/task-review-sess_dc5a30d0-ea40-46c1-8fdf-ebe195ba21d5-20261115T201801841Z-14692-eec9d5425259.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "components/home/team-section.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "app/[locale]/page.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "components/experts/expert-card.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-11-15T20:18:02.679Z"
+}

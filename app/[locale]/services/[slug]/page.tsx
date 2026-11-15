@@ -159,7 +159,11 @@ export default async function ServiceDetailPage({
   const { services, cases, team, experts } = content;
   const directionExperts = team.items
     .filter((expert) => expert.directions.includes(item.slug))
-    .slice(0, 4);
+    .slice(0, 4)
+    // JSON-seeded cards until this section moves to the backend roster; the
+    // card falls back to the static placeholder portrait when portraitUrl is
+    // null (see ExpertCardItem).
+    .map((expert) => ({ ...expert, portraitUrl: null as string | null }));
   const directionCases = cases.items.filter(
     (caseItem) => caseItem.serviceSlug === item.slug,
   );

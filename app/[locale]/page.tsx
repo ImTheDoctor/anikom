@@ -10,6 +10,7 @@ import { TeamSection } from "@/components/home/team-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { NewsletterBanner } from "@/components/news/newsletter-banner";
 import { PageShell } from "@/components/page-shell";
+import { getExpertRoster } from "@/lib/experts-api";
 import { getHomeContent } from "@/lib/home-content";
 import { isLocale, siteUrl } from "@/lib/i18n";
 
@@ -42,6 +43,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   if (!isLocale(locale)) notFound();
 
   const content = getHomeContent(locale);
+  const roster = await getExpertRoster(locale);
 
   // The subscribe banner (in place of the former contact CTA) targets the
   // office address from footer.contacts — the single source of truth for
@@ -66,7 +68,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         officeEmail={officeEmail}
       />
       <div className="mx-auto w-full px-4 pt-0 pb-12 sm:px-6 sm:pb-16 lg:px-15 2xl:max-w-[120rem]">
-        <TeamSection content={content} locale={locale} />
+        <TeamSection content={content} items={roster.items} locale={locale} />
         <PartnersSection content={content} />
       </div>
     </PageShell>

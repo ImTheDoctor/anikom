@@ -8,78 +8,84 @@ import { ContactCta } from "@/components/home/contact-cta";
 import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
 import { Reveal } from "@/components/reveal";
-import { getHomeContent, type CertificateItem } from "@/lib/home-content";
-import { isLocale, locales, siteUrl, type Locale } from "@/lib/i18n";
+import {
+  formatCertificateNumber,
+  getExpertDetail,
+  getExpertRoster,
+  type ExpertCertificate,
+} from "@/lib/experts-api";
+import { getHomeContent } from "@/lib/home-content";
+import { isLocale, locales, siteUrl } from "@/lib/i18n";
 
-export function generateStaticParams() {
-  return locales.flatMap((locale) =>
-    getHomeContent(locale).team.items.map((item) => ({
-      locale,
-      slug: item.slug,
-    })),
-  );
-}
+// Slugs added by admins after a build are not in the static params set; an
+// on-demand render of those would fail prerendering on the uncached `params`
+// access. A blocking route keeps the seeded profiles prerendered while new
+// ones render on request (all data reads are cached, so this stays fast).
+export const instant = false;
 
-type TeamDetailParams = { locale: string; slug: string };
-
-function findMember(params: TeamDetailParams) {
-  if (!isLocale(params.locale)) return null;
-  const locale: Locale = params.locale;
-  const content = getHomeContent(locale);
-  const item = content.team.items.find((entry) => entry.slug === params.slug);
-  return item ? { locale, content, item } : null;
+// Prerender params from the cached roster (backend Experts module with the
+// JSON fallback, lib/experts-api.ts). Profiles added by admins after the
+// build render on demand and then cache like the seeded ones.
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string }[] = [];
+  for (const locale of locales) {
+    const roster = await getExpertRoster(locale);
+    for (const item of roster.items) params.push({ locale, slug: item.slug });
+  }
+  return params;
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/[locale]/team/[slug]">): Promise<Metadata> {
-  const resolved = await params;
-  const found = findMember(resolved);
-  if (!found) return {};
+  const { locale, slug } = await params;
+  if (!isLocale(locale)) return {};
+
+  const detail = await getExpertDetail(slug, locale);
+  if (!detail) return {};
 
   return {
     metadataBase: new URL(siteUrl),
-    title: `${found.item.name} — Anicom`,
-    description: found.item.role,
+    title: `${detail.name} — Anicom`,
+    description: detail.role,
     alternates: {
-      canonical: `/${resolved.locale}/team/${resolved.slug}`,
+      canonical: `/${locale}/team/${slug}`,
       languages: {
-        hy: `/hy/team/${resolved.slug}`,
-        en: `/en/team/${resolved.slug}`,
-        ru: `/ru/team/${resolved.slug}`,
-        "x-default": `/hy/team/${resolved.slug}`,
+        hy: `/hy/team/${slug}`,
+        en: `/en/team/${slug}`,
+        ru: `/ru/team/${slug}`,
+        "x-default": `/hy/team/${slug}`,
       },
     },
   };
 }
 
 // Expert profile (owner request, Oct 2026): breadcrumb header with portrait,
-// bio, certificates (scans where copies exist — currently the director's four
-// documents — otherwise text rows), related experts, and the contact banner.
-// The roster is draft demo data; the director's profile is grounded in his
-// own documents.
+// bio, certificates (scans where the backend has them, otherwise text rows),
+// related experts, and the contact banner. The profile comes from the
+// backend Experts module (lib/experts-api.ts); similar experts are computed
+// here from the shared service directions.
 export default async function TeamDetailPage({
   params,
 }: PageProps<"/[locale]/team/[slug]">) {
-  const resolved = await params;
-  const found = findMember(resolved);
-  if (!found) notFound();
+  const { locale, slug } = await params;
+  if (!isLocale(locale)) notFound();
 
-  const { locale, content, item } = found;
+  const [detail, roster] = await Promise.all([
+    getExpertDetail(slug, locale),
+    getExpertRoster(locale),
+  ]);
+  if (!detail) notFound();
+
+  const content = getHomeContent(locale);
   const { experts, team } = content;
   const ui = experts.profileUi;
-  const withScans = item.profile.certificates.filter(
-    (certificate) => certificate.image,
-  );
-  const textOnly = item.profile.certificates.filter(
-    (certificate) => !certificate.image,
-  );
-  const similar = team.items
-    .filter((other) => other.slug !== item.slug)
+  const similar = roster.items
+    .filter((other) => other.slug !== detail.slug)
     .map((other) => ({
       other,
       shared: other.directions.filter((direction) =>
-        item.directions.includes(direction),
+        detail.directions.includes(direction),
       ).length,
     }))
     .sort((a, b) => b.shared - a.shared)
@@ -90,23 +96,37 @@ export default async function TeamDetailPage({
 
   // The official bio lists documents without issue years, so every part is
   // optional and empty ones drop out of the meta line.
-  const certificateMeta = (certificate: CertificateItem) =>
-    [certificate.issuer, certificate.year, certificate.number]
+  const certificateMeta = (certificate: ExpertCertificate) =>
+    [
+      certificate.issuer,
+      certificate.year,
+      certificate.number
+        ? formatCertificateNumber(certificate.number, locale)
+        : null,
+    ]
       .filter((part): part is string => Boolean(part))
       .join(" · ");
 
   // Scan-carrying certificates go to the client lightbox gallery; text-only
   // records stay server-rendered hairline rows.
-  const scans = withScans.flatMap((certificate) =>
-    certificate.image
+  const scans = detail.profile.certificates.flatMap((certificate) =>
+    certificate.scanUrl
       ? [
           {
-            ...certificate,
-            image: certificate.image,
+            title: certificate.title,
+            issuer: certificate.issuer ?? "",
+            year: certificate.year ?? "",
+            number: certificate.number
+              ? formatCertificateNumber(certificate.number, locale)
+              : undefined,
+            image: certificate.scanUrl,
             imageLabel: certificate.imageLabel ?? certificate.title,
           },
         ]
       : [],
+  );
+  const textOnly = detail.profile.certificates.filter(
+    (certificate) => !certificate.scanUrl,
   );
 
   return (
@@ -118,12 +138,12 @@ export default async function TeamDetailPage({
         crumbs={[
           { label: experts.breadcrumbHome, href: `/${locale}` },
           { label: experts.title, href: `/${locale}/team` },
-          { label: item.name },
+          { label: detail.name },
         ]}
-        eyebrow={item.role}
+        eyebrow={detail.role}
         eyebrowPosition="below"
-        title={item.name}
-        image={`/images/heroes/${item.directions[0]}.jpg`}
+        title={detail.name}
+        image={`/images/heroes/${detail.directions[0] ?? "judicial-examinations"}.jpg`}
         overlayClassName="bg-hero/85 md:bg-hero/75 lg:bg-hero/70"
       />
 
@@ -137,8 +157,8 @@ export default async function TeamDetailPage({
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,28rem)_minmax(0,1fr)] lg:gap-12">
           <div className="relative aspect-[3/4] w-full max-w-xs overflow-hidden border border-border sm:max-w-sm lg:sticky lg:top-24 lg:max-w-none lg:self-start">
             <Image
-              src={`/images/team/${item.slug}.jpg`}
-              alt={item.imageLabel}
+              src={detail.portraitUrl ?? `/images/team/${detail.slug}.jpg`}
+              alt={detail.imageLabel}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 448px"
@@ -148,7 +168,7 @@ export default async function TeamDetailPage({
 
           <div className="min-w-0">
             <div className="space-y-4 lg:max-w-5xl">
-              {item.profile.bio.map((paragraph) => (
+              {detail.profile.bio.map((paragraph) => (
                 <p key={paragraph} className="text-base leading-relaxed">
                   {paragraph}
                 </p>
@@ -185,7 +205,7 @@ export default async function TeamDetailPage({
 
           {textOnly.length > 0 ? (
             <ul
-              className={`${withScans.length > 0 ? "mt-6" : "mt-8"} ${listRowClass}`}
+              className={`${scans.length > 0 ? "mt-6" : "mt-8"} ${listRowClass}`}
             >
               {textOnly.map((certificate) => (
                 <li

@@ -1,5 +1,8 @@
 import { ActionLink } from "@/components/action-link";
-import { TeamCard } from "@/components/cards/team-card";
+import {
+  ExpertCard,
+  type ExpertCardItem,
+} from "@/components/experts/expert-card";
 import { SectionHeading } from "@/components/home/section-heading";
 import type { HomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
@@ -7,14 +10,14 @@ import { localizeHref } from "@/lib/i18n";
 
 type TeamSectionProps = {
   content: HomeContent;
+  // Backend roster items (lib/experts-api.ts) — the same cards as the
+  // /[locale]/team directory; the homepage features at most four of them.
+  items: ExpertCardItem[];
   locale: Locale;
 };
 
-export function TeamSection({ content, locale }: TeamSectionProps) {
+export function TeamSection({ content, items, locale }: TeamSectionProps) {
   const { team } = content;
-
-  // The homepage features the first four roster members; the full roster
-  // (draft demo data) lives on the /team expert directory.
 
   return (
     <section
@@ -31,8 +34,8 @@ export function TeamSection({ content, locale }: TeamSectionProps) {
       />
 
       <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-        {team.items.slice(0, 4).map((item) => (
-          <TeamCard
+        {items.slice(0, 4).map((item) => (
+          <ExpertCard
             key={item.slug}
             item={item}
             locale={locale}
