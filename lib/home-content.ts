@@ -14,48 +14,18 @@ export type LanguageContent = {
   names: Record<Locale, string>;
 };
 
-export type CertificateItem = {
-  title: string;
-  issuer: string;
-  year: string;
-  number?: string;
-  // Path to the scan under public/ when a copy exists (currently only the
-  // director's four documents); text-only records render as hairline rows.
-  image?: string;
-  imageLabel?: string;
-};
-
-// Detailed profile shown on /[locale]/team/[slug]. Draft demo data for every
-// expert except the director, whose entries are grounded in his documents.
-export type ExpertProfile = {
-  bio: string[];
-  education: {
-    period: string;
-    title: string;
-    place: string;
-  }[];
-  career: {
-    period: string;
-    title: string;
-    place: string;
-  }[];
-  languages: string[];
-  certificates: CertificateItem[];
-};
-
-// One entry of the expert roster. `directions` holds service slugs from
-// services.items (shared across locales); `experience` is the localized
-// display string, `experienceYears` the numeric value used for filtering
-// and sorting.
+// One entry of the expert roster kept in the JSON: news author cards, the
+// services-page expert row, and the offline roster fallback in
+// lib/experts-api.ts. The roster itself (portraits, scans, full profiles)
+// lives in the backend Experts module — see lib/experts-api.ts.
+// `directions` holds service slugs from services.items (shared across
+// locales).
 export type ExpertItem = {
   slug: string;
   name: string;
   role: string;
   imageLabel: string;
   directions: string[];
-  experienceYears: number;
-  experience: string;
-  profile: ExpertProfile;
 };
 
 // One subtype inside a service-catalog type entry (`code` is absent for
@@ -397,24 +367,6 @@ export type HomeContent = {
     }[];
     rosterStatLabel: string;
     listHeading: string;
-    directionsLabel: string;
-    filtersLabel: string;
-    searchLabel: string;
-    searchPlaceholder: string;
-    experienceLabel: string;
-    experienceOptions: {
-      value: string;
-      label: string;
-    }[];
-    resetLabel: string;
-    resultsLabel: string;
-    sortLabel: string;
-    sortOptions: {
-      value: string;
-      label: string;
-    }[];
-    gridViewLabel: string;
-    listViewLabel: string;
     cardAction: string;
     paginationLabel: string;
     previousPageLabel: string;
@@ -424,13 +376,8 @@ export type HomeContent = {
     emptyDescription: string;
     profileUi: {
       aboutTitle: string;
-      educationTitle: string;
-      careerTitle: string;
       certificatesTitle: string;
       similarTitle: string;
-      experienceLabel: string;
-      languagesLabel: string;
-      certificatesLabel: string;
       // Lightbox close button on the certificate gallery.
       closeLabel: string;
       // Visible eye-icon affordance that opens a certificate scan.

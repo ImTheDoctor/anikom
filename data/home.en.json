@@ -1678,59 +1678,7 @@
           "construction-technical-examinations",
           "property-valuation",
           "damage-assessment"
-        ],
-        "experienceYears": 26,
-        "experience": "26 years",
-        "profile": {
-          "bio": [
-            "Director of the specialized expert organization — the ANICOM LLC Center for Research and Judicial Examinations — holding a master's academic degree in Judicial Examination (diploma No. AM 100982) and higher economic education in Enterprise Economics and Management.",
-            "Qualification for forensic commodity examinations of type 16 subtypes 16-01 (research of industrial (non-food) goods, facilities and products of various industries, including construction-industry building structures, mining-industry mines, agro-industrial facilities, related territories and other land areas, including for determining quality characteristics and value indicators) and 16-02 (research of vehicles, including airborne, waterborne and linear ones, motor vehicles of any type, instruments and equipment, production lines and other machines and mechanisms, including for determining value, quality and damage amount indicators), granted by the judicial expert qualification commission within the National Academy of Sciences of the RA — qualification certificates No. 211, No. 298.",
-            "Qualification for construction-technical examinations, real property valuation research, and commodity-type examinations of subtypes (damage amount determination, quality research, goods valuation), granted by the judicial expert qualification commission of the RA Ministry of Justice — qualification certificates No. 243, No. 244.",
-            "Qualified by the Motor Insurers Bureau of Armenia as an expert assessing damage caused to real property and to any other property in the MTPL (compulsory motor third-party liability) sphere — qualification certificate No. 00327; 26 years of professional and forensic expertise work experience."
-          ],
-          "education": [],
-          "career": [],
-          "languages": [],
-          "certificates": [
-            {
-              "title": "Right to practice as a judicial expert",
-              "issuer": "Ministry of Justice of RA",
-              "year": "2005",
-              "number": "No. 0265",
-              "image": "/images/certificates/araik-stepanyan/03-judicial-expert-license-2005.png",
-              "imageLabel": "Judicial expert practice certificate (2005)"
-            },
-            {
-              "title": "Special rank: Justice Advisor, First Class",
-              "issuer": "Judicial Department of RA",
-              "year": "2007",
-              "image": "/images/certificates/araik-stepanyan/02-civil-service-rank-2007.jpg",
-              "imageLabel": "Special civil service rank certificate (2007)"
-            },
-            {
-              "title": "Right to practice in the field of valuation",
-              "issuer": "Ministry of Justice of RA",
-              "year": "2011",
-              "number": "No. 0416",
-              "image": "/images/certificates/araik-stepanyan/04-valuation-license-2011.jpg",
-              "imageLabel": "Valuation practice certificate (2011)"
-            },
-            {
-              "title": "Retraining certificate — Law",
-              "issuer": "Yerevan State University",
-              "year": "2012",
-              "image": "/images/certificates/araik-stepanyan/01-retraining-ysu-law-2012.jpg",
-              "imageLabel": "Retraining certificate, YSU (2012)"
-            },
-            {
-              "title": "Certificate of participation — “European Practices in Forensic Examination and Modern Trends in Digital Forensics” seminar",
-              "issuer": "Chamber of Experts and Criminologists of RA",
-              "year": "2026",
-              "image": "/images/certificates/araik-stepanyan/seminar-participation-certificate-2026.jpeg",
-              "imageLabel": "Seminar participation certificate, 2026"
-            }
-          ]
-        }
+        ]
       },
       {
         "slug": "pyotr-grigoryants",
@@ -1741,37 +1689,7 @@
           "judicial-examinations",
           "construction-technical-examinations",
           "property-valuation"
-        ],
-        "experienceYears": 43,
-        "experience": "43 years",
-        "profile": {
-          "bio": [
-            "Head of the Commodity Examinations Department of the specialized expert organization — the ANICOM LLC Center for Research and Judicial Examinations — with higher engineering-technical education, 43 years of work experience and 28 years of valuation experience.",
-            "Qualification for forensic commodity examinations of type 16-01 (research of industrial (non-food) goods, facilities and products of various industries, including construction-industry building structures, mining-industry mines, agro-industrial facilities, related territories and other land areas, including for determining quality characteristics and value indicators), granted by the judicial expert qualification commission within the National Academy of Sciences of the RA — qualification certificate No. 273 (indefinite).",
-            "Qualification for construction-technical examinations granted by the judicial expert qualification commission of the RA Ministry of Justice — real property valuation research, qualification certificate No. 236 (indefinite)."
-          ],
-          "education": [],
-          "career": [],
-          "languages": [],
-          "certificates": [
-            {
-              "title": "Forensic commodity examinations (subtype 16-01)",
-              "issuer": "Judicial expert qualification commission within the National Academy of Sciences of the RA",
-              "year": "2015",
-              "number": "No. 273",
-              "image": "/images/certificates/pyotr-grigoryants/16-01-commodity-certificate-2015.png",
-              "imageLabel": "Certificate to conduct forensic commodity examinations (subtype 16-01), 2015"
-            },
-            {
-              "title": "Construction-technical examinations, real property valuation",
-              "issuer": "Judicial expert qualification commission of the RA Ministry of Justice",
-              "year": "2016",
-              "number": "No. 236",
-              "image": "/images/certificates/pyotr-grigoryants/construction-technical-valuation-certificate-2016.jpg",
-              "imageLabel": "Certificate to conduct construction-technical examinations and real property valuation research, 2016"
-            }
-          ]
-        }
+        ]
       },
       {
         "slug": "artem-tumasyan",
@@ -1780,28 +1698,7 @@
         "imageLabel": "Portrait of Artyom Karli Tumasyan",
         "directions": [
           "construction-technical-examinations"
-        ],
-        "experienceYears": 34,
-        "experience": "34 years",
-        "profile": {
-          "bio": [
-            "Expert of the Construction-Technical Examinations Department of the specialized expert organization — the ANICOM LLC Center for Research and Judicial Examinations — with higher engineering-technical education and 34 years of professional experience.",
-            "Qualification for judicial construction examinations of type 13, subtype 13-01, granted by the judicial expert qualification commission of the RA Ministry of Justice: certificate No. 247 in the Construction-Technical Research specialization, seven years of experience."
-          ],
-          "education": [],
-          "career": [],
-          "languages": [],
-          "certificates": [
-            {
-              "title": "Judicial construction examinations (subtype 13-01)",
-              "issuer": "Judicial expert qualification commission of the RA Ministry of Justice",
-              "year": "2017",
-              "number": "No. 247",
-              "image": "/images/certificates/artem-tumasyan/construction-technical-certificate-247-2017.jpeg",
-              "imageLabel": "Certificate in the Construction-Technical Research specialization, 2017"
-            }
-          ]
-        }
+        ]
       }
     ]
   },
@@ -1823,48 +1720,6 @@
     ],
     "rosterStatLabel": "Experts on the roster",
     "listHeading": "Expert directory",
-    "directionsLabel": "Directions",
-    "filtersLabel": "Filters",
-    "searchLabel": "Search",
-    "searchPlaceholder": "Search by name or role…",
-    "experienceLabel": "Experience",
-    "experienceOptions": [
-      {
-        "value": "any",
-        "label": "Any"
-      },
-      {
-        "value": "5",
-        "label": "5+ years"
-      },
-      {
-        "value": "10",
-        "label": "10+ years"
-      },
-      {
-        "value": "15",
-        "label": "15+ years"
-      }
-    ],
-    "resetLabel": "Reset filters",
-    "resultsLabel": "Found: {count}",
-    "sortLabel": "Sort by",
-    "sortOptions": [
-      {
-        "value": "default",
-        "label": "Default order"
-      },
-      {
-        "value": "experience",
-        "label": "Experience: high to low"
-      },
-      {
-        "value": "name",
-        "label": "Name: A to Z"
-      }
-    ],
-    "gridViewLabel": "Grid view",
-    "listViewLabel": "List view",
     "cardAction": "Profile",
     "paginationLabel": "Pagination",
     "previousPageLabel": "Previous page",
@@ -1874,13 +1729,8 @@
     "emptyDescription": "The expert roster is currently being updated — please check back later.",
     "profileUi": {
       "aboutTitle": "About",
-      "educationTitle": "Education",
-      "careerTitle": "Career path",
       "certificatesTitle": "Certificates & qualifications",
       "similarTitle": "Related experts",
-      "experienceLabel": "Experience",
-      "languagesLabel": "Languages",
-      "certificatesLabel": "Certificates",
       "closeLabel": "Close",
       "viewCertificateLabel": "View certificate"
     }

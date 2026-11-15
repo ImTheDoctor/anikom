@@ -1,18 +1,18 @@
 import { cacheLife } from "next/cache";
 import { AUTH_API_ORIGIN, AUTH_API_URL } from "@/lib/auth-api";
-import { getHomeContent, type ExpertItem } from "@/lib/home-content";
+import { getHomeContent } from "@/lib/home-content";
 import type { Locale } from "@/lib/i18n";
 
 // Public expert-directory API (GET /v1/expert/profiles*, backend Experts
 // module, contract v2 — Nov 2026). Server-side only: the pages are Server
 // Components and the same-origin /api/expert/* proxy is for browser calls.
 //
-// The backend is the source of truth for the roster. The localized JSON in
-// data/home.*.json (team.items) stays as the emergency fallback: the test
-// API lives behind an ephemeral trycloudflare tunnel, and the public site
-// must keep rendering when it is unreachable. UI copy (headings, buttons,
-// hero stats, empty states) remains in the JSON — only roster data moved to
-// the API, so the fallback maps exactly the fields the UI renders.
+// The backend is the source of truth for the roster and the profiles. The
+// localized JSON in data/home.*.json (team.items, roster fields only) stays
+// as the emergency fallback: the test API lives behind an ephemeral
+// trycloudflare tunnel, and the public site must keep rendering when it is
+// unreachable. UI copy (headings, buttons, hero stats, empty states) remains
+// in the JSON.
 
 // One entry of the directory grid. portraitUrl null → components fall back
 // to the static /images/team/{slug}.jpg placeholder portrait.
@@ -54,15 +54,16 @@ export function formatCertificateNumber(number: string, locale: Locale) {
   return locale === "en" ? `No. ${number}` : `№ ${number}`;
 }
 
-// The fallback JSON numbers carry the prefix inline; strip it so the whole
-// app renders numbers through formatCertificateNumber in one place.
-function stripNumberPrefix(number: string) {
-  return number.replace(/^(?:№|No\.)\s*/u, "");
-}
+// --- JSON fallback mapping (data/home.*.json team.items — roster fields
+// only; profiles exist exclusively in the backend) ---
 
-// --- JSON fallback mapping (data/home.*.json team.items) ---
-
-function fallbackRosterItem(item: ExpertItem): ExpertRosterItem {
+function fallbackRosterItem(item: {
+  slug: string;
+  name: string;
+  role: string;
+  imageLabel: string;
+  directions: string[];
+}): ExpertRosterItem {
   return {
     slug: item.slug,
     name: item.name,
@@ -70,22 +71,6 @@ function fallbackRosterItem(item: ExpertItem): ExpertRosterItem {
     portraitUrl: null,
     imageLabel: item.imageLabel,
     directions: item.directions,
-  };
-}
-
-function fallbackProfile(item: ExpertItem): ExpertProfile {
-  return {
-    bio: item.profile.bio,
-    certificates: item.profile.certificates.map((certificate) => ({
-      title: certificate.title,
-      issuer: certificate.issuer,
-      year: certificate.year,
-      number: certificate.number
-        ? stripNumberPrefix(certificate.number)
-        : null,
-      scanUrl: certificate.image ?? null,
-      imageLabel: certificate.imageLabel ?? null,
-    })),
   };
 }
 
@@ -207,7 +192,9 @@ export async function getExpertDetail(
   const item = getHomeContent(locale).team.items.find(
     (entry) => entry.slug === slug,
   );
+  // The JSON seed carries roster fields only, so offline profiles render
+  // with an empty bio/certificates block until the backend is reachable.
   return item
-    ? { ...fallbackRosterItem(item), profile: fallbackProfile(item) }
+    ? { ...fallbackRosterItem(item), profile: { bio: [], certificates: [] } }
     : null;
 }
